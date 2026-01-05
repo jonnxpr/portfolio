@@ -1074,9 +1074,7 @@ select:focus {
    ======================================== */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Pode adicionar variações de cores para modo escuro aqui se necessário */
-  }
+  /* Pode adicionar variações de cores para modo escuro aqui se necessário */
 }
 
 /* ========================================
