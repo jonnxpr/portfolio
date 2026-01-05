@@ -310,6 +310,25 @@ select:focus {
   font-size: 1.8rem;
   color: var(--color-neon-cian);
   transition: all var(--transition-base);
+  overflow: hidden;
+  padding: 8px;
+}
+
+.tech-icon img {
+  max-width: 50%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(180deg) brightness(1.1) saturate(2);
+}
+
+.tech-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tech-icon:hover,
