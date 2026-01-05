@@ -16,25 +16,39 @@ Bem-vindo ao meu portfólio! Este é um site single page responsivo que apresent
 ```
 portfolio/
 ├── index.html              # Arquivo HTML principal
+├── package.json            # Configuração npm com scripts de build
+├── package-lock.json       # Lock file de dependências
+├── LICENSE                 # Licença MIT
+├── .gitignore              # Arquivos ignorados pelo Git
+├── README.md               # Este arquivo
+│
 ├── css/
-│   ├── styles.css         # CSS fonte (non-minificado, para desenvolvimento)
-│   └── styles.min.css     # CSS minificado (para produção)
+│   ├── styles.css          # CSS fonte (desenvolvimento)
+│   └── styles.min.css      # CSS minificado (produção)
 ├── js/
-│   ├── navigation.js      # Módulo de navegação e smooth scroll
-│   ├── projects.js        # Módulo de renderização de projetos
-│   ├── main.js            # Módulo principal e inicialização
-│   └── main.min.js        # Bundle JavaScript minificado (para produção)
+│   ├── navigation.js       # Módulo de navegação e smooth scroll
+│   ├── projects.js         # Módulo de renderização de projetos
+│   ├── main.js             # Módulo principal e inicialização
+│   └── main.min.js         # Bundle JavaScript minificado (produção)
 ├── data/
-│   └── projects.json      # Dados dos projetos
-├── assets/
-│   └── icons/             # Ícones personalizados (pasta para expansão futura)
-├── .github/
-│   └── workflows/         # CI/CD para GitHub Pages (pasta vazia - expandir se necessário)
-├── README.md              # Este arquivo
-└── .gitignore             # Arquivos ignorados pelo Git
+│   └── projects.json       # Dados dinâmicos dos projetos
+└── assets/
+    └── icons/              # Ícones personalizados (pasta para expansão futura)
 ```
 
 ## 🚀 Como Usar
+
+### 0. Instalar Dependências e Executar Localmente
+
+```bash
+# Instalar dependências
+npm install
+
+# Executar servidor local
+npm start
+
+# Abrir navegador em http://localhost:8000
+```
 
 ### 1. Adicionar um Novo Projeto
 
@@ -91,24 +105,33 @@ Todas as variáveis de tipografia e espaçamento estão no `:root` de `css/style
 
 ## 🔧 Minificação
 
-### CSS
+### Com NPM (Recomendado)
+```bash
+# Instalar dependências
+npm install
+
+# Minificar CSS
+npm run build:css
+
+# Minificar JavaScript
+npm run build:js
+
+# Minificar tudo (CSS + JS)
+npm run build
+```
+
+### Manualmente (Alternativa)
+**CSS:**
 1. Abra um minificador online: https://cssminifier.com
 2. Cole o conteúdo de `css/styles.css`
 3. Copie o resultado minificado
 4. Cole em `css/styles.min.css`
 
-### JavaScript
+**JavaScript:**
 1. Abra um minificador online: https://javascript-minifier.com
 2. Cole o conteúdo de `js/navigation.js`, `js/projects.js` e `js/main.js` em sequência
 3. Copie o resultado minificado
 4. Cole em `js/main.min.js`
-
-**Alternativa com Node.js:**
-```bash
-npm install -g terser clean-css-cli
-terser js/navigation.js js/projects.js js/main.js -o js/main.min.js -c -m
-cleancss css/styles.css -o css/styles.min.css
-```
 
 ## 📱 Responsividade
 
@@ -233,8 +256,10 @@ Este projeto é open source. Sinta-se livre para usá-lo como referência ou bas
 
 ---
 
-**Última atualização**: Janeiro 2026
+**Última atualização**: Janeiro 5, 2026
 
 **Autor**: Jonathan Douglas Diego Tavares
 
 **Versão**: 1.0.0
+
+**Licença**: MIT
