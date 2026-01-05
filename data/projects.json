@@ -14,7 +14,7 @@
   {
     "id": 2,
     "title": "PartnerBank - Instituição de Pagamento",
-    "description": "Atuo no desenvolvimento e manutenção de aplicações REST em Java e Spring Boot com frontend em React. Realizo integrações com AWS (SQS, ECS) e implemento pipelines de CI/CD utilizando GitLab, Docker, Nexus e Sonar. Minhas responsabilidades incluem definição de padrões de código, revisão técnica, documentação e suporte a sistemas existentes. Trabalho com bancos de dados MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban). Atualmente, desenvolvo novos módulos para a plataforma de serviços financeiros, otimizando aplicações legadas e assegurando conformidade regulatória do setor.",
+    "description": "Atuo no desenvolvimento e manutenção de aplicações REST em Java e Spring com frontend em React. Realizo integrações com AWS (SQS, ECS) e implemento pipelines de CI/CD utilizando GitLab, Docker, Nexus e Sonar. Minhas responsabilidades incluem definição de padrões de código, revisão técnica, documentação e suporte a sistemas existentes. Trabalho com bancos de dados MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban). Atualmente, desenvolvo novos módulos para a plataforma de serviços financeiros, otimizando aplicações legadas e assegurando conformidade regulatória do setor.",
     "technologies": ["Java", "Spring Boot", "React", "Javascript", "AWS SQS", "AWS ECS", "AWS EC2", "Docker", "CI/CD utilizando GitLab", "MySQL", "PostgreSQL", "MongoDB"],
     "icon": "<i class='fas fa-credit-card'></i>",
     "current": true,
