@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Jonathan Douglas Diego Tavares - Full Stack Developer">
+    <meta name="keywords" content="Full Stack Developer, Java, React, Angular, Portfolio">
+    <meta name="author" content="Jonathan Douglas Diego Tavares">
+    <title>Jonathan Douglas Diego Tavares - Full Stack Developer</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles (Minified) -->
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar--fixed navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar__brand" href="#inicio">JDDT</a>
+            <button class="navbar-toggler navbar__toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto navbar__nav">
+                    <li class="nav-item">
+                        <a class="nav-link navbar__link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar__link" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar__link" href="#educacao">Educação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar__link" href="#projetos">Projetos</a>
+                    </li>
+                </ul>
+                <div class="navbar__contacts ms-lg-4">
+                    <a href="mailto:joninf95@gmail.com" class="navbar__contact-link" title="Email" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="navbar__contact-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jonnxpr" class="navbar__contact-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="sobre" class="hero">
+            <div class="container hero__container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-8">
+                        <div class="hero__content">
+                            <h1 class="hero__title">Jonathan Douglas Diego Tavares</h1>
+                            <p class="hero__subtitle">Full Stack Developer</p>
+                            <p class="hero__description">
+                                Bem-vindo!<br/>
+                                Sou Desenvolvedor Full Stack especializado em criar soluções robustas e escaláveis. 
+                                Tenho experiência em desenvolvimento backend e frontend, cloud computing com AWS e gerenciamento de dados complexos. 
+                                Meu diferencial está em resolver problemas desafiadores, otimizar processos e entregar produtos de alta qualidade com excelente experiência do usuário. 
+                                Trabalho com metodologias ágeis, colaboro com equipes multifuncionais e possuo experiência em manutenção e migração de sistemas legados.
+                            </p>
+                            <p class="hero__description">
+                                Busco continuamente aprimorar minhas habilidades técnicas e comunicativas, acompanhando as melhores práticas de engenharia de software. 
+                                Utilizo inteligência artificial como ferramenta para otimizar processos, aumentar eficiência no desenvolvimento e colaborar melhor com equipes multidisciplinares.
+                            </p>
+                            
+                            <!-- Tech Stack Preview -->
+                            <div class="hero__tech-stack">
+                                <h3 class="hero__tech-title">Stack Principal:</h3>
+                                <div class="hero__tech-icons">
+                                    <!-- Backend -->
+                                    <div class="tech-icon" title="Java">
+                                        <i class="fab fa-java"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Spring Framework">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Quarkus">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Node.js">
+                                        <i class="fab fa-node-js"></i>
+                                    </div>
+                                    <!-- Frontend -->
+                                    <div class="tech-icon" title="React">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Angular">
+                                        <i class="fab fa-angular"></i>
+                                    </div>
+                                    <!-- Databases -->
+                                    <div class="tech-icon" title="MySQL">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="tech-icon" title="PostgreSQL">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Oracle Database">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="tech-icon" title="Firebase">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="hero__cta-buttons">
+                                <a href="#projetos" class="btn hero__btn hero__btn--primary" data-scroll>Ver Projetos</a>
+                                <a href="mailto:joninf95@gmail.com" class="btn hero__btn hero__btn--secondary" target="_blank" rel="noopener noreferrer">Entre em Contato</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="habilidades" class="skills">
+            <div class="container">
+                <h2 class="section__title">Habilidades</h2>
+                <p class="section__subtitle">Tecnologias que domino e trabalho diariamente</p>
+                
+                <div class="skills__grid">
+                    <!-- Backend -->
+                    <div class="skill-category fade-in-scroll">
+                        <div class="skill-category__icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="skill-category__title">Backend</h3>
+                        <p class="skill-category__description">Java, Spring Boot, Quarkus, Node.js, TypeScript, REST APIs, Microservices, Monolitos</p>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-category fade-in-scroll">
+                        <div class="skill-category__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-category__title">Frontend</h3>
+                        <p class="skill-category__description">React, Angular, TypeScript, JavaScript, Bootstrap, TailwindCSS, HTML/CSS</p>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-category fade-in-scroll">
+                        <div class="skill-category__icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="skill-category__title">Databases</h3>
+                        <p class="skill-category__description">MySQL, PostgreSQL, MongoDB, Firebase</p>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="skill-category fade-in-scroll">
+                        <div class="skill-category__icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="skill-category__title">Cloud</h3>
+                        <p class="skill-category__description">AWS Services, EC2, S3, Lambda, RDS, ECS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="educacao" class="education">
+            <div class="container">
+                <h2 class="section__title">Educação</h2>
+                <p class="section__subtitle">Formação acadêmica e trajetória educacional</p>
+                
+                <div class="education__timeline">
+                    <!-- CEFET-MG - Técnico -->
+                    <div class="education__item fade-in-scroll">
+                        <div class="education__item-header">
+                            <div class="education__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education__info">
+                                <h3 class="education__title">Técnico em Informática</h3>
+                                <p class="education__institution">CEFET-MG</p>
+                                <p class="education__period">Formação Técnica</p>
+                            </div>
+                        </div>
+                        <p class="education__description">Fundamentação sólida em tecnologia da informação com disciplinas práticas em programação, redes e sistemas operacionais.</p>
+                    </div>
+
+                    <!-- PUC-MG - Ciência da Computação -->
+                    <div class="education__item fade-in-scroll">
+                        <div class="education__item-header">
+                            <div class="education__icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="education__info">
+                                <h3 class="education__title">Ciência da Computação</h3>
+                                <p class="education__institution">PUC-MG</p>
+                                <p class="education__period">Graduação</p>
+                            </div>
+                        </div>
+                        <p class="education__description">Formação abrangente em conceitos de programação, algoritmos, estruturas de dados, engenharia de software e ciência computacional teórica.</p>
+                    </div>
+
+                    <!-- CEFET-MG - Engenharia de Computação -->
+                    <div class="education__item fade-in-scroll">
+                        <div class="education__item-header">
+                            <div class="education__icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="education__info">
+                                <h3 class="education__title">Engenharia de Computação</h3>
+                                <p class="education__institution">CEFET-MG</p>
+                                <p class="education__period">Graduação</p>
+                            </div>
+                        </div>
+                        <p class="education__description">Aprofundamento em arquitetura de sistemas, hardware/software, desenvolvimento de aplicações escaláveis e engenharia de software avançada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projetos" class="projects">
+            <div class="container">
+                <h2 class="section__title">Projetos</h2>
+                <p class="section__subtitle">Conheça os projetos que já atuei</p>
+                
+                <div id="projects-container" class="projects__grid">
+                    <!-- Projects will be dynamically rendered here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__copyright">
+                    <p>&copy; 2026 Jonathan Douglas Diego Tavares. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer__contacts">
+                    <a href="mailto:joninf95@gmail.com" class="footer__link" title="Email" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="footer__link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jonnxpr" class="footer__link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Scripts (Minified) -->
+    <script src="js/main.min.js"></script>
+</body>
+</html>
