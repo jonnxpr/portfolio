@@ -5,6 +5,19 @@
     "description": "Na Vetta, atuei por três anos no cliente Usiminas, evoluindo de estagiário (2021) a profissional. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. A experiência consolidou minhas habilidades técnicas e de colaboração em equipes multifuncionais, entregando soluções de qualidade para uma grande corporação.",
     "technologies": ["Java", "Quarkus", "Oracle Database", "PL/SQL", "Angular", "Typescript", "CI/CD utilizando Jenkins e Gogs"],
     "icon": "<i class='fas fa-industry'></i>",
+    "current": true,
+    "links": {
+      "Usiminas": "https://www.usiminas.com/",
+      "Vetta": "https://www.vetta.digital/pt-br"
+    }
+  },
+  {
+    "id": 2,
+    "title": "PartnerBank - Instituição de Pagamento",
+    "description": "Na Partnerbank, atuei por três anos no cliente Usiminas, evoluindo de estagiário (2021) a profissional. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. A experiência consolidou minhas habilidades técnicas e de colaboração em equipes multifuncionais, entregando soluções de qualidade para uma grande corporação.",
+    "technologies": ["Java", "Quarkus", "Oracle Database", "PL/SQL", "Angular", "Typescript", "CI/CD utilizando Jenkins e Gogs"],
+    "icon": "<i class='fas fa-building'></i>",
+    "current": false,
     "links": {
       "Usiminas": "https://www.usiminas.com/",
       "Vetta": "https://www.vetta.digital/pt-br"

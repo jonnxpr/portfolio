@@ -46,6 +46,15 @@ const Projects = (() => {
     card.className = 'project-card fade-in-scroll';
     card.style.animationDelay = `${index * 0.1}s`;
 
+    // Badge de projeto atual
+    if (project.current) {
+      const currentBadge = document.createElement('div');
+      currentBadge.className = 'project-card__current-badge';
+      currentBadge.innerHTML = '<i class="fas fa-star"></i> Projeto Atual';
+      currentBadge.title = 'Empresa onde estou trabalhando atualmente';
+      card.appendChild(currentBadge);
+    }
+
     const image = document.createElement('div');
     image.className = 'project-card__image';
     image.innerHTML = project.icon || '<i class="fas fa-code"></i>';

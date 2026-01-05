@@ -521,6 +521,7 @@ a {
   flex-direction: column;
   height: 100%;
   animation: slideInUp 0.6s ease-out;
+  position: relative;
 }
 
 @keyframes slideInUp {
@@ -539,6 +540,34 @@ a {
   background: rgba(26, 31, 58, 1);
   box-shadow: var(--glow-cian);
   transform: translateY(-12px);
+}
+
+.project-card__current-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--color-neon-magenta), var(--color-neon-cian));
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+  animation: pulse-glow 2s ease-in-out infinite;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.8), 0 0 35px rgba(0, 217, 255, 0.4);
+  }
 }
 
 .project-card__image {
