@@ -4,6 +4,12 @@
 
 const App = (() => {
   const init = () => {
+    // Definir ano dinâmico do copyright
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
     Navigation.init();
     Projects.init();
   };
