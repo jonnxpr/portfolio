@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Jonathan Douglas Diego Tavares - Full Stack Developer">
-    <meta name="keywords" content="Full Stack Developer, Java, React, Angular, Portfolio">
+    <meta name="description" content="Portfólio profissional de Jonathan Douglas Diego Tavares - Full Stack Developer com experiência em Java, Spring Boot, React, AWS e arquitetura de software escalável.">
+    <meta name="keywords" content="Full Stack Developer, Java, Spring Boot, React, Angular, AWS, Engenheiro de Software, Arquitetura de Sistemas, Portfólio">
     <meta name="author" content="Jonathan Douglas Diego Tavares">
-    <title>Jonathan Douglas Diego Tavares - Full Stack Developer</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0e27">
+    <link rel="canonical" href="https://joninf95.dev/">
+    
+    <!-- Open Graph Tags (Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jonathan Douglas Diego Tavares - Full Stack Developer">
+    <meta property="og:description" content="Portfólio profissional de um Full Stack Developer especializado em soluções robustas, escaláveis e de alta qualidade.">
+    <meta property="og:url" content="https://joninf95.dev/">
+    <meta property="og:image" content="https://joninf95.dev/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jonathan Douglas Diego Tavares - Full Stack Developer">
+    <meta name="twitter:description" content="Portfólio profissional showcasing Full Stack Development expertise">
+    <meta name="twitter:image" content="https://joninf95.dev/assets/og-image.jpg">
+    
+    <!-- Structured Data (JSON-LD Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jonathan Douglas Diego Tavares",
+      "url": "https://joninf95.dev/",
+      "email": "joninf95@gmail.com",
+      "jobTitle": "Full Stack Developer",
+      "image": "https://joninf95.dev/assets/profile-image.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/jonathan-douglas-3014b1b3/",
+        "https://github.com/jonnxpr"
+      ],
+      "knowsAbout": ["Java", "Spring Boot", "React", "Angular", "AWS", "Microservices", "SQL", "NoSQL", "Docker", "CI/CD"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PartnerBank"
+      }
+    }
+    </script>
+    
+    <title>Jonathan Douglas Diego Tavares - Full Stack Developer | Portfólio</title>
     
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,11 +58,14 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
+    <!-- Skip to main content link (Accessibility) -->
+    <a href="#main-content" class="skip-to-main">Pular para conteúdo principal</a>
+    
     <!-- Navbar -->
-    <nav class="navbar navbar--fixed navbar-expand-lg">
+    <nav class="navbar navbar--fixed navbar-expand-lg" aria-label="Navegação principal">
         <div class="container-fluid">
-            <a class="navbar-brand navbar__brand" href="#inicio">JDDT</a>
-            <button class="navbar-toggler navbar__toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand navbar__brand" href="#inicio" aria-label="Jonathan Tavares - Full Stack Developer">JDDT</a>
+            <button class="navbar-toggler navbar__toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,15 +83,15 @@
                         <a class="nav-link navbar__link" href="#projetos">Projetos</a>
                     </li>
                 </ul>
-                <div class="navbar__contacts ms-lg-4">
-                    <a href="mailto:joninf95@gmail.com" class="navbar__contact-link" title="Email" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-envelope"></i>
+                <div class="navbar__contacts ms-lg-4" role="list" aria-label="Links de contato">
+                    <a href="mailto:joninf95@gmail.com" class="navbar__contact-link" title="Email" aria-label="Enviar email para joninf95@gmail.com" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="navbar__contact-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="navbar__contact-link" title="LinkedIn" aria-label="Abrir perfil do LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="https://github.com/jonnxpr" class="navbar__contact-link" title="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/jonnxpr" class="navbar__contact-link" title="GitHub" aria-label="Abrir perfil do GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -56,7 +99,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section id="sobre" class="hero">
             <div class="container hero__container">
@@ -80,47 +123,47 @@
                             <!-- Tech Stack Preview -->
                             <div class="hero__tech-stack">
                                 <h3 class="hero__tech-title">Stack Principal:</h3>
-                                <div class="hero__tech-icons">
+                                <div class="hero__tech-icons" role="list" aria-label="Tecnologias principais">
                                     <!-- Backend -->
-                                    <div class="tech-icon" title="Java">
-                                        <i class="fab fa-java"></i>
+                                    <div class="tech-icon" role="listitem" title="Java" aria-label="Java">
+                                        <i class="fab fa-java" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Spring Framework">
-                                        <i class="fas fa-leaf"></i>
+                                    <div class="tech-icon" role="listitem" title="Spring Framework" aria-label="Spring Framework">
+                                        <i class="fas fa-leaf" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Quarkus">
-                                        <i class="fas fa-bolt"></i>
+                                    <div class="tech-icon" role="listitem" title="Quarkus" aria-label="Quarkus">
+                                        <i class="fas fa-bolt" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Node.js">
-                                        <i class="fab fa-node-js"></i>
+                                    <div class="tech-icon" role="listitem" title="Node.js" aria-label="Node.js">
+                                        <i class="fab fa-node-js" aria-hidden="true"></i>
                                     </div>
                                     <!-- Frontend -->
-                                    <div class="tech-icon" title="React">
-                                        <i class="fab fa-react"></i>
+                                    <div class="tech-icon" role="listitem" title="React" aria-label="React">
+                                        <i class="fab fa-react" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Angular">
-                                        <i class="fab fa-angular"></i>
+                                    <div class="tech-icon" role="listitem" title="Angular" aria-label="Angular">
+                                        <i class="fab fa-angular" aria-hidden="true"></i>
                                     </div>
                                     <!-- Databases -->
-                                    <div class="tech-icon" title="MySQL">
-                                        <i class="fas fa-database"></i>
+                                    <div class="tech-icon" role="listitem" title="MySQL" aria-label="MySQL">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="PostgreSQL">
-                                        <i class="fas fa-database"></i>
+                                    <div class="tech-icon" role="listitem" title="PostgreSQL" aria-label="PostgreSQL">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Oracle Database">
-                                        <i class="fas fa-database"></i>
+                                    <div class="tech-icon" role="listitem" title="Oracle Database" aria-label="Oracle Database">
+                                        <i class="fas fa-database" aria-hidden="true"></i>
                                     </div>
-                                    <div class="tech-icon" title="Firebase">
-                                        <i class="fas fa-fire"></i>
+                                    <div class="tech-icon" role="listitem" title="Firebase" aria-label="Firebase">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- CTA Buttons -->
                             <div class="hero__cta-buttons">
-                                <a href="#projetos" class="btn hero__btn hero__btn--primary" data-scroll>Ver Projetos</a>
-                                <a href="mailto:joninf95@gmail.com" class="btn hero__btn hero__btn--secondary" target="_blank" rel="noopener noreferrer">Entre em Contato</a>
+                                <a href="#projetos" class="btn hero__btn hero__btn--primary" data-scroll aria-label="Ver seção de projetos">Ver Projetos</a>
+                                <a href="mailto:joninf95@gmail.com" class="btn hero__btn hero__btn--secondary" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para joninf95@gmail.com">Entre em Contato</a>
                             </div>
                         </div>
                     </div>
@@ -129,15 +172,15 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="habilidades" class="skills">
+        <section id="habilidades" class="skills" aria-labelledby="skills-title" aria-describedby="skills-description">
             <div class="container">
-                <h2 class="section__title">Habilidades</h2>
-                <p class="section__subtitle">Tecnologias que domino e trabalho diariamente</p>
+                <h2 class="section__title" id="skills-title">Habilidades</h2>
+                <p class="section__subtitle" id="skills-description">Tecnologias que domino e trabalho diariamente</p>
                 
-                <div class="skills__grid">
+                <div class="skills__grid" role="list">
                     <!-- Backend -->
-                    <div class="skill-category fade-in-scroll">
-                        <div class="skill-category__icon">
+                    <div class="skill-category fade-in-scroll" role="listitem">
+                        <div class="skill-category__icon" aria-hidden="true">
                             <i class="fas fa-server"></i>
                         </div>
                         <h3 class="skill-category__title">Backend</h3>
@@ -145,8 +188,8 @@
                     </div>
 
                     <!-- Frontend -->
-                    <div class="skill-category fade-in-scroll">
-                        <div class="skill-category__icon">
+                    <div class="skill-category fade-in-scroll" role="listitem">
+                        <div class="skill-category__icon" aria-hidden="true">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="skill-category__title">Frontend</h3>
@@ -154,8 +197,8 @@
                     </div>
 
                     <!-- Databases -->
-                    <div class="skill-category fade-in-scroll">
-                        <div class="skill-category__icon">
+                    <div class="skill-category fade-in-scroll" role="listitem">
+                        <div class="skill-category__icon" aria-hidden="true">
                             <i class="fas fa-database"></i>
                         </div>
                         <h3 class="skill-category__title">Databases</h3>
@@ -163,8 +206,8 @@
                     </div>
 
                     <!-- Cloud -->
-                    <div class="skill-category fade-in-scroll">
-                        <div class="skill-category__icon">
+                    <div class="skill-category fade-in-scroll" role="listitem">
+                        <div class="skill-category__icon" aria-hidden="true">
                             <i class="fas fa-cloud"></i>
                         </div>
                         <h3 class="skill-category__title">Cloud</h3>
@@ -175,16 +218,16 @@
         </section>
 
         <!-- Education Section -->
-        <section id="educacao" class="education">
+        <section id="educacao" class="education" aria-labelledby="education-title" aria-describedby="education-description">
             <div class="container">
-                <h2 class="section__title">Educação</h2>
-                <p class="section__subtitle">Formação acadêmica e trajetória educacional</p>
+                <h2 class="section__title" id="education-title">Educação</h2>
+                <p class="section__subtitle" id="education-description">Formação acadêmica e trajetória educacional</p>
                 
-                <div class="education__timeline">
+                <div class="education__timeline" role="list">
                     <!-- CEFET-MG - Técnico -->
-                    <div class="education__item fade-in-scroll">
+                    <div class="education__item fade-in-scroll" role="listitem">
                         <div class="education__item-header">
-                            <div class="education__icon">
+                            <div class="education__icon" aria-hidden="true">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <div class="education__info">
@@ -197,9 +240,9 @@
                     </div>
 
                     <!-- PUC-MG - Ciência da Computação -->
-                    <div class="education__item fade-in-scroll">
+                    <div class="education__item fade-in-scroll" role="listitem">
                         <div class="education__item-header">
-                            <div class="education__icon">
+                            <div class="education__icon" aria-hidden="true">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <div class="education__info">
@@ -212,9 +255,9 @@
                     </div>
 
                     <!-- CEFET-MG - Engenharia de Computação -->
-                    <div class="education__item fade-in-scroll">
+                    <div class="education__item fade-in-scroll" role="listitem">
                         <div class="education__item-header">
-                            <div class="education__icon">
+                            <div class="education__icon" aria-hidden="true">
                                 <i class="fas fa-microchip"></i>
                             </div>
                             <div class="education__info">
@@ -230,12 +273,12 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projetos" class="projects">
+        <section id="projetos" class="projects" aria-labelledby="projects-title" aria-describedby="projects-description">
             <div class="container">
-                <h2 class="section__title">Projetos</h2>
-                <p class="section__subtitle">Conheça os projetos que já atuei</p>
+                <h2 class="section__title" id="projects-title">Projetos</h2>
+                <p class="section__subtitle" id="projects-description">Conheça os projetos que já atuei</p>
                 
-                <div id="projects-container" class="projects__grid">
+                <div id="projects-container" class="projects__grid" role="list" aria-live="polite" aria-label="Lista de projetos">
                     <!-- Projects will be dynamically rendered here by JavaScript -->
                 </div>
             </div>
@@ -243,21 +286,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__copyright">
                     <p>&copy; <span id="year"></span> Jonathan Douglas Diego Tavares. Todos os direitos reservados.</p>
                 </div>
-                <div class="footer__contacts">
-                    <a href="mailto:joninf95@gmail.com" class="footer__link" title="Email" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-envelope"></i>
+                <div class="footer__contacts" role="list" aria-label="Links de contato do rodapé">
+                    <a href="mailto:joninf95@gmail.com" class="footer__link" title="Email" aria-label="Enviar email para joninf95@gmail.com" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="footer__link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="footer__link" title="LinkedIn" aria-label="Abrir perfil do LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="https://github.com/jonnxpr" class="footer__link" title="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/jonnxpr" class="footer__link" title="GitHub" aria-label="Abrir perfil do GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>

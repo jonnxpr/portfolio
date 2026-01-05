@@ -45,18 +45,20 @@ const Projects = (() => {
     const card = document.createElement('div');
     card.className = 'project-card fade-in-scroll';
     card.style.animationDelay = `${index * 0.1}s`;
+    card.setAttribute('role', 'listitem');
 
     // Badge de projeto atual
     if (project.current) {
       const currentBadge = document.createElement('div');
       currentBadge.className = 'project-card__current-badge';
-      currentBadge.innerHTML = '<i class="fas fa-star"></i> Projeto Atual';
-      currentBadge.title = 'Empresa onde estou trabalhando atualmente';
+      currentBadge.setAttribute('aria-label', 'Projeto atual: Empresa onde estou trabalhando atualmente');
+      currentBadge.innerHTML = '<i class="fas fa-star" aria-hidden="true"></i> Projeto Atual';
       card.appendChild(currentBadge);
     }
 
     const image = document.createElement('div');
     image.className = 'project-card__image';
+    image.setAttribute('aria-hidden', 'true');
     image.innerHTML = project.icon || '<i class="fas fa-code"></i>';
 
     const content = document.createElement('div');
@@ -72,16 +74,20 @@ const Projects = (() => {
 
     const techContainer = document.createElement('div');
     techContainer.className = 'project-card__technologies';
+    techContainer.setAttribute('aria-label', 'Tecnologias utilizadas');
 
     project.technologies.forEach((tech) => {
       const badge = document.createElement('span');
       badge.className = 'tech-badge';
       badge.textContent = tech;
+      badge.setAttribute('role', 'doc-biblioentry');
       techContainer.appendChild(badge);
     });
 
     const linksContainer = document.createElement('div');
     linksContainer.className = 'project-card__links';
+    linksContainer.setAttribute('role', 'navigation');
+    linksContainer.setAttribute('aria-label', 'Links do projeto');
 
     // Renderizar links personalizados dinamicamente
     if (project.links) {
@@ -98,7 +104,8 @@ const Projects = (() => {
           iconClass = 'fab fa-github';
         }
         
-        link.innerHTML = `<i class="${iconClass}"></i> ${linkName}`;
+        link.setAttribute('aria-label', `Abrir ${linkName} em nova aba`);
+        link.innerHTML = `<i class="${iconClass}" aria-hidden="true"></i> ${linkName}`;
         linksContainer.appendChild(link);
       });
     }
