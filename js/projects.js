@@ -93,11 +93,9 @@ const Projects = (() => {
         link.className = 'project-link';
         
         // Definir ícone com base no nome do link
-        let iconClass = 'fas fa-external-link-alt';
+        let iconClass = 'fas fa-external-link-alt'; // Default
         if (linkName.toLowerCase() === 'github') {
           iconClass = 'fab fa-github';
-        } else if (linkName.toLowerCase() === 'demo') {
-          iconClass = 'fas fa-external-link-alt';
         }
         
         link.innerHTML = `<i class="${iconClass}"></i> ${linkName}`;
