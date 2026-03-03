@@ -17,3 +17,10 @@ Review checklist for PR and code-review tasks.
 - Confirm minified artifacts are updated when source CSS/JS changed.
 - Confirm no unnecessary dependency or framework was introduced.
 - Confirm deploy workflow compatibility with repository changes.
+
+## Mandatory final code review and factual integrity
+
+- At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
+- Review must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
+- It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
+- Never invent facts, APIs, versions, behaviors, or references; if uncertain, verify first or explicitly state uncertainty.
