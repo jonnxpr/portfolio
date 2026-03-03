@@ -11,6 +11,7 @@ const App = (() => {
     }
 
     Navigation.init();
+    Skills.init();
     Projects.init();
   };
 

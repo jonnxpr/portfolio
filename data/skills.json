@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Backend",
+    "description": "Java, Spring, Quarkus, Node.js, TypeScript, REST APIs, Microservices, Monoliths",
+    "icon": "<i class='fas fa-server'></i>"
+  },
+  {
+    "id": 2,
+    "title": "Frontend",
+    "description": "React, Angular, Ionic, TypeScript, JavaScript, Bootstrap, Tailwind CSS, HTML/CSS",
+    "icon": "<i class='fas fa-code'></i>"
+  },
+  {
+    "id": 3,
+    "title": "Databases",
+    "description": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
+    "icon": "<i class='fas fa-database'></i>"
+  },
+  {
+    "id": 4,
+    "title": "Cloud & DevOps",
+    "description": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
+    "icon": "<i class='fas fa-cloud'></i>"
+  }
+]

@@ -21,7 +21,7 @@
   "scripts": {
     "start": "python -m http.server 8000",
     "build:css": "cleancss css/styles.css -o css/styles.min.css",
-    "build:js": "terser js/navigation.js js/projects.js js/main.js -o js/main.min.js -c -m",
+    "build:js": "terser js/navigation.js js/animations.js js/projects.js js/skills.js js/main.js -o js/main.min.js -c -m",
     "build": "npm run build:css && npm run build:js"
   },
   "devDependencies": {

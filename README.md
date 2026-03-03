@@ -8,7 +8,7 @@ Bem-vindo ao meu portfólio! Este é um site single page responsivo que apresent
 - **Totalmente Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
 - **Single Page**: Navegação fluida e intuitiva com smooth scroll
 - **Performance Otimizada**: CSS e JavaScript minificados
-- **Lazy Loading**: Imagens carregam sob demanda
+- **Renderização Dinâmica**: Projetos e skills carregados de JSON
 - **Acessível**: HTML5 semântico, WCAG compliant
 
 ## 📁 Estrutura do Projeto
@@ -27,11 +27,14 @@ portfolio/
 │   └── styles.min.css      # CSS minificado (produção)
 ├── js/
 │   ├── navigation.js       # Módulo de navegação e smooth scroll
+│   ├── animations.js       # Utilitários de animação/reveal no scroll
 │   ├── projects.js         # Módulo de renderização de projetos
+│   ├── skills.js           # Módulo de renderização de skills
 │   ├── main.js             # Módulo principal e inicialização
 │   └── main.min.js         # Bundle JavaScript minificado (produção)
 ├── data/
-│   └── projects.json       # Dados dinâmicos dos projetos
+│   ├── projects.json       # Dados dinâmicos dos projetos
+│   └── skills.json         # Dados dinâmicos de skills
 └── assets/
     └── icons/              # Ícones personalizados (pasta para expansão futura)
 ```
@@ -129,7 +132,7 @@ npm run build
 
 **JavaScript:**
 1. Abra um minificador online: https://javascript-minifier.com
-2. Cole o conteúdo de `js/navigation.js`, `js/projects.js` e `js/main.js` em sequência
+2. Cole o conteúdo de `js/navigation.js`, `js/animations.js`, `js/projects.js`, `js/skills.js` e `js/main.js` em sequência
 3. Copie o resultado minificado
 4. Cole em `js/main.min.js`
 
@@ -182,6 +185,7 @@ git push origin main
 - **Bootstrap 5**: Via CDN para componentes responsivos
 - **Font Awesome 6**: Via CDN para ícones
 - **JSON**: Para dados dinâmicos de projetos
+- **JSON**: Para dados dinâmicos de projetos e skills
 
 ## ♿ Acessibilidade
 
@@ -190,14 +194,15 @@ O portfólio segue boas práticas de acessibilidade:
 - Atributos ARIA quando necessário
 - Contraste adequado de cores
 - Navegação por teclado completa
+- Marcação de idioma para conteúdo em inglês quando aplicável
 - Alt text para imagens (quando adicionadas)
 
 ## 🎯 Seções do Site
 
 ### Navbar
 Navegação fixa no topo com:
-- Logo/marca pessoal (JDT)
-- Links de navegação (Sobre, Habilidades, Projetos)
+- Logo/marca pessoal (JDDT)
+- Links de navegação (Sobre, Habilidades, Educação, Projetos)
 - Ícones de contato (Email, LinkedIn, GitHub)
 - Menu responsivo (hambúrguer em mobile)
 
@@ -209,11 +214,11 @@ Apresentação profissional com:
 - Botões CTA (Ver Projetos / Entre em Contato)
 
 ### Skills Section
-Grid com 4 categorias:
-- Backend (Java, Spring Boot, etc)
-- Frontend (React, Angular, JavaScript)
+Grid dinâmico carregado de `data/skills.json`:
+- Backend (Java, Spring, Quarkus, Node.js, TypeScript)
+- Frontend (React, Angular, TypeScript, JavaScript)
 - Databases (MySQL, PostgreSQL, MongoDB, Firebase)
-- Cloud (AWS Services)
+- Cloud & DevOps (AWS, CI/CD, Docker, Jenkins, GitLab)
 
 ### Projects Section
 Grid dinâmica carregada de `data/projects.json`:

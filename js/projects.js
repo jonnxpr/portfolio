@@ -42,10 +42,9 @@ const Projects = (() => {
   };
 
   const createProjectCard = (project, index) => {
-    const card = document.createElement('div');
+    const card = document.createElement('li');
     card.className = 'project-card fade-in-scroll';
     card.style.animationDelay = `${index * 0.1}s`;
-    card.setAttribute('role', 'listitem');
 
     // Badge de projeto atual
     if (project.current) {
@@ -59,7 +58,7 @@ const Projects = (() => {
     const image = document.createElement('div');
     image.className = 'project-card__image';
     image.setAttribute('aria-hidden', 'true');
-    image.innerHTML = project.icon || '<i class="fas fa-code"></i>';
+    image.appendChild(createProjectIcon(project.icon));
 
     const content = document.createElement('div');
     content.className = 'project-card__content';
@@ -105,7 +104,13 @@ const Projects = (() => {
         }
         
         link.setAttribute('aria-label', `Abrir ${linkName} em nova aba`);
-        link.innerHTML = `<i class="${iconClass}" aria-hidden="true"></i> ${linkName}`;
+
+        const icon = document.createElement('i');
+        icon.className = iconClass;
+        icon.setAttribute('aria-hidden', 'true');
+
+        link.appendChild(icon);
+        link.appendChild(document.createTextNode(` ${linkName}`));
         linksContainer.appendChild(link);
       });
     }
@@ -121,22 +126,22 @@ const Projects = (() => {
     return card;
   };
 
-  const setupLazyLoading = () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.animation = `fadeInOnScroll 0.6s ease-out forwards`;
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    });
+  const createProjectIcon = (iconMarkup) => {
+    const icon = document.createElement('i');
+    icon.setAttribute('aria-hidden', 'true');
 
-    document.querySelectorAll('.fade-in-scroll').forEach((el) => {
-      observer.observe(el);
-    });
+    const fallbackClass = 'fas fa-code';
+    const classRegex = /class=['"]([^'"]+)['"]/i;
+    const classMatch = typeof iconMarkup === 'string'
+      ? classRegex.exec(iconMarkup)
+      : null;
+
+    icon.className = classMatch?.[1] || fallbackClass;
+    return icon;
+  };
+
+  const setupLazyLoading = () => {
+    AnimationUtils.observeFadeInSelector('#projects-container .fade-in-scroll');
   };
 
   return {
