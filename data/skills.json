@@ -1,26 +1,58 @@
 [
   {
     "id": 1,
-    "title": "Backend",
-    "description": "Java, Spring, Quarkus, Node.js, TypeScript, REST APIs, Microservices, Monoliths",
+    "title": {
+      "pt-BR": "Backend",
+      "en": "Backend",
+      "es": "Backend"
+    },
+    "description": {
+      "pt-BR": "Java, Spring, Quarkus, Node.js, TypeScript, APIs REST, Microsserviços, Monolitos",
+      "en": "Java, Spring, Quarkus, Node.js, TypeScript, REST APIs, Microservices, Monoliths",
+      "es": "Java, Spring, Quarkus, Node.js, TypeScript, APIs REST, Microservicios, Monolitos"
+    },
     "icon": "<i class='fas fa-server'></i>"
   },
   {
     "id": 2,
-    "title": "Frontend",
-    "description": "React, Angular, Ionic, TypeScript, JavaScript, Bootstrap, Tailwind CSS, HTML/CSS",
+    "title": {
+      "pt-BR": "Frontend",
+      "en": "Frontend",
+      "es": "Frontend"
+    },
+    "description": {
+      "pt-BR": "React, Angular, Ionic, TypeScript, JavaScript, Bootstrap, Tailwind CSS, HTML/CSS",
+      "en": "React, Angular, Ionic, TypeScript, JavaScript, Bootstrap, Tailwind CSS, HTML/CSS",
+      "es": "React, Angular, Ionic, TypeScript, JavaScript, Bootstrap, Tailwind CSS, HTML/CSS"
+    },
     "icon": "<i class='fas fa-code'></i>"
   },
   {
     "id": 3,
-    "title": "Databases",
-    "description": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
+    "title": {
+      "pt-BR": "Bancos de Dados",
+      "en": "Databases",
+      "es": "Bases de Datos"
+    },
+    "description": {
+      "pt-BR": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
+      "en": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
+      "es": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL"
+    },
     "icon": "<i class='fas fa-database'></i>"
   },
   {
     "id": 4,
-    "title": "Cloud & DevOps",
-    "description": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
+    "title": {
+      "pt-BR": "Cloud e DevOps",
+      "en": "Cloud & DevOps",
+      "es": "Cloud y DevOps"
+    },
+    "description": {
+      "pt-BR": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
+      "en": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
+      "es": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab"
+    },
     "icon": "<i class='fas fa-cloud'></i>"
   }
 ]

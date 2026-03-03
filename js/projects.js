@@ -4,11 +4,13 @@
 
 const Projects = (() => {
   let projectsData = [];
+  let languageListenerBound = false;
 
   const init = async () => {
     await loadProjectsData();
     renderProjects();
     setupLazyLoading();
+    setupLanguageListener();
   };
 
   const loadProjectsData = async () => {
@@ -31,7 +33,7 @@ const Projects = (() => {
     container.innerHTML = '';
 
     if (projectsData.length === 0) {
-      container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-secondary);">Projetos em desenvolvimento...</p>';
+      container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-secondary);">${I18n.t('projectsEmpty')}</p>`;
       return;
     }
 
@@ -50,8 +52,8 @@ const Projects = (() => {
     if (project.current) {
       const currentBadge = document.createElement('div');
       currentBadge.className = 'project-card__current-badge';
-      currentBadge.setAttribute('aria-label', 'Projeto atual: Empresa onde estou trabalhando atualmente');
-      currentBadge.innerHTML = '<i class="fas fa-star" aria-hidden="true"></i> Projeto Atual';
+      currentBadge.setAttribute('aria-label', I18n.t('projectCurrentAria'));
+      currentBadge.innerHTML = `<i class="fas fa-star" aria-hidden="true"></i> ${I18n.t('projectCurrentText')}`;
       card.appendChild(currentBadge);
     }
 
@@ -65,17 +67,21 @@ const Projects = (() => {
 
     const title = document.createElement('h3');
     title.className = 'project-card__title';
-    title.textContent = project.title;
+    title.textContent = I18n.resolveLocalizedValue(project.title);
+    title.setAttribute('lang', I18n.t('htmlLang'));
 
     const description = document.createElement('p');
     description.className = 'project-card__description';
-    description.textContent = project.description;
+    description.textContent = I18n.resolveLocalizedValue(project.description);
+    description.setAttribute('lang', I18n.t('htmlLang'));
 
     const techContainer = document.createElement('div');
     techContainer.className = 'project-card__technologies';
-    techContainer.setAttribute('aria-label', 'Tecnologias utilizadas');
+    techContainer.setAttribute('aria-label', I18n.t('projectTechAria'));
 
-    project.technologies.forEach((tech) => {
+    const localizedTechnologies = I18n.resolveLocalizedValue(project.technologies) || [];
+
+    localizedTechnologies.forEach((tech) => {
       const badge = document.createElement('span');
       badge.className = 'tech-badge';
       badge.textContent = tech;
@@ -86,7 +92,7 @@ const Projects = (() => {
     const linksContainer = document.createElement('div');
     linksContainer.className = 'project-card__links';
     linksContainer.setAttribute('role', 'navigation');
-    linksContainer.setAttribute('aria-label', 'Links do projeto');
+    linksContainer.setAttribute('aria-label', I18n.t('projectLinksAria'));
 
     // Renderizar links personalizados dinamicamente
     if (project.links) {
@@ -103,7 +109,7 @@ const Projects = (() => {
           iconClass = 'fab fa-github';
         }
         
-        link.setAttribute('aria-label', `Abrir ${linkName} em nova aba`);
+        link.setAttribute('aria-label', I18n.t('projectOpenLink', { name: linkName }));
 
         const icon = document.createElement('i');
         icon.className = iconClass;
@@ -142,6 +148,17 @@ const Projects = (() => {
 
   const setupLazyLoading = () => {
     AnimationUtils.observeFadeInSelector('#projects-container .fade-in-scroll');
+  };
+
+  const setupLanguageListener = () => {
+    if (languageListenerBound) return;
+
+    globalThis.addEventListener('languageChanged', () => {
+      renderProjects();
+      setupLazyLoading();
+    });
+
+    languageListenerBound = true;
   };
 
   return {

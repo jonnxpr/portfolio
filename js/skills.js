@@ -4,11 +4,13 @@
 
 const Skills = (() => {
   let skillsData = [];
+  let languageListenerBound = false;
 
   const init = async () => {
     await loadSkillsData();
     renderSkills();
     setupLazyLoading();
+    setupLanguageListener();
   };
 
   const loadSkillsData = async () => {
@@ -31,7 +33,7 @@ const Skills = (() => {
     container.innerHTML = '';
 
     if (skillsData.length === 0) {
-      container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-secondary);">Habilidades em atualização...</p>';
+      container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-secondary);">${I18n.t('skillsEmpty')}</p>`;
       return;
     }
 
@@ -53,13 +55,13 @@ const Skills = (() => {
 
     const title = document.createElement('h3');
     title.className = 'skill-category__title';
-    title.setAttribute('lang', 'en');
-    title.textContent = skill.title;
+    title.setAttribute('lang', I18n.t('htmlLang'));
+    title.textContent = I18n.resolveLocalizedValue(skill.title);
 
     const description = document.createElement('p');
     description.className = 'skill-category__description';
-    description.setAttribute('lang', 'en');
-    description.textContent = skill.description;
+    description.setAttribute('lang', I18n.t('htmlLang'));
+    description.textContent = I18n.resolveLocalizedValue(skill.description);
 
     card.appendChild(icon);
     card.appendChild(title);
@@ -84,6 +86,17 @@ const Skills = (() => {
 
   const setupLazyLoading = () => {
     AnimationUtils.observeFadeInSelector('#skills-container .fade-in-scroll');
+  };
+
+  const setupLanguageListener = () => {
+    if (languageListenerBound) return;
+
+    globalThis.addEventListener('languageChanged', () => {
+      renderSkills();
+      setupLazyLoading();
+    });
+
+    languageListenerBound = true;
   };
 
   return {

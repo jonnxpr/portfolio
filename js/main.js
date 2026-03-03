@@ -3,16 +3,17 @@
    ======================================== */
 
 const App = (() => {
-  const init = () => {
+  const init = async () => {
     // Definir ano dinâmico do copyright
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
       yearSpan.textContent = new Date().getFullYear();
     }
 
+    await I18n.init();
     Navigation.init();
-    Skills.init();
-    Projects.init();
+    await Skills.init();
+    await Projects.init();
   };
 
   return {

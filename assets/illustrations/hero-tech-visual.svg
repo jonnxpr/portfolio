@@ -1,0 +1,62 @@
+<svg width="680" height="680" viewBox="0 0 680 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panelGradient" x1="40" y1="40" x2="640" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D9FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#B300FF" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="84" y1="84" x2="596" y2="596" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D9FF"/>
+      <stop offset="1" stop-color="#77E8FF"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="680" height="680" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="40" y="40" width="600" height="600" rx="28" fill="url(#panelGradient)" stroke="#00D9FF" stroke-opacity="0.5" stroke-width="2"/>
+
+  <g filter="url(#glow)">
+    <circle cx="340" cy="340" r="156" stroke="url(#lineGradient)" stroke-opacity="0.95" stroke-width="2" stroke-dasharray="8 8"/>
+    <circle cx="340" cy="340" r="108" stroke="#00D9FF" stroke-opacity="0.75" stroke-width="2"/>
+  </g>
+
+  <g stroke="#00D9FF" stroke-opacity="0.82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 340H120"/>
+    <path d="M560 340H462"/>
+    <path d="M340 218V120"/>
+    <path d="M340 560V462"/>
+  </g>
+
+  <g fill="#00D9FF">
+    <circle cx="120" cy="340" r="6"/>
+    <circle cx="560" cy="340" r="6"/>
+    <circle cx="340" cy="120" r="6"/>
+    <circle cx="340" cy="560" r="6"/>
+  </g>
+
+  <g fill="#00D9FF" fill-opacity="0.9" font-family="JetBrains Mono, monospace" font-size="52" font-weight="700">
+    <text x="250" y="360">&lt;/&gt;</text>
+  </g>
+
+  <g fill="#00D9FF" fill-opacity="0.85" font-family="JetBrains Mono, monospace" font-size="18" font-weight="500">
+    <text x="92" y="112">SYSTEM.NODE(DEV_PORTFOLIO)</text>
+    <text x="92" y="136">STATUS: ONLINE</text>
+    <text x="92" y="160">MODE: FULL_STACK</text>
+  </g>
+
+  <g stroke="#00D9FF" stroke-opacity="0.55" stroke-width="1.5">
+    <rect x="92" y="190" width="496" height="98" rx="12"/>
+    <rect x="92" y="392" width="496" height="98" rx="12"/>
+    <path d="M112 216H568"/>
+    <path d="M112 418H568"/>
+  </g>
+
+  <g fill="#77E8FF" fill-opacity="0.95" font-family="JetBrains Mono, monospace" font-size="16">
+    <text x="112" y="246">stack: java | spring | node | react | angular | cloud</text>
+    <text x="112" y="448">focus: scalable systems • clean architecture</text>
+  </g>
+</svg>

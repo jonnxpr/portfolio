@@ -178,6 +178,73 @@ select:focus-visible {
   align-items: center;
 }
 
+.navbar__language {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__language-group {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0, 217, 255, 0.06);
+  padding: 0;
+  margin: 0;
+  min-inline-size: auto;
+}
+
+.navbar__language-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar__language-option {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  min-width: 46px;
+  height: 34px;
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__language-option + .navbar__language-option {
+  border-left: 1px solid rgba(0, 217, 255, 0.22);
+}
+
+.navbar__language-input + .navbar__language-option {
+  border-left: 1px solid rgba(0, 217, 255, 0.22);
+}
+
+.navbar__language-input:first-of-type + .navbar__language-option {
+  border-left: 0;
+}
+
+.navbar__language-option:hover {
+  color: var(--color-neon-cian);
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.navbar__language-input:checked + .navbar__language-option {
+  color: var(--color-bg-primary);
+  background: var(--color-neon-cian);
+  box-shadow: inset 0 0 0 1px rgba(0, 217, 255, 0.9);
+}
+
+.navbar__language-input:focus-visible + .navbar__language-option {
+  outline: 2px solid var(--color-neon-cian);
+  outline-offset: -2px;
+}
+
 .navbar__contact-link {
   color: var(--color-text-primary);
   font-size: var(--font-size-lg);
@@ -278,6 +345,35 @@ select:focus-visible {
   margin-bottom: var(--spacing-2xl);
   max-width: 600px;
   line-height: 1.8;
+}
+
+.hero__visual {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  padding: 14px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.08), rgba(179, 0, 255, 0.05));
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  box-shadow: var(--shadow-lg);
+  margin-top: var(--spacing-lg);
+  position: relative;
+}
+
+.hero__visual::after {
+  content: '';
+  position: absolute;
+  inset: -26px -18px -32px -24px;
+  background: radial-gradient(circle at 40% 30%, rgba(0, 217, 255, 0.18) 0%, rgba(179, 0, 255, 0.05) 45%, transparent 72%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero__visual-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  filter: drop-shadow(0 0 18px rgba(0, 217, 255, 0.28));
 }
 
 /* Tech Stack */
@@ -865,6 +961,12 @@ select:focus-visible {
     width: 100%;
     border-top: 1px solid rgba(0, 217, 255, 0.1);
     padding-top: var(--spacing-lg);
+  }
+
+  .navbar__language {
+    margin-top: var(--spacing-lg);
+    justify-content: center;
+    width: 100%;
   }
 
   .navbar__nav {

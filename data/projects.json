@@ -1,9 +1,21 @@
 [
-    {
+  {
     "id": 1,
-    "title": "Sistemas de Gerenciamento Industrial (Pátio, Ativos, Manutenção e Financeiro)",
-    "description": "Na Vetta, atuei por três anos no cliente Usiminas, evoluindo de estagiário (2021) a profissional. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. Trabalhei em ambiente ágil utilizando Scrum e Kanban, colaborando eficazmente com equipes multifuncionais. A experiência consolidou minhas habilidades técnicas e de colaboração, entregando soluções de qualidade para uma grande corporação.",
-    "technologies": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD with Jenkins and Gogs"],
+    "title": {
+      "pt-BR": "Sistemas de Gerenciamento Industrial (Pátio, Ativos, Manutenção e Financeiro)",
+      "en": "Industrial Management Systems (Yard, Assets, Maintenance, and Finance)",
+      "es": "Sistemas de Gestión Industrial (Patio, Activos, Mantenimiento y Finanzas)"
+    },
+    "description": {
+      "pt-BR": "Na Vetta, atuei por três anos no cliente Usiminas, evoluindo de estagiário (2021) a profissional. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. Trabalhei em ambiente ágil utilizando Scrum e Kanban, colaborando eficazmente com equipes multifuncionais. A experiência consolidou minhas habilidades técnicas e de colaboração, entregando soluções de qualidade para uma grande corporação.",
+      "en": "At Vetta, I worked for three years on the Usiminas account, progressing from intern (2021) to professional developer. I participated in the development and maintenance of integrated industrial management systems, including yard, assets, maintenance, and financial management. These systems significantly improved operations, delivering higher efficiency and control in daily activities. I worked in agile environments using Scrum and Kanban, collaborating effectively with cross-functional teams. This experience strengthened my technical and collaboration skills while delivering high-quality solutions for a large corporation.",
+      "es": "En Vetta, trabajé durante tres años para el cliente Usiminas, evolucionando de pasante (2021) a desarrollador profesional. Participé en el desarrollo y mantenimiento de sistemas integrados de gestión industrial, incluyendo patio, activos, mantenimiento y gestión financiera. Estos sistemas optimizaron significativamente las operaciones, brindando mayor eficiencia y control en las actividades diarias. Trabajé en entornos ágiles utilizando Scrum y Kanban, colaborando eficazmente con equipos multidisciplinarios. Esta experiencia fortaleció mis habilidades técnicas y de colaboración, entregando soluciones de alta calidad para una gran corporación."
+    },
+    "technologies": {
+      "pt-BR": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD com Jenkins e Gogs"],
+      "en": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD with Jenkins and Gogs"],
+      "es": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD con Jenkins y Gogs"]
+    },
     "icon": "<i class='fas fa-industry'></i>",
     "current": false,
     "links": {
@@ -13,9 +25,21 @@
   },
   {
     "id": 2,
-    "title": "PartnerBank - Instituição de Pagamento",
-    "description": "Atuo no desenvolvimento e manutenção de aplicações REST em Java e Spring Boot com frontend em React. Realizo integrações com AWS (S3, SQS, ECS) e implemento pipelines de CI/CD utilizando GitLab, Docker, Nexus e Sonar, garantindo qualidade e observabilidade através do New Relic para monitorar performance e identificar gargalos. Minhas responsabilidades incluem definição de padrões de código, revisão técnica, documentação e suporte a sistemas existentes. Trabalho com bancos de dados MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban). Atualmente, desenvolvo novos módulos para a plataforma de serviços financeiros, otimizando aplicações legadas e assegurando conformidade regulatória do setor.",
-    "technologies": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD with GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
+    "title": {
+      "pt-BR": "PartnerBank - Instituição de Pagamento",
+      "en": "PartnerBank - Payment Institution",
+      "es": "PartnerBank - Institución de Pago"
+    },
+    "description": {
+      "pt-BR": "Atuo no desenvolvimento e manutenção de aplicações REST em Java e Spring Boot com frontend em React. Realizo integrações com AWS (S3, SQS, ECS) e implemento pipelines de CI/CD utilizando GitLab, Docker, Nexus e Sonar, garantindo qualidade e observabilidade através do New Relic para monitorar performance e identificar gargalos. Minhas responsabilidades incluem definição de padrões de código, revisão técnica, documentação e suporte a sistemas existentes. Trabalho com bancos de dados MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban). Atualmente, desenvolvo novos módulos para a plataforma de serviços financeiros, otimizando aplicações legadas e assegurando conformidade regulatória do setor.",
+      "en": "I develop and maintain REST applications in Java and Spring Boot with a React frontend. I implement AWS integrations (S3, SQS, ECS) and build CI/CD pipelines using GitLab, Docker, Nexus, and Sonar, ensuring quality and observability through New Relic for performance monitoring and bottleneck detection. My responsibilities include coding standards definition, technical review, documentation, and support for existing systems. I work with MySQL, PostgreSQL, and MongoDB in agile environments (Scrum and Kanban). Currently, I build new modules for the financial services platform, optimize legacy applications, and ensure regulatory compliance.",
+      "es": "Desarrollo y mantengo aplicaciones REST en Java y Spring Boot con frontend en React. Implemento integraciones con AWS (S3, SQS, ECS) y pipelines de CI/CD utilizando GitLab, Docker, Nexus y Sonar, garantizando calidad y observabilidad con New Relic para monitorear rendimiento e identificar cuellos de botella. Mis responsabilidades incluyen definición de estándares de código, revisión técnica, documentación y soporte a sistemas existentes. Trabajo con MySQL, PostgreSQL y MongoDB en entornos ágiles (Scrum y Kanban). Actualmente, desarrollo nuevos módulos para la plataforma de servicios financieros, optimizo aplicaciones legadas y aseguro el cumplimiento regulatorio del sector."
+    },
+    "technologies": {
+      "pt-BR": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD com GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
+      "en": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD with GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
+      "es": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD con GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"]
+    },
     "icon": "<i class='fas fa-credit-card'></i>",
     "current": true,
     "links": {
