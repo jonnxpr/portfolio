@@ -40,12 +40,14 @@ Technical memory for implementation and refactor in this workspace.
 - Consult Context7 MCP for latest framework/library/language guidance before implementation/refactor/review.
 - Prefer modern and suitable features when compatibility is verified against project constraints.
 
-## Mandatory final code review and factual integrity
+## Mandatory final code review, cross-validation, and factual integrity
 
 - At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
-- Review must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
+- Cross-validation is mandatory and does not replace code review: validate outputs against at least two independent sources of evidence (for example tests/build logs, contract/docs, runtime behavior, or diff-based verification).
+- Final approval requires both gates: (1) technical code review quality and (2) evidence-based cross-validation consistency.
+- Review and cross-validation must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
 - It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
-- Never invent facts, APIs, versions, behaviors, or references; if uncertain, verify first or explicitly state uncertainty.
+- Never invent facts, APIs, versions, behaviors, references, or validation results; if uncertain, verify first or explicitly state uncertainty.
 
 ## MCP credential discovery and connection consent (mandatory)
 
