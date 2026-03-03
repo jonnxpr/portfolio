@@ -1,7 +1,8 @@
 ---
 name: orchestrate-multi-agents
-description: Robust multi-agent orchestration with dependency DAG, quality/security gates, HITL checkpoints, and auditable consolidation.
+description: Consolidated orchestration memory for complex multi-agent execution with planning, dependency control, quality gates, and auditable delivery.
 ---
+
 
 # Skill: Orchestrate Multi-Agents (Orquestracao de Multi Agentes)
 

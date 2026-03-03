@@ -1,3 +1,9 @@
+---
+name: orchestrate-multi-agents
+description: Consolidated orchestration memory for complex multi-agent execution with planning, dependency control, quality gates, and auditable delivery.
+---
+
+
 # Skill: Orchestrate Multi-Agents (Orquestracao de Multi Agentes)
 
 ## Objective
