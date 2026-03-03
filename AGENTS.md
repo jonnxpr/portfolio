@@ -112,3 +112,11 @@ This rule is strict and non-optional: Conventional Commits with message content 
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
 - Never invent credential locations, tokens, API keys, or authentication results.
 
+
+## Mandatory multi-agent orchestration skill
+
+- For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
+- OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
+- For OpenCode, when `.opencode/skills/` exists in the workspace, mirror this skill in `.opencode/skills/orchestrate-multi-agents/SKILL.md`.
+- Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
+- If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
