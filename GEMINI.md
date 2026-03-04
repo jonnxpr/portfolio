@@ -37,7 +37,8 @@ Then include one objective next step.
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/<category>.instructions.md` (when applicable)
 5. `.agent/skills/development-standards/SKILL.md`
-6. `.agent/rules/development-standards.md`
+6. `.agent/skills/frontend-design/SKILL.md` (frontend design-centric tasks)
+7. `.agent/rules/development-standards.md`
 
 ## Mandatory rules
 
@@ -51,6 +52,7 @@ Then include one objective next step.
 - Continuously update `tasks/lessons.md` whenever new lessons are learned.
 - This is a non-Java workspace; do not run Java/Maven/Gradle builds here.
 - For technology decisions, consult Context7 MCP and apply the latest suitable guidance for the active stack.
+- For frontend design-centric tasks, apply `.agent/skills/frontend-design/SKILL.md` together with `.github/instructions/web.instructions.md`.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

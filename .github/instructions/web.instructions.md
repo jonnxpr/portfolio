@@ -12,6 +12,7 @@ applyTo: "index.html,css/**,js/**"
 - Keep vanilla JS modular and avoid unnecessary abstractions.
 - Prefer CSS variables over hardcoded repeated values.
 - Keep animation subtle and meaningful.
+- For frontend design-centric tasks, apply `.agent/skills/frontend-design/SKILL.md`.
 
 ## Minimum validation
 

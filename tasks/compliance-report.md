@@ -1,7 +1,7 @@
 # Compliance Report
 
 - Score: **100/100**
-- Files checked: **15**
+- Files checked: **16**
 - Missing final gate: **0**
 - Missing orchestration section: **0**
 - Missing DAG reference: **0**

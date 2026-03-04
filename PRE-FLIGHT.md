@@ -16,6 +16,7 @@ Hard gate before any technical answer.
 10. This workspace is non-Java; do not run Java/Maven/Gradle builds here.
 11. If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with clear usage instructions before technical work.
 12. Before technical implementation/refactor/review, consult Context7 MCP for the technologies involved and apply the latest suitable guidance.
+13. For frontend design-centric tasks (building or redesigning pages/components/interfaces), load `.agent/skills/frontend-design/SKILL.md`.
 
 ## Universal optimization guardrails
 

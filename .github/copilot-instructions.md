@@ -42,6 +42,10 @@ and include one objective next step.
 - Before technical implementation/refactor/review, consult Context7 MCP for latest docs/examples of technologies in scope.
 - Prefer modern and suitable features when compatible with project runtime/build constraints and architecture.
 
+## Frontend design skill (mandatory by context)
+
+- For frontend design-centric tasks (building or redesigning pages/components/interfaces), also apply `.agent/skills/frontend-design/SKILL.md`.
+
 ## Integral instruction read (mandatory)
 
 - All required instruction files must be read completely (first line to last line).

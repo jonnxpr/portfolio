@@ -56,6 +56,7 @@ and include one objective next action.
 ## Skills auto-loading
 
 - Implementation/refactor: `development-standards`.
+- Frontend design-centric tasks: `development-standards` + `frontend-design`.
 - Review/PR: `development-standards` + `code-review`.
 
 ## Task knowledge policy (mandatory)
@@ -88,6 +89,7 @@ This rule is strict and non-optional: Conventional Commits with message content 
 - `.github/instructions/web.instructions.md`
 - `.github/instructions/data.instructions.md`
 - `.agent/skills/development-standards/SKILL.md`
+- `.agent/skills/frontend-design/SKILL.md`
 - `.agent/skills/code-review/SKILL.md`
 - `.agent/rules/development-standards.md`
 - `CLAUDE.md`, `GEMINI.md`, `PRE-FLIGHT.md`
