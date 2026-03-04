@@ -7,9 +7,9 @@
       "es": "Backend"
     },
     "description": {
-      "pt-BR": "Java, Spring, Quarkus, Node.js, TypeScript, APIs REST, Microsserviços, Monolitos",
-      "en": "Java, Spring, Quarkus, Node.js, TypeScript, REST APIs, Microservices, Monoliths",
-      "es": "Java, Spring, Quarkus, Node.js, TypeScript, APIs REST, Microservicios, Monolitos"
+      "pt-BR": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, APIs REST, Microsserviços, Monolitos",
+      "en": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, REST APIs, Microservices, Monoliths",
+      "es": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, APIs REST, Microservicios, Monolitos"
     },
     "icon": "<i class='fas fa-server'></i>"
   },

@@ -28,6 +28,7 @@ build/
 !opencode.json
 !tasks/
 !tasks/**
+tasks/*.sarif
 !scripts/jdk-env.ps1
 !scripts/gradlew-jdk.ps1
 !scripts/mvn-jdk.ps1

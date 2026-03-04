@@ -35,6 +35,14 @@ const I18n = (() => {
     return defaultLanguage;
   };
 
+  const withAssetVersion = (path) => {
+    const version = document.querySelector('meta[name="asset-version"]')?.getAttribute('content')?.trim();
+    if (!version) return path;
+
+    const separator = path.includes('?') ? '&' : '?';
+    return `${path}${separator}v=${encodeURIComponent(version)}`;
+  };
+
   const getNestedValue = (source, keyPath) => {
     if (!source) return undefined;
 
@@ -137,6 +145,11 @@ const I18n = (() => {
     setText('#hero-description-2', 'heroDescription2');
     setText('#hero-stack-title', 'heroStackTitle');
     setAttribute('#hero-tech-icons', 'aria-label', 'heroTechAria');
+    setAttribute('#hero-highlights', 'aria-label', 'heroHighlightsAria');
+    setText('#hero-highlights-title', 'heroHighlightsTitle');
+    setText('#hero-highlight-1', 'heroHighlight1');
+    setText('#hero-highlight-2', 'heroHighlight2');
+    setText('#hero-highlight-3', 'heroHighlight3');
 
     setText('#cta-projects', 'ctaProjects');
     setText('#cta-contact', 'ctaContact');
@@ -161,10 +174,16 @@ const I18n = (() => {
     setText('#projects-description', 'projectsDescription');
     setAttribute('#projects-container', 'aria-label', 'projectsListAria');
 
+    setText('#opportunities-title', 'opportunitiesTitle');
+    setText('#opportunities-text', 'opportunitiesText');
+    setAttribute('#opportunities-actions', 'aria-label', 'opportunitiesActionsAria');
+    setText('#opportunities-email', 'opportunitiesEmail');
+    setText('#opportunities-linkedin', 'opportunitiesLinkedin');
+
     setText('#footer-rights-text', 'footerRights');
 
     const contentLanguage = t('htmlLang');
-    ['#hero-role', '#hero-description-1', '#hero-description-2', '#skills-title', '#skills-description', '#education-title', '#education-description', '#projects-title', '#projects-description'].forEach((selector) => {
+    ['#hero-role', '#hero-description-1', '#hero-description-2', '#hero-highlights-title', '#hero-highlight-1', '#hero-highlight-2', '#hero-highlight-3', '#skills-title', '#skills-description', '#education-title', '#education-description', '#projects-title', '#projects-description', '#opportunities-title', '#opportunities-text'].forEach((selector) => {
       const element = document.querySelector(selector);
       if (element) {
         element.setAttribute('lang', contentLanguage);
@@ -228,7 +247,7 @@ const I18n = (() => {
   };
 
   const loadTranslations = async () => {
-    const response = await fetch('data/i18n.json');
+    const response = await fetch(withAssetVersion('data/i18n.json'), { cache: 'no-store' });
     if (!response.ok) {
       throw new Error('Failed to load i18n data');
     }

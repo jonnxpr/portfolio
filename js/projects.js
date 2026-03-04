@@ -6,6 +6,32 @@ const Projects = (() => {
   let projectsData = [];
   let languageListenerBound = false;
 
+  const withAssetVersion = (path) => {
+    const version = document.querySelector('meta[name="asset-version"]')?.getAttribute('content')?.trim();
+    if (!version) return path;
+
+    const separator = path.includes('?') ? '&' : '?';
+    return `${path}${separator}v=${encodeURIComponent(version)}`;
+  };
+
+  const sanitizeLinkUrl = (rawUrl) => {
+    if (typeof rawUrl !== 'string' || rawUrl.trim().length === 0) {
+      return null;
+    }
+
+    try {
+      const parsed = new URL(rawUrl, globalThis.location.origin);
+      const allowedProtocols = new Set(['https:', 'http:', 'mailto:']);
+      if (!allowedProtocols.has(parsed.protocol)) {
+        return null;
+      }
+
+      return parsed.href;
+    } catch {
+      return null;
+    }
+  };
+
   const init = async () => {
     await loadProjectsData();
     renderProjects();
@@ -15,7 +41,7 @@ const Projects = (() => {
 
   const loadProjectsData = async () => {
     try {
-      const response = await fetch('data/projects.json');
+      const response = await fetch(withAssetVersion('data/projects.json'), { cache: 'no-store' });
       if (!response.ok) {
         throw new Error('Failed to load projects');
       }
@@ -97,11 +123,17 @@ const Projects = (() => {
     // Renderizar links personalizados dinamicamente
     if (project.links) {
       Object.entries(project.links).forEach(([linkName, linkUrl]) => {
+        const safeUrl = sanitizeLinkUrl(linkUrl);
+        if (!safeUrl) return;
+
         const link = document.createElement('a');
-        link.href = linkUrl;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
+        link.href = safeUrl;
         link.className = 'project-link';
+
+        if (safeUrl.startsWith('http://') || safeUrl.startsWith('https://')) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
         
         // Definir ícone com base no nome do link
         let iconClass = 'fas fa-external-link-alt'; // Default

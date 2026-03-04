@@ -6,6 +6,14 @@ const Skills = (() => {
   let skillsData = [];
   let languageListenerBound = false;
 
+  const withAssetVersion = (path) => {
+    const version = document.querySelector('meta[name="asset-version"]')?.getAttribute('content')?.trim();
+    if (!version) return path;
+
+    const separator = path.includes('?') ? '&' : '?';
+    return `${path}${separator}v=${encodeURIComponent(version)}`;
+  };
+
   const init = async () => {
     await loadSkillsData();
     renderSkills();
@@ -15,7 +23,7 @@ const Skills = (() => {
 
   const loadSkillsData = async () => {
     try {
-      const response = await fetch('data/skills.json');
+      const response = await fetch(withAssetVersion('data/skills.json'), { cache: 'no-store' });
       if (!response.ok) {
         throw new Error('Failed to load skills');
       }
