@@ -85,3 +85,10 @@ Then include one single objective next action to unblock.
 - Instruction sync (idempotent): `python ./tools/governance/sync-instructions.py`
 - Compliance score/report: `python ./tools/governance/audit-compliance.py`
 - Precedence matrix: `./tools/governance/precedence-matrix.md`
+
+## Skill runtime fallback (mandatory)
+
+- Preferred source for runtime skill loading: .opencode/skills/*/SKILL.md.
+- Fallback source (if runtime reports Available skills: none): .agent/skills/*/SKILL.md.
+- If Skill not found occurs, continue by reading required SKILL.md files directly and apply them in the same task.
+

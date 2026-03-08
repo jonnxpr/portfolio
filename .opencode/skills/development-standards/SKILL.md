@@ -1,58 +1,44 @@
-# GEMINI.md - Antigravity Entry Point (Portifolio)
+---
+name: development-standards
+description: Consolidated technical memory for implementation and refactoring in the Portifolio workspace.
+---
 
-Use `CLAUDE.md` as canonical workflow.
+# Skill - development-standards (Portifolio)
 
-## Hard preflight gate (mandatory)
+## Intent
 
-Before any technical response:
+Technical memory for implementation and refactor in this workspace.
 
-1. Read mandatory instruction files for active context.
-2. Start response with:
-   - `Preflight OK: <file1>, <file2>, ...`
+## Stack and architecture
 
-If preflight is incomplete, do not provide technical content. Reply only:
+- Static single-page site (`index.html`).
+- CSS source: `css/styles.css`; artifact: `css/styles.min.css`.
+- JS source modules: `js/navigation.js`, `js/projects.js`, `js/main.js`; artifact: `js/main.min.js`.
+- Data source: `data/projects.json`.
 
-- `BLOCKED: preflight incompleto`
+## Rules
 
-Then include one objective next step.
+- Preserve existing UI language and interaction patterns.
+- Keep semantic HTML and accessibility good practices.
+- Keep JS simple, modular, and framework-free unless explicitly required.
+- Avoid unnecessary dependencies.
+- For CSS/JS source updates, regenerate minified files.
 
-## Universal optimization guardrails
+## Verification
 
-- Preserve existing instruction content with merge-by-intent.
-- Resolve stack/version details from manifests and active configuration.
-- Apply capability-based fallback when runtime/IDE support differs.
-- Keep critical rules concise and near file top.
-- Keep instruction changes idempotent.
+- Run `npm run build` for CSS/JS changes.
+- Run `npm start` and smoke-test affected sections on desktop and mobile viewport.
 
-## Integral instruction-read policy (mandatory)
+## Task knowledge
 
-- Read mandatory instruction files in full (all lines).
-- If runtime output is partial, continue chunked reads until EOF.
-- Preflight only completes after full-file reads.
-
-## Mandatory loading order
-
-1. `.copilot/base-instructions.md`
-2. `CLAUDE.md`
-3. `.github/copilot-instructions.md`
-4. `.github/instructions/<category>.instructions.md` (when applicable)
-5. `.agent/skills/development-standards/SKILL.md`
-6. `.agent/skills/frontend-design/SKILL.md` (frontend design-centric tasks)
-7. `.agent/rules/development-standards.md`
-
-## Mandatory rules
-
-- Preserve existing visual language and responsiveness.
-- Keep static-first approach (HTML/CSS/JS, no unnecessary frameworks).
-- Keep build artifacts aligned when source files change.
-- Validate affected pages and interactions before completion.
-- For any commit creation or commit message generation task, read and strictly apply `.github/copilot-commit-message-instructions.md`.
-- If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` fully before technical output.
-- If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with usage guidance before technical output.
+- If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` before technical tasks.
+- If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with usage guidance before technical tasks.
 - Continuously update `tasks/lessons.md` whenever new lessons are learned.
-- This is a non-Java workspace; do not run Java/Maven/Gradle builds here.
-- For technology decisions, consult Context7 MCP and apply the latest suitable guidance for the active stack.
-- For frontend design-centric tasks, apply `.agent/skills/frontend-design/SKILL.md` together with `.github/instructions/web.instructions.md`.
+
+## Context7 policy (mandatory)
+
+- Consult Context7 MCP for latest framework/library/language guidance before implementation/refactor/review.
+- Prefer modern and suitable features when compatibility is verified against project constraints.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 
@@ -85,17 +71,3 @@ Then include one objective next step.
 - Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
 - If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
 - For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
-
-## Governance automation (mandatory)
-
-- Secret scan: `./tools/governance/scan-secrets.ps1`
-- Instruction sync (idempotent): `python ./tools/governance/sync-instructions.py`
-- Compliance score/report: `python ./tools/governance/audit-compliance.py`
-- Precedence matrix: `./tools/governance/precedence-matrix.md`
-
-## Skill runtime fallback (mandatory)
-
-- Preferred source for runtime skill loading: .opencode/skills/*/SKILL.md.
-- Fallback source (if runtime reports Available skills: none): .agent/skills/*/SKILL.md.
-- If Skill not found occurs, continue by reading required SKILL.md files directly and apply them in the same task.
-
