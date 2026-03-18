@@ -86,21 +86,22 @@ and include one objective next step.
 
 - When a task requests a specific MCP server, or when policy requires one (for example Context7), automatically attempt credential discovery before connecting.
 - Search credential/config locations in this order:
-  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`.
+  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`, `.copilot/mcp-config.json`.
   2. OpenCode config: path from `OPENCODE_CONFIG` (if set), then user/global OpenCode config directories for this OS (for example `~/.config/opencode/opencode.json`, `~/.config/opencode/mcp/*.json`).
-  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` (macOS), `~/.config/Code/User/mcp.json` (Linux).
-  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`).
+  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` and `%APPDATA%/Code/User/profiles/*/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` and `~/Library/Application Support/Code/User/profiles/*/mcp.json` (macOS), `~/.config/Code/User/mcp.json` and `~/.config/Code/User/profiles/*/mcp.json` (Linux).
+  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`, `~/.gemini/antigravity/mcp_config.json`).
   5. Environment variables referenced by MCP configuration (`env`, `${VAR}`, `$VAR`, `%VAR%`).
 - If credentials are not found, report exactly: `credentials not found for requested MCP`.
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
 - Never invent credential locations, tokens, API keys, or authentication results.
+- Treat user environment variables as valid fallback credential sources, especially `CONTEXT7_API_KEY`.
 
 
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
 - OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
-- For OpenCode, when `.opencode/skills/` exists in the workspace, mirror this skill in `.opencode/skills/orchestrate-multi-agents/SKILL.md`.
+- For OpenCode, when `skill/` exists in the workspace, mirror this skill in `skill/orchestrate-multi-agents/SKILL.md`.
 - Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
 - If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
 - For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
