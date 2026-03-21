@@ -2,10 +2,16 @@ from pathlib import Path
 import argparse
 import sys
 
-ROOT = Path('.')
+ROOT = Path(__file__).resolve().parents[2]
 TASKS = ROOT / 'tasks'
 TASKS.mkdir(exist_ok=True)
 OUT = TASKS / 'precedence-report.md'
+WORKSPACE_ROOT_MARKERS = [
+    ROOT / 'PRE-FLIGHT.md',
+    ROOT / 'CLAUDE.md',
+    ROOT / '.copilot' / 'base-instructions.md',
+]
+IS_WORKSPACE_ROOT = any(path.exists() for path in WORKSPACE_ROOT_MARKERS)
 
 ORDER_TOKENS = [
     '.copilot/base-instructions.md',
@@ -19,7 +25,7 @@ CORE_FILES = [
     ROOT / 'GEMINI.md',
     ROOT / '.copilot' / 'base-instructions.md',
     ROOT / '.github' / 'copilot-instructions.md',
-]
+] if IS_WORKSPACE_ROOT else []
 
 
 def read_text(path: Path) -> str:

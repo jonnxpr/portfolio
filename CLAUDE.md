@@ -1,89 +1,50 @@
 # CLAUDE.md - Canonical Workflow (Portifolio)
 
-This file defines the shared workflow for Copilot, OpenCode, and Antigravity runtimes.
+Shared workflow for Copilot, OpenCode, and Antigravity.
 
-## Workflow Orchestration
+## Workflow orchestration
 
-### 1) Plan mode by default
-- For non-trivial tasks (3+ steps, investigation, architecture, refactor), start with a plan.
-- Include verification in the plan.
+- Plan first for non-trivial work.
+- Re-plan when evidence changes.
+- Prefer root-cause fixes and minimal impact.
+- Verify before done, especially on desktop and mobile for UI work.
 
-### 2) Immediate re-planning
-- If blockers, repeated failures, or contradictory evidence appear, stop and re-plan.
+## Task management
 
-### 3) Verify before done
-- Do not mark work complete without evidence (build, tests, logs, behavior diff).
-- For UI changes, validate desktop and mobile behavior.
-
-### 4) Root-cause and minimal impact
-- Prefer root-cause fixes over cosmetic patches.
-- Touch only required files and preserve existing design language.
-
-## Task Management
-
-1. Plan non-trivial tasks in `tasks/todo.md`.
-2. Update progress during execution.
-3. Record final review/results.
-4. If `tasks/` exists, read `tasks/lessons.md` before technical work.
-5. Continuously update `tasks/lessons.md` whenever new lessons are learned.
-6. If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with usage instructions.
+- If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` before technical work.
+- If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` before technical work.
+- Keep the plan updated during execution.
 
 ## Workspace technical context
 
-- Site type: static single-page portfolio (`index.html`).
-- Frontend stack: HTML5, CSS3, vanilla JavaScript modules.
-- Data source: `data/projects.json`.
-- Build scripts: `npm run build:css`, `npm run build:js`, `npm run build`.
-- Local run: `npm start` (`python -m http.server 8000`).
-- Deploy: GitHub Pages workflow at `.github/workflows/deploy.yml`.
+- Static single-page portfolio with HTML, CSS, and vanilla JS modules.
+- `data/projects.json` is the dynamic data source.
+- `npm run build` is the canonical verification for asset changes.
 
-Manifest and source files are authoritative over instruction files.
+## Git repository context (mandatory)
 
-## Git Repository Context (MANDATORY)
+- This workspace root is a git repository.
+- If a task ever targets a nested repo instead, resolve it before git operations.
 
-When the workspace root is not a git repository (this is a monorepo with subprojects):
-- IMMEDIATELY scan parent directories for subfolders containing `.git`
-- Use the discovered sub-repo context for all git operations (commits, branches, status, diff)
-- NEVER use the workspace root for git commands - it is NOT a git repository
-- Run `scripts/discover-git-repo.ps1` to auto-detect the active git repository
+## Context7 documentation policy (mandatory)
 
-Note: Portifolio workspace root IS a git repo (Documents/Portifolio/.git exists), so this discovery is mainly for reference in other workspaces.
-
-## Mandatory final code review, cross-validation, and factual integrity
-
-- At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
-- Cross-validation is mandatory and does not replace code review: validate outputs against at least two independent sources of evidence (for example tests/build logs, contract/docs, runtime behavior, or diff-based verification).
-- Final approval requires both gates: (1) technical code review quality and (2) evidence-based cross-validation consistency.
-- Review and cross-validation must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
-- It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
-- Never invent facts, APIs, versions, behaviors, references, or validation results; if uncertain, verify first or explicitly state uncertainty.
+- Use Context7 before implementation, refactor, and review decisions.
 
 ## MCP credential discovery and connection consent (mandatory)
 
-- When a task requests a specific MCP server, or when policy requires one (for example Context7), automatically attempt credential discovery before connecting.
-- Search credential/config locations in this order:
-  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`, `.copilot/mcp-config.json`.
-  2. OpenCode config: path from `OPENCODE_CONFIG` (if set), then user/global OpenCode config directories for this OS (for example `~/.config/opencode/opencode.json`, `~/.config/opencode/mcp/*.json`).
-  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` and `%APPDATA%/Code/User/profiles/*/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` and `~/Library/Application Support/Code/User/profiles/*/mcp.json` (macOS), `~/.config/Code/User/mcp.json` and `~/.config/Code/User/profiles/*/mcp.json` (Linux).
-  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`, `~/.gemini/antigravity/mcp_config.json`).
-  5. Environment variables referenced by MCP configuration (`env`, `${VAR}`, `$VAR`, `%VAR%`).
-- If credentials are not found, report exactly: `credentials not found for requested MCP`.
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
-- Never invent credential locations, tokens, API keys, or authentication results.
-
+- Discovery must include workspace/project files, OpenCode config, `.copilot/mcp-config.json`, VS Code `profiles/*/mcp.json`, `~/.gemini/antigravity/mcp_config.json`, and referenced environment variables.
 
 ## Mandatory multi-agent orchestration skill
 
-- For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
-- OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
-- For OpenCode, when `skill/` exists in the workspace, mirror this skill in `skill/orchestrate-multi-agents/SKILL.md`.
-- Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
-- If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
-- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
+- For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+
+## Mandatory final code review, cross-validation, and factual integrity
+
+- Every implementation, refactor, or fix ends with final code review plus evidence-based cross-validation.
 
 ## Governance automation (mandatory)
 
 - Secret scan: `./tools/governance/scan-secrets.ps1`
-- Instruction sync (idempotent): `python ./tools/governance/sync-instructions.py`
-- Compliance score/report: `python ./tools/governance/audit-compliance.py`
-- Precedence matrix: `./tools/governance/precedence-matrix.md`
+- Instruction sync: `python ./tools/governance/sync-instructions.py`
+- Compliance audit: `python ./tools/governance/audit-compliance.py`

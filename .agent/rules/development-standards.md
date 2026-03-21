@@ -4,76 +4,28 @@ trigger: always_on
 
 # Development Standards Rule - Portifolio
 
-## Minimum hierarchy
+## Canonical sources
 
-1. `.copilot/base-instructions.md`
-2. `CLAUDE.md`
-3. `.github/copilot-instructions.md`
-4. `.agent/skills/development-standards/SKILL.md`
-5. `.agent/rules/development-standards.md`
+- `.agent/skills/development-standards/SKILL.md` = detailed technical memory.
+- `.github/instructions/*.instructions.md` = path-specific constraints.
+- Source files and manifests = exact runtime truth.
 
-## Validated stack
+## Always-on rules
 
-- HTML5, CSS3, vanilla JavaScript
-- Build: `clean-css-cli`, `terser`
-- Local serve: Python http.server via `npm start`
+- Preserve semantic structure, responsiveness, accessibility, and current visual identity.
+- Keep JS modular and avoid unnecessary dependencies.
+- Keep minified artifacts aligned with source changes.
+- Prefer the smallest safe change.
 
-## Critical rules
+## Validation minima
 
-- Preserve semantic structure and accessibility.
-- Preserve responsive behavior (desktop/tablet/mobile).
-- Preserve existing design system and CSS variable usage.
-- Keep JS modular and avoid introducing frameworks for simple changes.
-- Keep minified artifacts synchronized with source changes.
+- `npm run build` when source CSS/JS changes.
+- Manual smoke test of the affected sections.
 
-## Execution rules
+## Context7 documentation policy (mandatory)
 
-- Plan non-trivial tasks.
-- Re-plan on blockers or contradictory evidence.
-- Do not mark complete without verification evidence.
-- If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` before technical tasks.
-- If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with usage guidance before technical tasks.
-- Continuously update `tasks/lessons.md` whenever new lessons are learned.
-
-## Context7 policy (mandatory)
-
-- Consult Context7 MCP for latest framework/library/language guidance before implementation/refactor/review.
-- Prefer modern and suitable features when compatibility is verified against project constraints.
-
-## Minimum validation
-
-- `npm run build` when CSS/JS changes.
-- Manual smoke test on `index.html` sections affected.
+- Use Context7 before implementation, refactor, and review decisions.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 
-- At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
-- Cross-validation is mandatory and does not replace code review: validate outputs against at least two independent sources of evidence (for example tests/build logs, contract/docs, runtime behavior, or diff-based verification).
-- Final approval requires both gates: (1) technical code review quality and (2) evidence-based cross-validation consistency.
-- Review and cross-validation must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
-- It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
-- Never invent facts, APIs, versions, behaviors, references, or validation results; if uncertain, verify first or explicitly state uncertainty.
-
-## MCP credential discovery and connection consent (mandatory)
-
-- When a task requests a specific MCP server, or when policy requires one (for example Context7), automatically attempt credential discovery before connecting.
-- Search credential/config locations in this order:
-  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`, `.copilot/mcp-config.json`.
-  2. OpenCode config: path from `OPENCODE_CONFIG` (if set), then user/global OpenCode config directories for this OS (for example `~/.config/opencode/opencode.json`, `~/.config/opencode/mcp/*.json`).
-  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` and `%APPDATA%/Code/User/profiles/*/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` and `~/Library/Application Support/Code/User/profiles/*/mcp.json` (macOS), `~/.config/Code/User/mcp.json` and `~/.config/Code/User/profiles/*/mcp.json` (Linux).
-  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`, `~/.gemini/antigravity/mcp_config.json`).
-  5. Environment variables referenced by MCP configuration (`env`, `${VAR}`, `$VAR`, `%VAR%`).
-- If credentials are not found, report exactly: `credentials not found for requested MCP`.
-- Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
-- Never invent credential locations, tokens, API keys, or authentication results.
-- Treat user environment variables as valid fallback credential sources, especially `CONTEXT7_API_KEY`.
-
-
-## Mandatory multi-agent orchestration skill
-
-- For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
-- OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
-- For OpenCode, when `skill/` exists in the workspace, mirror this skill in `skill/orchestrate-multi-agents/SKILL.md`.
-- Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
-- If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
-- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
+- Apply the canonical final gate from `CLAUDE.md` before marking work complete.

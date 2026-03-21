@@ -43,7 +43,7 @@ Remember: Claude is capable of extraordinary creative work. Don't hold back, sho
 
 ## Cross-tool activation contract
 
-- OpenCode: load this skill from `.agent/skills/frontend-design/SKILL.md` when a task is frontend design-centric.
+- OpenCode: load this skill from `.opencode/skills/frontend-design/SKILL.md`; fallback to `.agent/skills/frontend-design/SKILL.md` when the `.opencode` mirror is absent.
 - GitHub Copilot: apply this skill guidance together with `.github/instructions/web.instructions.md` and `.github/copilot-instructions.md`.
 - Antigravity/Gemini: apply this skill guidance together with `GEMINI.md` and `CLAUDE.md`.
 

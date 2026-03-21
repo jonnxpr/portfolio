@@ -7,37 +7,24 @@ Hard gate before any technical answer.
 1. Read `.copilot/base-instructions.md`.
 2. Read `CLAUDE.md`.
 3. Read `.github/copilot-instructions.md`.
-4. Read `.github/instructions/*.instructions.md` applicable to active context.
+4. Read applicable `.github/instructions/*.instructions.md`.
 5. Read `.agent/skills/development-standards/SKILL.md`.
 6. Read `.agent/rules/development-standards.md`.
-7. If task is review/PR, also read `.agent/skills/code-review/SKILL.md`.
-8. For commit creation or commit message generation tasks, read `.github/copilot-commit-message-instructions.md` and apply it strictly.
-9. If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` fully before technical output.
+7. For review/PR, also read `.agent/skills/code-review/SKILL.md`.
+8. For commit creation or commit message generation, read `.github/copilot-commit-message-instructions.md`.
+9. If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` fully; if `tasks/` is missing, create both before technical work.
 10. This workspace is non-Java; do not run Java/Maven/Gradle builds here.
-11. If `tasks/` is missing, create `tasks/todo.md` and `tasks/lessons.md` with clear usage instructions before technical work.
-12. Before technical implementation/refactor/review, consult Context7 MCP for the technologies involved and apply the latest suitable guidance.
-13. For frontend design-centric tasks (building or redesigning pages/components/interfaces), load `.agent/skills/frontend-design/SKILL.md`.
-14. Git Repository Discovery (MANDATORY):
-    - If workspace root is NOT a git repo (no .git in current path), IMMEDIATELY scan parent directories for subfolders containing .git
-    - Identify which subproject/repository the target files belong to based on file paths
-    - Use the discovered git repo context for: git commands, commits, branches, status
-    - NEVER assume workspace root is the git repository
-    - Run `scripts/discover-git-repo.ps1` to auto-detect the active git repository
-
-## Universal optimization guardrails
-
-- Preserve existing instruction content and prefer merge over replacement.
-- Resolve stack/version details from manifests and active config files only.
-- Apply capability-based fallback when runtime/IDE support differs.
-- Keep preflight and hierarchy rules concise and near file top.
-- Keep instruction changes idempotent.
+11. Before implementation/refactor/review, consult Context7.
+12. For frontend design-centric tasks, also load `.opencode/skills/frontend-design/SKILL.md`.
+13. Git Repository Discovery (MANDATORY):
+    - If workspace root is not a git repo, run `scripts/discover-git-repo.ps1`.
+    - Use the discovered repo for git operations.
 
 ## Integral read requirement (mandatory)
 
-- Read all mandatory instruction files fully (all lines, no truncation).
-- If the runtime/IDE returns partial content, continue chunked reads until EOF.
-- Preflight remains incomplete while any mandatory file is partially read.
-- Apply the same full-read requirement to `tasks/todo.md` and `tasks/lessons.md` when `tasks/` exists.
+- Read all mandatory instruction files fully.
+- If output is partial, continue chunked reads until EOF.
+- Preflight is incomplete while any mandatory file is partially read.
 
 ## Proof line format (mandatory)
 
@@ -47,54 +34,32 @@ Start the response with exactly:
 
 ## Failure behavior (mandatory)
 
-If checklist is incomplete, do not provide technical content. Reply only:
+If checklist is incomplete, reply only:
 
 - `BLOCKED: preflight incompleto`
 
 Then include one single objective next action to unblock.
 
-## Mandatory final code review, cross-validation, and factual integrity
+## Context7 documentation policy (mandatory)
 
-- At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
-- Cross-validation is mandatory and does not replace code review: validate outputs against at least two independent sources of evidence (for example tests/build logs, contract/docs, runtime behavior, or diff-based verification).
-- Final approval requires both gates: (1) technical code review quality and (2) evidence-based cross-validation consistency.
-- Review and cross-validation must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
-- It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
-- Never invent facts, APIs, versions, behaviors, references, or validation results; if uncertain, verify first or explicitly state uncertainty.
+- Use Context7 for implementation, refactor, and review decisions.
 
 ## MCP credential discovery and connection consent (mandatory)
 
-- When a task requests a specific MCP server, or when policy requires one (for example Context7), automatically attempt credential discovery before connecting.
-- Search credential/config locations in this order:
-  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`, `.copilot/mcp-config.json`.
-  2. OpenCode config: path from `OPENCODE_CONFIG` (if set), then user/global OpenCode config directories for this OS (for example `~/.config/opencode/opencode.json`, `~/.config/opencode/mcp/*.json`).
-  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` and `%APPDATA%/Code/User/profiles/*/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` and `~/Library/Application Support/Code/User/profiles/*/mcp.json` (macOS), `~/.config/Code/User/mcp.json` and `~/.config/Code/User/profiles/*/mcp.json` (Linux).
-  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`, `~/.gemini/antigravity/mcp_config.json`).
-  5. Environment variables referenced by MCP configuration (`env`, `${VAR}`, `$VAR`, `%VAR%`).
-- If credentials are not found, report exactly: `credentials not found for requested MCP`.
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
-- Never invent credential locations, tokens, API keys, or authentication results.
-- Treat user environment variables as valid fallback credential sources, especially `CONTEXT7_API_KEY`.
-
+- Discovery order must cover workspace/project files, OpenCode config, `.copilot/mcp-config.json`, VS Code `profiles/*/mcp.json`, `~/.gemini/antigravity/mcp_config.json`, and referenced environment variables such as `CONTEXT7_API_KEY`.
+- If credentials are not found, report exactly: `credentials not found for requested MCP`.
 
 ## Mandatory multi-agent orchestration skill
 
-- For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
-- OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
-- For OpenCode, when `skill/` exists in the workspace, mirror this skill in `skill/orchestrate-multi-agents/SKILL.md`.
-- Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
-- If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
-- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
+- For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+
+## Mandatory final code review, cross-validation, and factual integrity
+
+- Technical work is complete only after final code review plus evidence-based cross-validation.
 
 ## Governance automation (mandatory)
 
 - Secret scan: `./tools/governance/scan-secrets.ps1`
-- Instruction sync (idempotent): `python ./tools/governance/sync-instructions.py`
-- Compliance score/report: `python ./tools/governance/audit-compliance.py`
-- Precedence matrix: `./tools/governance/precedence-matrix.md`
-
-## Skill runtime fallback (mandatory)
-
-- Preferred source for runtime skill loading: skill/*/SKILL.md.
-- Fallback source (if runtime reports Available skills: none): .agent/skills/*/SKILL.md.
-- If Skill not found occurs, continue by reading required SKILL.md files directly and apply them in the same task.
+- Instruction sync: `python ./tools/governance/sync-instructions.py`
+- Compliance audit: `python ./tools/governance/audit-compliance.py`

@@ -66,8 +66,8 @@ Technical memory for implementation and refactor in this workspace.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks (multi-discipline scope, parallelizable work, broad refactor/migration, high inconsistency risk, or audit-heavy requirements), always apply `orchestrate-multi-agents` before implementation.
-- OpenCode/Antigravity source of truth: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
-- For OpenCode, when `skill/` exists in the workspace, mirror this skill in `skill/orchestrate-multi-agents/SKILL.md`.
+- OpenCode source of truth: `.opencode/skills/orchestrate-multi-agents/SKILL.md`.
+- Antigravity/Copilot-compatible mirror: `.agent/skills/orchestrate-multi-agents/SKILL.md`.
 - Minimum flow is mandatory: Execution Plan -> explicit handoffs -> dependency-gated parallelism -> DoD validation -> final consolidation with Decision Log.
 - If the task is trivial/single-step, explicitly state why multi-agent orchestration is not required.
 - For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.

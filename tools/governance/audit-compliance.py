@@ -1,14 +1,19 @@
 from pathlib import Path
 import argparse
 import os
-import json
 import re
 import sys
 
-ROOT = Path('.')
+ROOT = Path(__file__).resolve().parents[2]
 TASKS = ROOT / 'tasks'
 TASKS.mkdir(exist_ok=True)
 OUT = TASKS / 'compliance-report.md'
+WORKSPACE_ROOT_MARKERS = [
+    ROOT / 'PRE-FLIGHT.md',
+    ROOT / 'CLAUDE.md',
+    ROOT / '.copilot' / 'base-instructions.md',
+]
+IS_WORKSPACE_ROOT = any(path.exists() for path in WORKSPACE_ROOT_MARKERS)
 
 GATE = '## Mandatory final code review, cross-validation, and factual integrity'
 ORCH = '## Mandatory multi-agent orchestration skill'
@@ -74,7 +79,10 @@ def read_text(path: Path) -> str:
 
 
 def rel(path: Path) -> str:
-    return path.as_posix()
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def add_finding(bucket: dict, category: str, path: Path, reason: str, fix: str):
@@ -150,14 +158,16 @@ def check_reference_integrity(reference_files, findings):
 
 
 def check_core_contracts(files, findings):
-    root_core = {
-        (ROOT / 'PRE-FLIGHT.md').resolve(),
-        (ROOT / 'AGENTS.md').resolve(),
-        (ROOT / 'GEMINI.md').resolve(),
-        (ROOT / 'CLAUDE.md').resolve(),
-        (ROOT / '.copilot' / 'base-instructions.md').resolve(),
-        (ROOT / '.github' / 'copilot-instructions.md').resolve(),
-    }
+    root_core = set()
+    if IS_WORKSPACE_ROOT:
+        root_core = {
+            (ROOT / 'PRE-FLIGHT.md').resolve(),
+            (ROOT / 'AGENTS.md').resolve(),
+            (ROOT / 'GEMINI.md').resolve(),
+            (ROOT / 'CLAUDE.md').resolve(),
+            (ROOT / '.copilot' / 'base-instructions.md').resolve(),
+            (ROOT / '.github' / 'copilot-instructions.md').resolve(),
+        }
 
     for file_path in files:
         if file_path.suffix != '.md':
@@ -281,6 +291,8 @@ def check_core_contracts(files, findings):
 
 
 def check_skill_routing(findings):
+    if not IS_WORKSPACE_ROOT:
+        return
     frontend_skill = ROOT / '.agent' / 'skills' / 'frontend-design' / 'SKILL.md'
     if not frontend_skill.exists():
         return
@@ -347,9 +359,11 @@ def check_user_mcp_runtime(findings):
     if appdata:
         runtime_targets.extend([
             appdata / 'Code' / 'User' / 'mcp.json',
-            appdata / 'Code' / 'User' / 'profiles' / '149c18e5' / 'mcp.json',
             appdata / 'Antigravity' / 'User' / 'mcp.json',
         ])
+        profiles_root = appdata / 'Code' / 'User' / 'profiles'
+        if profiles_root.exists():
+            runtime_targets.extend(sorted(profiles_root.glob('*/mcp.json')))
 
     found_context7 = False
     for path in runtime_targets:

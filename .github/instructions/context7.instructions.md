@@ -6,46 +6,10 @@ applyTo: "**"
 
 # Context7 policy (mandatory)
 
-Before proposing, generating, refactoring, or reviewing code that uses any framework, library, language feature, or API:
-
-1. Use Context7 MCP to retrieve the latest relevant documentation and examples.
-2. Resolve the library ID first, then query docs with the exact scenario.
-3. Prefer modern and suitable features when compatible with current project constraints.
-
-## Decision guidance
-
-- Favor current, stable capabilities only when they fit project runtime/build constraints.
-- Validate compatibility with manifests and existing architecture before adoption.
-- Do not force modernization when it breaks compatibility or increases risk.
-
-## Example criteria
-
-- Java: decide between `record` and DTO class based on mutability, serialization needs, and API contract stability.
-- Java concurrency: consider Virtual Threads for I/O-bound workloads only when JDK/framework compatibility is verified.
-
-## Fallback
-
-If Context7 is unavailable, explicitly report fallback and use repository manifests plus official documentation sources.
-
-## MCP credential discovery and connection consent (mandatory)
-
-- When a task requests a specific MCP server, or when policy requires one (for example Context7), automatically attempt credential discovery before connecting.
-- Search credential/config locations in this order:
-  1. Workspace/project files: `mcp.json`, `.mcp.json`, `mcp_servers.json`, `.vscode/mcp.json`, `opencode.json`.
-  2. OpenCode config: path from `OPENCODE_CONFIG` (if set), then user/global OpenCode config directories for this OS (for example `~/.config/opencode/opencode.json`, `~/.config/opencode/mcp/*.json`).
-  3. VS Code user/profile MCP config for this OS: `%APPDATA%/Code/User/mcp.json` (Windows), `~/Library/Application Support/Code/User/mcp.json` (macOS), `~/.config/Code/User/mcp.json` (Linux).
-  4. Antigravity/Gemini local config only when files exist and are documented for the active environment/project (for example `~/.gemini/settings.json`).
-  5. Environment variables referenced by MCP configuration (`env`, `${VAR}`, `$VAR`, `%VAR%`).
-- If credentials are not found, report exactly: `credentials not found for requested MCP`.
-- Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
-- Never invent credential locations, tokens, API keys, or authentication results.
-
+- Resolve the right library and use Context7 before proposing, generating, refactoring, or reviewing code.
+- Prefer modern features only when compatibility and risk are acceptable.
+- If Context7 is unavailable, state the fallback and use repository files plus official documentation.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 
-- At the end of every implementation/refactor/fix, perform a final code review before marking the task complete.
-- Cross-validation is mandatory and does not replace code review: validate outputs against at least two independent sources of evidence (for example tests/build logs, contract/docs, runtime behavior, or diff-based verification).
-- Final approval requires both gates: (1) technical code review quality and (2) evidence-based cross-validation consistency.
-- Review and cross-validation must verify correctness, security, performance, readability, test impact, and compatibility with existing architecture/contracts.
-- It is allowed (and encouraged) to use internet sources and up-to-date documentation (including Context7 and official docs) to close knowledge gaps.
-- Never invent facts, APIs, versions, behaviors, references, or validation results; if uncertain, verify first or explicitly state uncertainty.
+- Apply the canonical final gate from `CLAUDE.md` before marking work complete.
