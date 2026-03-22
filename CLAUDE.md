@@ -1,6 +1,6 @@
 # CLAUDE.md - Canonical Workflow (Portifolio)
 
-Shared workflow for Copilot, OpenCode, and Antigravity.
+Shared workflow for GitHub Copilot VS Code, GitHub Copilot CLI, OpenCode, and Antigravity.
 
 ## Workflow orchestration
 

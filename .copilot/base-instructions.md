@@ -10,12 +10,14 @@ Universal behavior and quality standards for the `Portifolio` workspace.
 2. `CLAUDE.md`
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/*.instructions.md`
-5. `.agent/skills/development-standards/SKILL.md`
-6. `.agent/rules/development-standards.md`
+5. `.github/skills/development-standards/SKILL.md`
+6. `.opencode/skills/development-standards/SKILL.md`
+7. `.agent/skills/development-standards/SKILL.md`
+8. `.agent/rules/development-standards.md`
 
 ## Cross-tool contract
 
-- Keep the same semantics across Copilot, OpenCode, and Antigravity.
+- Keep the same semantics across GitHub Copilot VS Code, GitHub Copilot CLI, OpenCode, and Antigravity.
 - Use active files as the source of truth.
 - Prefer short canonical instructions over repeated text.
 

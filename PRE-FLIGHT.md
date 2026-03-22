@@ -1,6 +1,6 @@
 # PRE-FLIGHT - Portifolio
 
-Hard gate before any technical answer.
+Hard gate before any technical answer across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
 ## Mandatory checklist
 
@@ -15,7 +15,7 @@ Hard gate before any technical answer.
 9. If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md` fully; if `tasks/` is missing, create both before technical work.
 10. This workspace is non-Java; do not run Java/Maven/Gradle builds here.
 11. Before implementation/refactor/review, consult Context7.
-12. For frontend design-centric tasks, also load `.opencode/skills/frontend-design/SKILL.md`.
+12. For frontend design-centric tasks, also load `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 13. Git Repository Discovery (MANDATORY):
     - If workspace root is not a git repo, run `scripts/discover-git-repo.ps1`.
     - Use the discovered repo for git operations.

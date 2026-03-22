@@ -1,6 +1,6 @@
 # OpenCode Instructions - Portifolio
 
-OpenCode entry point aligned with Copilot and Antigravity.
+OpenCode entry point aligned with GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
 Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github/copilot-instructions.md`.
 
@@ -34,15 +34,17 @@ and provide one objective next step.
 2. `CLAUDE.md`
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/*.instructions.md`
-5. `.agent/skills/development-standards/SKILL.md`
-6. `.agent/rules/development-standards.md`
-7. `.agent/skills/code-review/SKILL.md` when reviewing
+5. `.github/skills/development-standards/SKILL.md`
+6. `.opencode/skills/development-standards/SKILL.md`
+7. `.agent/skills/development-standards/SKILL.md`
+8. `.agent/rules/development-standards.md`
+9. `.github/skills/code-review/SKILL.md` or `.agent/skills/code-review/SKILL.md` when reviewing
 
 ## Skill routing
 
 - Implementation/refactor: `development-standards`.
 - Review/PR: `development-standards` + `code-review`.
-- Frontend design-centric work: also load `.opencode/skills/frontend-design/SKILL.md`.
+- Frontend design-centric work: also load `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 
 ## Task knowledge policy
 

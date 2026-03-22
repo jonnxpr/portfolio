@@ -6,14 +6,18 @@ applyTo: "**"
 
 # GitHub Copilot Instructions - Portifolio
 
+This repository must stay consistent across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
+
 ## Mandatory loading order
 
 1. `.copilot/base-instructions.md`
 2. `CLAUDE.md`
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/*.instructions.md`
-5. `.agent/skills/development-standards/SKILL.md`
-6. `.agent/rules/development-standards.md`
+5. `.github/skills/development-standards/SKILL.md`
+6. `.opencode/skills/development-standards/SKILL.md`
+7. `.agent/skills/development-standards/SKILL.md`
+8. `.agent/rules/development-standards.md`
 
 ## Hard preflight gate (mandatory)
 
@@ -47,7 +51,7 @@ and include one single objective action to unblock.
 
 ## Frontend design skill (mandatory by context)
 
-- For design-centric work, also apply `.opencode/skills/frontend-design/SKILL.md`.
+- For design-centric work, also apply `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 
 ## MCP credential discovery and connection consent (mandatory)
 

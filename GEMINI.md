@@ -1,5 +1,7 @@
 # GEMINI.md - Antigravity Entry Point (Portifolio)
 
+This repository must stay consistent across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
+
 Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github/copilot-instructions.md`.
 
 Use `CLAUDE.md` as the canonical workflow contract.
@@ -22,9 +24,10 @@ and provide one objective next step.
 2. `CLAUDE.md`
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/*.instructions.md`
-5. `.agent/skills/development-standards/SKILL.md`
-6. `.opencode/skills/frontend-design/SKILL.md` for design-centric work
-7. `.agent/rules/development-standards.md`
+5. `.github/skills/development-standards/SKILL.md`
+6. `.agent/skills/development-standards/SKILL.md`
+7. `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` for design-centric work
+8. `.agent/rules/development-standards.md`
 
 ## Mandatory rules
 
