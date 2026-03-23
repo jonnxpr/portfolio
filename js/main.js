@@ -11,6 +11,9 @@ const App = (() => {
     }
 
     await I18n.init();
+  await ChromeUI.init();
+    await Hero.init();
+    await ContentSections.init();
     Navigation.init();
     await Skills.init();
     await Projects.init();

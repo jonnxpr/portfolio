@@ -92,7 +92,7 @@ const Projects = (() => {
     content.className = 'project-card__content';
 
     const title = document.createElement('h3');
-    title.className = 'project-card__title';
+    title.className = 'project-card__title text-balance';
     title.textContent = I18n.resolveLocalizedValue(project.title);
     title.setAttribute('lang', I18n.t('htmlLang'));
 

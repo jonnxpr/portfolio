@@ -82,34 +82,27 @@ const I18n = (() => {
       ?? '';
   };
 
-  const setText = (selector, key) => {
+  const setText = (selector, key, params = {}) => {
     const element = document.querySelector(selector);
     if (!element) return;
-    element.textContent = t(key);
+    element.textContent = t(key, params);
   };
 
-  const setHTML = (selector, key) => {
+  const setHTML = (selector, key, params = {}) => {
     const element = document.querySelector(selector);
     if (!element) return;
-    element.innerHTML = t(key);
+    element.innerHTML = t(key, params);
   };
 
-  const setAttribute = (selector, attributeName, key) => {
+  const setAttribute = (selector, attributeName, key, params = {}) => {
     const element = document.querySelector(selector);
     if (!element) return;
-    element.setAttribute(attributeName, t(key));
+    element.setAttribute(attributeName, t(key, params));
   };
 
   const applyStaticTranslations = () => {
     document.documentElement.lang = t('htmlLang');
-    document.title = t('pageTitle');
-
-    setAttribute('#meta-description', 'content', 'metaDescription');
-    setAttribute('#meta-og-title', 'content', 'metaOgTitle');
-    setAttribute('#meta-og-description', 'content', 'metaOgDescription');
     setAttribute('#meta-og-locale', 'content', 'ogLocale');
-    setAttribute('#meta-twitter-title', 'content', 'metaTwitterTitle');
-    setAttribute('#meta-twitter-description', 'content', 'metaTwitterDescription');
 
     setText('#skip-main-link', 'skipToMain');
     setAttribute('#main-nav', 'aria-label', 'navLabel');
@@ -126,20 +119,6 @@ const I18n = (() => {
     setAttribute('#navbar-contacts', 'aria-label', 'contactsLabel');
     setAttribute('#footer-contacts', 'aria-label', 'footerContactsLabel');
 
-    setAttribute('#nav-contact-email', 'title', 'email');
-    setAttribute('#nav-contact-email', 'aria-label', 'email');
-    setAttribute('#nav-contact-linkedin', 'title', 'linkedin');
-    setAttribute('#nav-contact-linkedin', 'aria-label', 'linkedin');
-    setAttribute('#nav-contact-github', 'title', 'github');
-    setAttribute('#nav-contact-github', 'aria-label', 'github');
-
-    setAttribute('#footer-contact-email', 'title', 'email');
-    setAttribute('#footer-contact-email', 'aria-label', 'email');
-    setAttribute('#footer-contact-linkedin', 'title', 'linkedin');
-    setAttribute('#footer-contact-linkedin', 'aria-label', 'linkedin');
-    setAttribute('#footer-contact-github', 'title', 'github');
-    setAttribute('#footer-contact-github', 'aria-label', 'github');
-
     setText('#hero-role', 'heroRole');
     setHTML('#hero-description-1', 'heroDescription1');
     setText('#hero-description-2', 'heroDescription2');
@@ -147,12 +126,6 @@ const I18n = (() => {
     setAttribute('#hero-tech-icons', 'aria-label', 'heroTechAria');
     setAttribute('#hero-highlights', 'aria-label', 'heroHighlightsAria');
     setText('#hero-highlights-title', 'heroHighlightsTitle');
-    setText('#hero-highlight-1', 'heroHighlight1');
-    setText('#hero-highlight-2', 'heroHighlight2');
-    setText('#hero-highlight-3', 'heroHighlight3');
-
-    setText('#cta-projects', 'ctaProjects');
-    setText('#cta-contact', 'ctaContact');
 
     setText('#skills-title', 'skillsTitle');
     setText('#skills-description', 'skillsDescription');
@@ -160,15 +133,6 @@ const I18n = (() => {
 
     setText('#education-title', 'educationTitle');
     setText('#education-description', 'educationDescription');
-    setText('#education-title-1', 'educationTitle1');
-    setText('#education-period-1', 'educationPeriod1');
-    setText('#education-description-1', 'educationDescription1');
-    setText('#education-title-2', 'educationTitle2');
-    setText('#education-period-2', 'educationPeriod2');
-    setText('#education-description-2', 'educationDescription2');
-    setText('#education-title-3', 'educationTitle3');
-    setText('#education-period-3', 'educationPeriod3');
-    setText('#education-description-3', 'educationDescription3');
 
     setText('#projects-title', 'projectsTitle');
     setText('#projects-description', 'projectsDescription');
@@ -177,13 +141,11 @@ const I18n = (() => {
     setText('#opportunities-title', 'opportunitiesTitle');
     setText('#opportunities-text', 'opportunitiesText');
     setAttribute('#opportunities-actions', 'aria-label', 'opportunitiesActionsAria');
-    setText('#opportunities-email', 'opportunitiesEmail');
-    setText('#opportunities-linkedin', 'opportunitiesLinkedin');
 
     setText('#footer-rights-text', 'footerRights');
 
     const contentLanguage = t('htmlLang');
-    ['#hero-role', '#hero-description-1', '#hero-description-2', '#hero-highlights-title', '#hero-highlight-1', '#hero-highlight-2', '#hero-highlight-3', '#skills-title', '#skills-description', '#education-title', '#education-description', '#projects-title', '#projects-description', '#opportunities-title', '#opportunities-text'].forEach((selector) => {
+    ['#hero-role', '#hero-description-1', '#hero-description-2', '#hero-highlights-title', '#skills-title', '#skills-description', '#education-title', '#education-description', '#projects-title', '#projects-description', '#opportunities-title', '#opportunities-text'].forEach((selector) => {
       const element = document.querySelector(selector);
       if (element) {
         element.setAttribute('lang', contentLanguage);
@@ -194,9 +156,9 @@ const I18n = (() => {
   };
 
   const updateLanguageSwitcherUI = () => {
-    const selectedInput = document.querySelector(`#language-switcher input[value="${currentLanguage}"]`);
-    if (selectedInput) {
-      selectedInput.checked = true;
+    const select = document.querySelector('#language-switcher');
+    if (select instanceof HTMLSelectElement) {
+      select.value = currentLanguage;
     }
   };
 
@@ -233,11 +195,11 @@ const I18n = (() => {
     if (languageSwitcherBound) return;
 
     const switcher = document.querySelector('#language-switcher');
-    if (!switcher) return;
+    if (!(switcher instanceof HTMLSelectElement)) return;
 
     switcher.addEventListener('change', (event) => {
       const target = event.target;
-      if (!(target instanceof HTMLInputElement)) return;
+      if (!(target instanceof HTMLSelectElement)) return;
       if (target.name !== 'language-switch') return;
 
       setLanguage(target.value);

@@ -1,0 +1,58 @@
+{
+  "techStack": [
+    {
+      "label": "Java",
+      "type": "icon",
+      "iconClass": "fab fa-java"
+    },
+    {
+      "label": "Spring Framework",
+      "type": "icon",
+      "iconClass": "fas fa-leaf"
+    },
+    {
+      "label": "Quarkus",
+      "type": "icon",
+      "iconClass": "fas fa-bolt"
+    },
+    {
+      "label": "Node.js",
+      "type": "icon",
+      "iconClass": "fab fa-node-js"
+    },
+    {
+      "label": "React",
+      "type": "icon",
+      "iconClass": "fab fa-react"
+    },
+    {
+      "label": "Angular",
+      "type": "icon",
+      "iconClass": "fab fa-angular"
+    }
+  ],
+  "ctaButtons": [
+    {
+      "id": "cta-projects",
+      "variant": "primary",
+      "href": "#projetos",
+      "label": {
+        "pt-BR": "Ver Projetos",
+        "en": "View Projects",
+        "es": "Ver Proyectos"
+      },
+      "useSmoothScroll": true
+    },
+    {
+      "id": "cta-contact",
+      "variant": "secondary",
+      "contactKey": "email",
+      "label": {
+        "pt-BR": "Entre em Contato",
+        "en": "Get in Touch",
+        "es": "Contáctame"
+      },
+      "openInNewTab": true
+    }
+  ]
+}

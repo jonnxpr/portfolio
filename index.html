@@ -5,38 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta id="meta-description" name="description" content="Portfólio profissional de Jonathan Douglas Diego Tavares - Full Stack Developer com experiência em Java, Spring Boot, React, AWS e arquitetura de software escalável.">
     <meta name="keywords" content="Full Stack Developer, Java, Spring Boot, React, Angular, AWS, Engenheiro de Software, Arquitetura de Sistemas, Portfólio">
-    <meta name="author" content="Jonathan Douglas Diego Tavares">
+    <meta id="meta-author" name="author" content="Jonathan Douglas Diego Tavares">
     <meta name="asset-version" content="2026-03-04-2">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0e27">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
-    <link rel="canonical" href="https://joninf95.dev/">
+    <link id="canonical-link" rel="canonical" href="https://jonnxpr.github.io/portfolio/">
     <link rel="icon" type="image/x-icon" href="assets/icons/mongodb-logo.ico">
     
     <!-- Open Graph Tags (Social Sharing) -->
     <meta property="og:type" content="website">
     <meta id="meta-og-title" property="og:title" content="Jonathan Douglas Diego Tavares - Full Stack Developer">
     <meta id="meta-og-description" property="og:description" content="Portfólio profissional de um Full Stack Developer especializado em soluções robustas, escaláveis e de alta qualidade.">
-    <meta property="og:url" content="https://joninf95.dev/">
-    <meta property="og:image" content="https://joninf95.dev/assets/og-image.jpg">
+    <meta id="meta-og-url" property="og:url" content="https://jonnxpr.github.io/portfolio/">
+    <meta id="meta-og-image" property="og:image" content="https://jonnxpr.github.io/portfolio/assets/og-image.jpg">
     <meta id="meta-og-locale" property="og:locale" content="pt_BR">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta id="meta-twitter-title" name="twitter:title" content="Jonathan Douglas Diego Tavares - Full Stack Developer">
     <meta id="meta-twitter-description" name="twitter:description" content="Portfólio profissional de um Desenvolvedor Full Stack especializado em soluções robustas e escaláveis.">
-    <meta name="twitter:image" content="https://joninf95.dev/assets/og-image.jpg">
+    <meta id="meta-twitter-image" name="twitter:image" content="https://jonnxpr.github.io/portfolio/assets/og-image.jpg">
     
     <!-- Structured Data (JSON-LD Schema.org) -->
-    <script type="application/ld+json">
+    <script id="person-schema" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jonathan Douglas Diego Tavares",
-      "url": "https://joninf95.dev/",
+    "url": "https://jonnxpr.github.io/portfolio/",
       "email": "joninf95@gmail.com",
       "jobTitle": "Full Stack Developer",
-      "image": "https://joninf95.dev/assets/profile-image.jpg",
+    "image": "https://jonnxpr.github.io/portfolio/assets/profile-image.jpg",
       "sameAs": [
         "https://www.linkedin.com/in/jonathan-douglas-3014b1b3/",
         "https://github.com/jonnxpr"
@@ -92,29 +92,13 @@
                     </li>
                 </ul>
                 <div class="navbar__language ms-lg-3">
-                    <fieldset class="navbar__language-group" id="language-switcher">
-                        <legend class="visually-hidden" id="language-switcher-label">Idioma</legend>
-
-                        <input class="navbar__language-input" type="radio" name="language-switch" id="lang-option-pt" value="pt-BR" checked>
-                        <label class="navbar__language-option" for="lang-option-pt">PT</label>
-
-                        <input class="navbar__language-input" type="radio" name="language-switch" id="lang-option-en" value="en">
-                        <label class="navbar__language-option" for="lang-option-en">EN</label>
-
-                        <input class="navbar__language-input" type="radio" name="language-switch" id="lang-option-es" value="es">
-                        <label class="navbar__language-option" for="lang-option-es">ES</label>
-                    </fieldset>
+                    <label class="visually-hidden" id="language-switcher-label" for="language-switcher">Idioma</label>
+                    <div class="navbar__language-select-wrap">
+                        <i class="fas fa-globe-americas navbar__language-icon" aria-hidden="true"></i>
+                        <select class="navbar__language-select" id="language-switcher" name="language-switch" aria-labelledby="language-switcher-label"></select>
+                    </div>
                 </div>
                 <div class="navbar__contacts ms-lg-4" id="navbar-contacts" aria-label="Links de contato">
-                    <a href="mailto:joninf95@gmail.com" class="navbar__contact-link" id="nav-contact-email" title="Email" aria-label="Email" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="navbar__contact-link" id="nav-contact-linkedin" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/jonnxpr" class="navbar__contact-link" id="nav-contact-github" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -128,77 +112,33 @@
                 <div class="row align-items-start g-5">
                     <div class="col-lg-8">
                         <div class="hero__content">
-                            <h1 class="hero__title">Jonathan Douglas Diego Tavares</h1>
-                            <p class="hero__subtitle" id="hero-role">Full Stack Developer</p>
-                            <p class="hero__description" id="hero-description-1">
+                            <h1 class="hero__title text-balance">Jonathan Douglas Diego Tavares</h1>
+                            <p class="hero__subtitle text-balance" id="hero-role">Full Stack Developer</p>
+                            <p class="hero__description prose-block prose-block--justify-desktop" id="hero-description-1">
                                 Bem-vindo!<br/>
                                 Sou Desenvolvedor Full Stack especializado em criar soluções robustas e escaláveis. 
                                 Tenho experiência em desenvolvimento backend e frontend, cloud computing com AWS e gerenciamento de dados complexos. 
                                 Meu diferencial está em resolver problemas desafiadores, otimizar processos e entregar produtos de alta qualidade com excelente experiência do usuário. 
                                 Trabalho com metodologias ágeis, colaboro com equipes multifuncionais e possuo experiência em manutenção e migração de sistemas legados.
                             </p>
-                            <p class="hero__description" id="hero-description-2">
+                            <p class="hero__description prose-block prose-block--justify-desktop" id="hero-description-2">
                                 Busco continuamente aprimorar minhas habilidades técnicas e comunicativas, acompanhando as melhores práticas de engenharia de software. 
                                 Utilizo inteligência artificial como ferramenta para otimizar processos, aumentar eficiência no desenvolvimento e colaborar melhor com equipes multidisciplinares.
                             </p>
 
                             <div class="hero__highlights" id="hero-highlights" aria-label="Resumo profissional">
                                 <h3 class="hero__highlights-title" id="hero-highlights-title">Competências-chave</h3>
-                                <ul class="hero__highlights-list" id="hero-highlights-list">
-                                    <li class="hero__highlights-item" id="hero-highlight-1">Backend com Java, Spring Boot e Quarkus</li>
-                                    <li class="hero__highlights-item" id="hero-highlight-2">Frontend com React, Angular, TypeScript e JavaScript</li>
-                                    <li class="hero__highlights-item" id="hero-highlight-3">AWS, construção de sistemas, integração e evolução de legados</li>
-                                </ul>
+                                <ul class="hero__highlights-list" id="hero-highlights-list"></ul>
                             </div>
                             
                             <!-- Tech Stack Preview -->
                             <div class="hero__tech-stack">
                                 <h3 class="hero__tech-title" id="hero-stack-title">Stack Principal:</h3>
-                                <div class="hero__tech-icons" id="hero-tech-icons" aria-label="Tecnologias principais">
-                                    <!-- Backend -->
-                                    <div class="tech-icon" title="Java">
-                                        <i class="fab fa-java" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="tech-icon" title="Spring Framework">
-                                        <i class="fas fa-leaf" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="tech-icon" title="Quarkus">
-                                        <i class="fas fa-bolt" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="tech-icon" title="Node.js">
-                                        <i class="fab fa-node-js" aria-hidden="true"></i>
-                                    </div>
-                                    <!-- Frontend -->
-                                    <div class="tech-icon" title="React">
-                                        <i class="fab fa-react" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="tech-icon" title="Angular">
-                                        <i class="fab fa-angular" aria-hidden="true"></i>
-                                    </div>
-                                    <!-- Databases -->
-                                    <div class="tech-icon" title="MySQL">
-                                        <img src="assets/icons/mysql-logo.ico" class="tech-icon__image" alt="MySQL" loading="lazy" decoding="async" />
-                                    </div>
-                                    <div class="tech-icon" title="PostgreSQL">
-                                        <img src="assets/icons/postgree-sql-logo.ico" class="tech-icon__image" alt="PostgreSQL" loading="lazy" decoding="async" />
-                                    </div>
-                                    <div class="tech-icon" title="Oracle Database">
-                                        <img src="assets/icons/oracle-database-logo.ico" class="tech-icon__image" alt="Oracle Database" loading="lazy" decoding="async" />
-                                    </div>
-                                    <div class="tech-icon" title="Firebase">
-                                        <img src="assets/icons/firebase-logo.ico" class="tech-icon__image" alt="Firebase" loading="lazy" decoding="async" />
-                                    </div>
-                                    <div class="tech-icon" title="MongoDB">
-                                        <img src="assets/icons/mongodb-logo.ico" class="tech-icon__image" alt="MongoDB" loading="lazy" decoding="async" />
-                                    </div>
-                                </div>
+                                <div class="hero__tech-icons" id="hero-tech-icons" aria-label="Tecnologias principais"></div>
                             </div>
 
                             <!-- CTA Buttons -->
-                            <div class="hero__cta-buttons">
-                                <a href="#projetos" class="btn hero__btn hero__btn--primary" id="cta-projects" data-scroll>Ver Projetos</a>
-                                <a href="mailto:joninf95@gmail.com" class="btn hero__btn hero__btn--secondary" id="cta-contact" target="_blank" rel="noopener noreferrer">Entre em Contato</a>
-                            </div>
+                            <div class="hero__cta-buttons"></div>
                         </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-flex justify-content-center">
@@ -214,7 +154,7 @@
         <section id="habilidades" class="skills" aria-labelledby="skills-title" aria-describedby="skills-description">
             <div class="container">
                 <h2 class="section__title" id="skills-title">Habilidades</h2>
-                <p class="section__subtitle" id="skills-description">Tecnologias que domino e trabalho diariamente</p>
+                <p class="section__subtitle text-balance" id="skills-description">Tecnologias que domino e trabalho diariamente</p>
                 
                 <ul id="skills-container" class="skills__grid" aria-live="polite" aria-label="Categorias de habilidades">
                     <!-- Skill categories will be dynamically rendered here by JavaScript -->
@@ -226,54 +166,9 @@
         <section id="educacao" class="education" aria-labelledby="education-title" aria-describedby="education-description">
             <div class="container">
                 <h2 class="section__title" id="education-title">Educação</h2>
-                <p class="section__subtitle" id="education-description">Formação acadêmica e trajetória educacional</p>
+                <p class="section__subtitle text-balance" id="education-description">Formação acadêmica e trajetória educacional</p>
                 
-                <div class="education__timeline">
-                    <!-- CEFET-MG - Técnico -->
-                    <div class="education__item fade-in-scroll">
-                        <div class="education__item-header">
-                            <div class="education__icon" aria-hidden="true">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="education__info">
-                                <h3 class="education__title" id="education-title-1">Técnico em Informática</h3>
-                                <p class="education__institution">CEFET-MG</p>
-                                <p class="education__period" id="education-period-1">Formação Técnica</p>
-                            </div>
-                        </div>
-                        <p class="education__description" id="education-description-1">Fundamentação sólida em tecnologia da informação com disciplinas práticas em programação, redes e sistemas operacionais.</p>
-                    </div>
-
-                    <!-- PUC-MG - Ciência da Computação -->
-                    <div class="education__item fade-in-scroll">
-                        <div class="education__item-header">
-                            <div class="education__icon" aria-hidden="true">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <div class="education__info">
-                                <h3 class="education__title" id="education-title-2">Ciência da Computação</h3>
-                                <p class="education__institution">PUC-MG</p>
-                                <p class="education__period" id="education-period-2">Graduação</p>
-                            </div>
-                        </div>
-                        <p class="education__description" id="education-description-2">Formação abrangente em conceitos de programação, algoritmos, estruturas de dados, engenharia de software e ciência computacional teórica.</p>
-                    </div>
-
-                    <!-- CEFET-MG - Engenharia de Computação -->
-                    <div class="education__item fade-in-scroll">
-                        <div class="education__item-header">
-                            <div class="education__icon" aria-hidden="true">
-                                <i class="fas fa-microchip"></i>
-                            </div>
-                            <div class="education__info">
-                                <h3 class="education__title" id="education-title-3">Engenharia de Computação</h3>
-                                <p class="education__institution">CEFET-MG</p>
-                                <p class="education__period" id="education-period-3">Graduação</p>
-                            </div>
-                        </div>
-                        <p class="education__description" id="education-description-3">Aprofundamento em arquitetura de sistemas, hardware/software, desenvolvimento de aplicações escaláveis e engenharia de software avançada.</p>
-                    </div>
-                </div>
+                <div class="education__timeline" id="education-timeline"></div>
             </div>
         </section>
 
@@ -281,7 +176,7 @@
         <section id="projetos" class="projects" aria-labelledby="projects-title" aria-describedby="projects-description">
             <div class="container">
                 <h2 class="section__title" id="projects-title">Projetos</h2>
-                <p class="section__subtitle" id="projects-description">Conheça os projetos em que já atuei</p>
+                <p class="section__subtitle text-balance" id="projects-description">Conheça os projetos em que já atuei</p>
                 
                 <ul id="projects-container" class="projects__grid" aria-live="polite" aria-label="Lista de projetos">
                     <!-- Projects will be dynamically rendered here by JavaScript -->
@@ -291,12 +186,9 @@
 
         <section class="opportunities" aria-labelledby="opportunities-title">
             <div class="container opportunities__container">
-                <h2 class="opportunities__title" id="opportunities-title">Vamos conversar</h2>
-                <p class="opportunities__text" id="opportunities-text">Se quiser trocar ideias sobre projetos, tecnologia ou oportunidades profissionais, fico à disposição nos canais abaixo.</p>
-                <div class="opportunities__actions" id="opportunities-actions" aria-label="Ações de contato">
-                    <a href="mailto:joninf95@gmail.com" class="opportunities__action opportunities__action--primary" id="opportunities-email" target="_blank" rel="noopener noreferrer">Enviar email</a>
-                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="opportunities__action opportunities__action--secondary" id="opportunities-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
+                <h2 class="opportunities__title text-balance" id="opportunities-title">Vamos conversar</h2>
+                <p class="opportunities__text prose-block" id="opportunities-text">Se quiser trocar ideias sobre projetos, tecnologia ou oportunidades profissionais, fico à disposição nos canais abaixo.</p>
+                <div class="opportunities__actions" id="opportunities-actions" aria-label="Ações de contato"></div>
             </div>
         </section>
     </main>
@@ -309,15 +201,6 @@
                     <p>&copy; <span id="year"></span> Jonathan Douglas Diego Tavares. <span id="footer-rights-text">Todos os direitos reservados.</span></p>
                 </div>
                 <div class="footer__contacts" id="footer-contacts" aria-label="Links de contato do rodapé">
-                    <a href="mailto:joninf95@gmail.com" class="footer__link" id="footer-contact-email" title="Email" aria-label="Email" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jonathan-douglas-3014b1b3/" class="footer__link" id="footer-contact-linkedin" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/jonnxpr" class="footer__link" id="footer-contact-github" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,108 @@
+{
+  "heroHighlights": [
+    {
+      "text": {
+        "pt-BR": "Backend com Java, Spring Boot e Quarkus",
+        "en": "Backend with Java, Spring Boot, and Quarkus",
+        "es": "Backend con Java, Spring Boot y Quarkus"
+      }
+    },
+    {
+      "text": {
+        "pt-BR": "Frontend com React, Angular, TypeScript e JavaScript",
+        "en": "Frontend with React, Angular, TypeScript, and JavaScript",
+        "es": "Frontend con React, Angular, TypeScript y JavaScript"
+      }
+    },
+    {
+      "text": {
+        "pt-BR": "AWS, construção de sistemas, integração e evolução de legados",
+        "en": "AWS, systems engineering, integration, and legacy modernization",
+        "es": "AWS, construcción de sistemas, integración y evolución de legados"
+      }
+    }
+  ],
+  "educationItems": [
+    {
+      "iconClass": "fas fa-graduation-cap",
+      "title": {
+        "pt-BR": "Técnico em Informática",
+        "en": "IT Technician",
+        "es": "Técnico en Informática"
+      },
+      "institution": "CEFET-MG",
+      "period": {
+        "pt-BR": "Formação Técnica",
+        "en": "Technical Education",
+        "es": "Formación Técnica"
+      },
+      "description": {
+        "pt-BR": "Fundamentação sólida em tecnologia da informação com disciplinas práticas em programação, redes e sistemas operacionais.",
+        "en": "Solid foundation in information technology with hands-on coursework in programming, networking, and operating systems.",
+        "es": "Base sólida en tecnología de la información con formación práctica en programación, redes y sistemas operativos."
+      }
+    },
+    {
+      "iconClass": "fas fa-laptop-code",
+      "title": {
+        "pt-BR": "Ciência da Computação",
+        "en": "Computer Science",
+        "es": "Ciencias de la Computación"
+      },
+      "institution": "PUC-MG",
+      "period": {
+        "pt-BR": "Graduação",
+        "en": "Undergraduate Degree",
+        "es": "Grado"
+      },
+      "description": {
+        "pt-BR": "Formação abrangente em conceitos de programação, algoritmos, estruturas de dados, engenharia de software e ciência computacional teórica.",
+        "en": "Comprehensive education in programming concepts, algorithms, data structures, software engineering, and theoretical computer science.",
+        "es": "Formación integral en conceptos de programación, algoritmos, estructuras de datos, ingeniería de software y computación teórica."
+      }
+    },
+    {
+      "iconClass": "fas fa-microchip",
+      "title": {
+        "pt-BR": "Engenharia de Computação",
+        "en": "Computer Engineering",
+        "es": "Ingeniería en Computación"
+      },
+      "institution": "CEFET-MG",
+      "period": {
+        "pt-BR": "Graduação",
+        "en": "Undergraduate Degree",
+        "es": "Grado"
+      },
+      "description": {
+        "pt-BR": "Aprofundamento em arquitetura de sistemas, hardware/software, desenvolvimento de aplicações escaláveis e engenharia de software avançada.",
+        "en": "Advanced study in systems architecture, hardware and software integration, scalable application development, and advanced software engineering.",
+        "es": "Profundización en arquitectura de sistemas, integración hardware/software, desarrollo de aplicaciones escalables e ingeniería de software avanzada."
+      }
+    }
+  ],
+  "opportunityActions": [
+    {
+      "id": "opportunities-email",
+      "variant": "primary",
+      "contactKey": "email",
+      "label": {
+        "pt-BR": "Enviar email",
+        "en": "Send email",
+        "es": "Enviar correo"
+      },
+      "openInNewTab": true
+    },
+    {
+      "id": "opportunities-linkedin",
+      "variant": "secondary",
+      "contactKey": "linkedin",
+      "label": {
+        "pt-BR": "LinkedIn",
+        "en": "LinkedIn",
+        "es": "LinkedIn"
+      },
+      "openInNewTab": true
+    }
+  ]
+}

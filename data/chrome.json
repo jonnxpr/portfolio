@@ -1,0 +1,85 @@
+{
+  "profile": {
+    "fullName": "Jonathan Douglas Diego Tavares",
+    "brandName": "JDDT",
+    "siteUrl": "https://jonnxpr.github.io/portfolio/",
+    "emailKey": "email",
+    "jobTitle": {
+      "pt-BR": "Desenvolvedor Full Stack",
+      "en": "Full Stack Developer",
+      "es": "Desarrollador Full Stack"
+    },
+    "image": "https://jonnxpr.github.io/portfolio/assets/profile-image.jpg",
+    "ogImage": "https://jonnxpr.github.io/portfolio/assets/og-image.jpg",
+    "sameAsKeys": ["linkedin", "github"],
+    "knowsAbout": ["Java", "Spring Boot", "React", "Angular", "AWS", "Microservices", "SQL", "NoSQL", "Docker", "CI/CD"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "PartnerBank"
+    }
+  },
+  "languageOptions": [
+    {
+      "code": "pt-BR",
+      "shortLabel": "PT",
+      "label": {
+        "pt-BR": "Português",
+        "en": "Portuguese",
+        "es": "Portugués"
+      }
+    },
+    {
+      "code": "en",
+      "shortLabel": "EN",
+      "label": {
+        "pt-BR": "Inglês",
+        "en": "English",
+        "es": "Inglés"
+      }
+    },
+    {
+      "code": "es",
+      "shortLabel": "ES",
+      "label": {
+        "pt-BR": "Espanhol",
+        "en": "Spanish",
+        "es": "Español"
+      }
+    }
+  ],
+  "contactLinks": [
+    {
+      "key": "email",
+      "href": "mailto:joninf95@gmail.com",
+      "iconClass": "fas fa-envelope",
+      "label": {
+        "pt-BR": "Email",
+        "en": "Email",
+        "es": "Correo"
+      },
+      "openInNewTab": true
+    },
+    {
+      "key": "linkedin",
+      "href": "https://www.linkedin.com/in/jonathan-douglas-3014b1b3/",
+      "iconClass": "fab fa-linkedin",
+      "label": {
+        "pt-BR": "LinkedIn",
+        "en": "LinkedIn",
+        "es": "LinkedIn"
+      },
+      "openInNewTab": true
+    },
+    {
+      "key": "github",
+      "href": "https://github.com/jonnxpr",
+      "iconClass": "fab fa-github",
+      "label": {
+        "pt-BR": "GitHub",
+        "en": "GitHub",
+        "es": "GitHub"
+      },
+      "openInNewTab": true
+    }
+  ]
+}

@@ -62,7 +62,7 @@ const Skills = (() => {
     icon.appendChild(createSkillIcon(skill.icon));
 
     const title = document.createElement('h3');
-    title.className = 'skill-category__title';
+    title.className = 'skill-category__title text-balance';
     title.setAttribute('lang', I18n.t('htmlLang'));
     title.textContent = I18n.resolveLocalizedValue(skill.title);
 
