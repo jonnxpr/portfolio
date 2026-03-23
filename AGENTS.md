@@ -1,4 +1,4 @@
-# OpenCode Instructions - Portifolio
+# OpenCode Instructions - Portfolio
 
 OpenCode entry point aligned with GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
@@ -6,7 +6,7 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 
 ## Scope
 
-- Applies to the whole `Portifolio/` tree.
+- Applies to the whole repository tree.
 - Use active files as the source of truth.
 - Ignore generated artifacts unless the task targets them.
 - This workspace is non-Java.
@@ -68,6 +68,7 @@ and provide one objective next step.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

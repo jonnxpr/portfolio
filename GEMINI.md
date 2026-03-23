@@ -1,4 +1,4 @@
-# GEMINI.md - Antigravity Entry Point (Portifolio)
+# GEMINI.md - Antigravity Entry Point (Portfolio)
 
 This repository must stay consistent across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
@@ -50,6 +50,7 @@ and provide one objective next step.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

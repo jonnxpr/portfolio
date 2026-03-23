@@ -2,7 +2,7 @@
 trigger: always_on
 ---
 
-# Development Standards Rule - Portifolio
+# Development Standards Rule - Portfolio
 
 ## Canonical sources
 

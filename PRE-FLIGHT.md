@@ -1,4 +1,4 @@
-# PRE-FLIGHT - Portifolio
+# PRE-FLIGHT - Portfolio
 
 Hard gate before any technical answer across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
@@ -53,6 +53,7 @@ Then include one single objective next action to unblock.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

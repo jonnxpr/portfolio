@@ -1,8 +1,8 @@
-# Copilot Base Instructions - Portifolio
+# Copilot Base Instructions - Portfolio
 
 ## Purpose
 
-Universal behavior and quality standards for the `Portifolio` workspace.
+Universal behavior and quality standards for the `Portfolio` workspace.
 
 ## Mandatory hierarchy
 
@@ -46,6 +46,7 @@ Universal behavior and quality standards for the `Portifolio` workspace.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

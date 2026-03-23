@@ -1,10 +1,10 @@
 ---
-name: Portifolio Instructions
+name: Portfolio Instructions
 description: Global instructions for portfolio static-site workflows
 applyTo: "**"
 ---
 
-# GitHub Copilot Instructions - Portifolio
+# GitHub Copilot Instructions - Portfolio
 
 This repository must stay consistent across OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity.
 
@@ -62,6 +62,7 @@ and include one single objective action to unblock.
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

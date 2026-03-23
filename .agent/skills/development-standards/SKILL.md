@@ -1,9 +1,9 @@
 ---
 name: development-standards
-description: Canonical technical memory for implementation, refactor, and review in the Portifolio workspace.
+description: Canonical technical memory for implementation, refactor, and review in the Portfolio workspace.
 ---
 
-# Skill - development-standards (Portifolio)
+# Skill - development-standards (Portfolio)
 
 ## When to use
 
@@ -55,3 +55,4 @@ description: Canonical technical memory for implementation, refactor, and review
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.

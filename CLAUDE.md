@@ -1,4 +1,4 @@
-# CLAUDE.md - Canonical Workflow (Portifolio)
+# CLAUDE.md - Canonical Workflow (Portfolio)
 
 Shared workflow for GitHub Copilot VS Code, GitHub Copilot CLI, OpenCode, and Antigravity.
 
@@ -40,6 +40,7 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 ## Mandatory multi-agent orchestration skill
 
 - For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
+- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

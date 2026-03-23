@@ -1,9 +1,9 @@
 ---
 name: code-review
-description: Review checklist and quality gates for PR and code-review tasks in the Portifolio workspace.
+description: Review checklist and quality gates for PR and code-review tasks in the Portfolio workspace.
 ---
 
-# Skill - code-review (Portifolio)
+# Skill - code-review (Portfolio)
 
 ## Intent
 

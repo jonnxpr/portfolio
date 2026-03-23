@@ -1,9 +1,9 @@
 ---
 name: development-standards
-description: Consolidated technical memory for implementation and refactoring in the Portifolio workspace.
+description: Consolidated technical memory for implementation and refactoring in the Portfolio workspace.
 ---
 
-# Skill - development-standards (Portifolio)
+# Skill - development-standards (Portfolio)
 
 ## Intent
 
