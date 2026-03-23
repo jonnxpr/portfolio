@@ -1,5 +1,6 @@
 from pathlib import Path
 import argparse
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -28,14 +29,22 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding='utf-8', errors='ignore')
 
 
+def compile_token_pattern(token: str):
+    escaped = re.escape(token)
+    if token == 'CLAUDE.md':
+        return re.compile(r'`CLAUDE\.md`|CLAUDE\.md')
+    return re.compile(escaped)
+
+
 def check_token_order(text: str) -> bool:
-    positions = []
+    cursor = 0
     for token in ORDER_TOKENS:
-        index = text.find(token)
-        if index == -1:
+        pattern = compile_token_pattern(token)
+        match = pattern.search(text, cursor)
+        if not match:
             return False
-        positions.append(index)
-    return positions == sorted(positions)
+        cursor = match.end()
+    return True
 
 
 def main():

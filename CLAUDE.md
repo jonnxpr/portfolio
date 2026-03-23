@@ -2,6 +2,8 @@
 
 Shared workflow for GitHub Copilot VS Code, GitHub Copilot CLI, OpenCode, and Antigravity.
 
+Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github/copilot-instructions.md`.
+
 ## Workflow orchestration
 
 - Plan first for non-trivial work.

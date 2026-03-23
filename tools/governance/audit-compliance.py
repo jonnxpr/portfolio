@@ -270,11 +270,11 @@ def check_user_mcp_runtime(findings):
         home / '.gemini' / 'antigravity' / 'mcp_config.json',
     ]
     if appdata:
-        runtime_targets.extend([
-            appdata / 'Code' / 'User' / 'mcp.json',
-            appdata / 'Code' / 'User' / 'profiles' / '149c18e5' / 'mcp.json',
-            appdata / 'Antigravity' / 'User' / 'mcp.json',
-        ])
+        runtime_targets.append(appdata / 'Code' / 'User' / 'mcp.json')
+        profiles_dir = appdata / 'Code' / 'User' / 'profiles'
+        if profiles_dir.exists():
+            runtime_targets.extend(sorted(profiles_dir.glob('*/mcp.json')))
+        runtime_targets.append(appdata / 'Antigravity' / 'User' / 'mcp.json')
     found_context7 = False
     for path in runtime_targets:
         if path.exists():
