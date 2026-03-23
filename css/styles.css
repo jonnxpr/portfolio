@@ -216,6 +216,7 @@ select:focus-visible {
 .navbar__language-select-wrap {
   --language-icon-space: 1rem;
   --language-icon-offset: 0.9rem;
+  --language-trigger-height: 44px;
   --language-trigger-horizontal-padding: 1.35rem;
   --language-menu-width: max(100%, 10.2rem);
   --language-panel-bg: linear-gradient(180deg, rgba(10, 20, 46, 0.98), rgba(7, 16, 38, 0.96));
@@ -235,7 +236,9 @@ select:focus-visible {
 
 .navbar__language-icon {
   position: absolute;
+  top: calc(var(--language-trigger-height) / 2);
   left: var(--language-icon-offset);
+  transform: translateY(-50%);
   width: var(--language-icon-space);
   color: rgba(131, 237, 255, 0.8);
   opacity: 0.82;
@@ -1294,6 +1297,7 @@ select:focus-visible {
   .navbar__language-select-wrap {
     --language-icon-space: 0.92rem;
     --language-icon-offset: 0.75rem;
+    --language-trigger-height: 40px;
     --language-trigger-horizontal-padding: 1.08rem;
     --language-menu-width: min(100%, 12rem);
     --language-menu-gap: 0.26rem;
