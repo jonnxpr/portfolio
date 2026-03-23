@@ -1,7 +1,7 @@
 📱 PORTFOLIO - ESTRUTURA FINAL
 ═══════════════════════════════════════════════════════════════
 
-📦 Portifolio/
+📦 portfolio/
 │
 ├─ 📄 index.html                 ← ARQUIVO PRINCIPAL (abra no navegador)
 ├─ 📄 QUICKSTART.md              ← Guia rápido (LEIA PRIMEIRO!)
@@ -52,10 +52,10 @@
    └─ Recriar: styles.min.css (minificar)
 
 4️⃣  FAZER DEPLOY
-   └─ Criar repo: jonnxpr.github.io no GitHub
+   └─ Criar ou renomear repo: portfolio no GitHub
    └─ Fazer push dos arquivos
    └─ Ativar GitHub Pages em Settings
-   └─ Acessar: https://jonnxpr.github.io
+   └─ Acessar: https://jonnxpr.github.io/portfolio/
 
 ═══════════════════════════════════════════════════════════════
 

@@ -1,270 +1,265 @@
 # Portfólio - Documentação
 
-Bem-vindo ao meu portfólio! Este é um site single page responsivo que apresenta meus projetos e habilidades como Full Stack Developer.
+Site single page responsivo para apresentar projetos, habilidades e informações profissionais de Jonathan Douglas Diego Tavares. O conteúdo principal é carregado dinamicamente de arquivos JSON e a experiência visual é construída com HTML, CSS e JavaScript vanilla.
 
-## 🎨 Características
+## Características
 
-- **Design Cyberpunk Minimalista**: Tema dark com neons sutis (cian e magenta)
-- **Totalmente Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- **Single Page**: Navegação fluida e intuitiva com smooth scroll
-- **Performance Otimizada**: CSS e JavaScript minificados
-- **Renderização Dinâmica**: Projetos e skills carregados de JSON
-- **Acessível**: HTML5 semântico, WCAG compliant
+- Single page responsiva com navegação suave
+- Conteúdo orientado a dados em `data/*.json`
+- CSS e JavaScript minificados para publicação
+- Módulos JavaScript separados por responsabilidade
+- Metadados públicos sincronizados a partir de `data/chrome.json`
+- HTML semântico com foco em acessibilidade
 
-## 📁 Estrutura do Projeto
+## Estrutura do projeto
 
-```
+```text
 portfolio/
-├── index.html              # Arquivo HTML principal
-├── package.json            # Configuração npm com scripts de build
-├── package-lock.json       # Lock file de dependências
-├── LICENSE                 # Licença MIT
-├── .gitignore              # Arquivos ignorados pelo Git
-├── README.md               # Este arquivo
-│
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+├── LICENSE
+├── AGENTS.md
+├── CLAUDE.md
+├── PRE-FLIGHT.md
+├── PROJECT_STRUCTURE.txt
+├── opencode.json
+├── assets/
+│   ├── icons/
+│   └── illustrations/
 ├── css/
-│   ├── styles.css          # CSS fonte (desenvolvimento)
-│   └── styles.min.css      # CSS minificado (produção)
-├── js/
-│   ├── navigation.js       # Módulo de navegação e smooth scroll
-│   ├── animations.js       # Utilitários de animação/reveal no scroll
-│   ├── projects.js         # Módulo de renderização de projetos
-│   ├── skills.js           # Módulo de renderização de skills
-│   ├── main.js             # Módulo principal e inicialização
-│   └── main.min.js         # Bundle JavaScript minificado (produção)
+│   ├── styles.css
+│   └── styles.min.css
 ├── data/
-│   ├── projects.json       # Dados dinâmicos dos projetos
-│   └── skills.json         # Dados dinâmicos de skills
-└── assets/
-    └── icons/              # Ícones personalizados (pasta para expansão futura)
+│   ├── chrome.json
+│   ├── hero.json
+│   ├── i18n.json
+│   ├── projects.json
+│   ├── sections.json
+│   └── skills.json
+├── js/
+│   ├── animations.js
+│   ├── chrome.js
+│   ├── hero.js
+│   ├── i18n.js
+│   ├── main.js
+│   ├── main.min.js
+│   ├── navigation.js
+│   ├── projects.js
+│   ├── sections.js
+│   └── skills.js
+├── scripts/
+│   ├── prepare-pages-artifact.mjs
+│   └── verify-metadata-sync.mjs
+├── tasks/
+└── tools/
 ```
 
-## 🚀 Como Usar
-
-### 0. Instalar Dependências e Executar Localmente
+## Scripts disponíveis
 
 ```bash
-# Instalar dependências
-npm install
-
-# Executar servidor local
-npm start
-
-# Abrir navegador em http://localhost:8000
-```
-
-### 1. Adicionar um Novo Projeto
-
-Para adicionar um novo projeto ao portfólio, edite o arquivo `data/projects.json` e adicione um novo objeto ao array:
-
-```json
-{
-  "id": 5,
-  "title": "Seu Título de Projeto",
-  "description": "Descrição completa do seu projeto. Explique o que ele faz e por que é importante.",
-  "technologies": ["Tecnologia1", "Tecnologia2", "Tecnologia3"],
-  "icon": "<i class='fas fa-código'></i>",
-  "links": {
-    "github": "https://github.com/seuusuario/seu-projeto",
-    "demo": "https://seu-projeto-demo.com"
-  }
-}
-```
-
-### Campos Explicados:
-- **id**: Identificador único numérico
-- **title**: Nome do projeto (máx. 50 caracteres recomendado)
-- **description**: Descrição clara e concisa do projeto
-- **technologies**: Array com nomes das tecnologias usadas
-- **icon**: Ícone Font Awesome. Veja opções em: https://fontawesome.com/icons
-- **links**: Objeto com URLs (apenas GitHub é obrigatório, demo é opcional)
-
-### 2. Personalizar Cores
-
-Abra `css/styles.css` e modifique as variáveis CSS no `:root`:
-
-```css
-:root {
-  --color-bg-primary: #0a0e27;           /* Fundo primário */
-  --color-neon-cian: #00d9ff;            /* Cor neon cian */
-  --color-neon-magenta: #ff00ff;         /* Cor neon magenta */
-  --color-text-primary: #e0e0e0;         /* Texto primário */
-  /* ... outras variáveis */
-}
-```
-
-Após modificar `styles.css`, regenere `styles.min.css` minificando novamente.
-
-### 3. Tipografia e Espaçamento
-
-Todas as variáveis de tipografia e espaçamento estão no `:root` de `css/styles.css`:
-
-```css
---font-main: /* Fonte principal para textos */
---font-mono: /* Fonte monospace para destaque */
---spacing-base: /* Unidade base de espaçamento (1rem) */
-/* ... outras variáveis */
-```
-
-## 🔧 Minificação
-
-### Com NPM (Recomendado)
-```bash
-# Instalar dependências
-npm install
-
-# Minificar CSS
+npm start              # servidor local em http://localhost:8000
+npm run start:localhost
+npm run start:127      # servidor local em http://127.0.0.1:8000
+npm run start:all      # servidor em todas as interfaces da máquina
+npm run verify:metadata
 npm run build:css
-
-# Minificar JavaScript
+npm run watch:css
 npm run build:js
+npm run build
+npm run prepare:pages
+npm run verify:metadata:artifact
+```
 
-# Minificar tudo (CSS + JS)
+## Desenvolvimento local
+
+### 1. Instalar dependências
+
+```bash
+npm install
+```
+
+### 2. Iniciar o servidor local
+
+Uso padrão:
+
+```bash
+npm start
+```
+
+Outras opções úteis:
+
+```bash
+npm run start:localhost
+npm run start:127
+npm run start:all
+```
+
+### 3. Trabalhar no CSS com minificação contínua
+
+O `index.html` usa `css/styles.min.css`. Por isso, durante alterações de estilo, o fluxo recomendado é manter o watcher ativo:
+
+```bash
+npm run watch:css
+```
+
+Esse comando observa `css/styles.css` e regenera `css/styles.min.css` automaticamente.
+
+## Build e minificação
+
+### CSS
+
+```bash
+npm run build:css
+```
+
+Minifica `css/styles.css` em `css/styles.min.css`.
+
+### JavaScript
+
+```bash
+npm run build:js
+```
+
+Concatena e minifica os módulos JavaScript em `js/main.min.js`.
+
+### Build completo
+
+```bash
 npm run build
 ```
 
-### Manualmente (Alternativa)
-**CSS:**
-1. Abra um minificador online: https://cssminifier.com
-2. Cole o conteúdo de `css/styles.css`
-3. Copie o resultado minificado
-4. Cole em `css/styles.min.css`
+Executa, nesta ordem:
 
-**JavaScript:**
-1. Abra um minificador online: https://javascript-minifier.com
-2. Cole o conteúdo de `js/navigation.js`, `js/animations.js`, `js/projects.js`, `js/skills.js` e `js/main.js` em sequência
-3. Copie o resultado minificado
-4. Cole em `js/main.min.js`
+1. Validação de metadados com `npm run verify:metadata`
+2. Minificação do CSS
+3. Minificação do JavaScript
 
-## 📱 Responsividade
+## Publicação no GitHub Pages
 
-O site é totalmente responsivo com breakpoints otimizados:
-- **Mobile**: < 480px
-- **Tablet**: 480px - 767px
-- **Desktop**: 768px+
+### Configuração atual
 
-Teste em diferentes tamanhos usando o DevTools do navegador (F12).
+- Repositório: `https://github.com/jonnxpr/portfolio.git`
+- URL pública: `https://jonnxpr.github.io/portfolio/`
+- Os caminhos de assets são relativos, então não é necessário usar `<base>`
+- Canonical, Open Graph, Twitter Card e JSON-LD são derivados de `data/chrome.json`
 
-## 🌐 Deploy no GitHub Pages
+### Preparar artefato de publicação
 
-### Opção 1: Repositório `username.github.io`
-1. Crie um repositório com nome `jonnxpr.github.io`
-2. Clone para sua máquina
-3. Copie os arquivos do portfólio para a raiz
-4. Execute:
 ```bash
-git add .
-git commit -m "Initial portfolio commit"
-git push origin main
+npm run prepare:pages
 ```
-5. O site estará disponível em `https://jonnxpr.github.io`
 
-### Opção 2: Repositório com nome customizado
-1. Crie um repositório `portfolio` (ou outro nome)
-2. Adicione ao `index.html` antes de `</head>`:
-```html
-<base href="/portfolio/">
-```
-3. Configure GitHub Pages em: Settings → Pages → Deploy from branch → main
-4. O site estará disponível em `https://jonnxpr.github.io/portfolio`
+Esse comando cria `.pages-artifact/` apenas com os arquivos necessários para o deploy.
 
-### Atualizar o site
+### Validar o artefato final
+
 ```bash
-# Faça suas alterações
-git add .
-git commit -m "Sua mensagem de commit"
-git push origin main
-# O site será atualizado automaticamente!
+npm run verify:metadata:artifact
 ```
 
-## 📚 Stack Tecnológico
+### Fluxo recomendado antes de publicar
 
-- **HTML5**: Semântico e acessível
-- **CSS3**: Grid, Flexbox, Variáveis CSS, Media Queries
-- **JavaScript Vanilla**: Sem dependências externas (exceto Bootstrap e Font Awesome via CDN)
-- **Bootstrap 5**: Via CDN para componentes responsivos
-- **Font Awesome 6**: Via CDN para ícones
-- **JSON**: Para dados dinâmicos de projetos
-- **JSON**: Para dados dinâmicos de projetos e skills
+```bash
+npm run build
+npm run prepare:pages
+npm run verify:metadata:artifact
+```
 
-## ♿ Acessibilidade
+## Fonte dos dados
 
-O portfólio segue boas práticas de acessibilidade:
-- HTML semântico com `<nav>`, `<main>`, `<section>`, `<footer>`
-- Atributos ARIA quando necessário
-- Contraste adequado de cores
-- Navegação por teclado completa
-- Marcação de idioma para conteúdo em inglês quando aplicável
-- Alt text para imagens (quando adicionadas)
+- `data/chrome.json`: perfil público, links globais, contatos e metadados
+- `data/hero.json`: conteúdo principal da hero e CTAs
+- `data/i18n.json`: dicionário de textos localizados
+- `data/projects.json`: lista de projetos
+- `data/sections.json`: highlights, educação, blocos auxiliares e CTAs finais
+- `data/skills.json`: grupos de habilidades
 
-## 🎯 Seções do Site
+## Como atualizar conteúdo
+
+### Adicionar ou editar projetos
+
+Atualize `data/projects.json` com a estrutura já usada pelos demais itens. Cada projeto deve manter os mesmos campos esperados pelo renderizador, incluindo título, descrição, tecnologias, ícone e links.
+
+### Atualizar contatos e metadados públicos
+
+Edite `data/chrome.json`. Esse arquivo centraliza:
+
+- links de contato globais
+- dados de perfil
+- URL pública do site
+- imagens sociais
+- metadados reutilizados no `index.html`
+
+### Atualizar textos multilíngues
+
+Edite `data/i18n.json` e mantenha as chaves coerentes com o código existente.
+
+## Arquitetura da interface
 
 ### Navbar
-Navegação fixa no topo com:
-- Logo/marca pessoal (JDDT)
-- Links de navegação (Sobre, Habilidades, Educação, Projetos)
-- Ícones de contato (Email, LinkedIn, GitHub)
-- Menu responsivo (hambúrguer em mobile)
 
-### Hero Section
-Apresentação profissional com:
-- Nome completo
-- Subtítulo e descrição
-- Stack principal com ícones
-- Botões CTA (Ver Projetos / Entre em Contato)
+- Navegação fixa com links de seção
+- Seletor de idioma visual customizado, sincronizado com um `select` nativo oculto para semântica e estado
+- Ícones de contato globais renderizados a partir de `data/chrome.json`
+- Menu colapsável em mobile
 
-### Skills Section
-Grid dinâmico carregado de `data/skills.json`:
-- Backend (Java, Spring, Quarkus, Node.js, TypeScript)
-- Frontend (React, Angular, TypeScript, JavaScript)
-- Databases (MySQL, PostgreSQL, MongoDB, Firebase)
-- Cloud & DevOps (AWS, CI/CD, Docker, Jenkins, GitLab)
+### Hero
 
-### Projects Section
-Grid dinâmica carregada de `data/projects.json`:
-- Ícone do projeto
-- Título e descrição
-- Badges de tecnologias
-- Links (GitHub e Demo)
-- Animações ao scroll
+- Nome, subtítulo e descrição
+- Stack principal renderizado de `data/hero.json`
+- CTAs vindos de `data/hero.json`
 
-### Footer
-Rodapé minimalista com:
-- Copyright
-- Ícones de contato (repetidos)
-- Links funcionais
+### Education
 
-## 🎨 Paleta de Cores
+- Linha do tempo derivada de `data/sections.json`
 
-| Cor | Hex | Uso |
-|-----|-----|-----|
-| Fundo Primário | #0a0e27 | Background |
-| Fundo Secundário | #1a1f3a | Cards, componentes |
-| Texto Primário | #e0e0e0 | Textos principais |
-| Texto Secundário | #a0a0a0 | Descrições, labels |
-| Neon Cian | #00d9ff | Destaque, hover |
-| Neon Magenta | #ff00ff | Acentos secundários |
+### Skills
 
-## 📧 Dados de Contato
+- Grid dinâmico renderizado de `data/skills.json`
 
-- **Email**: joninf95@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/jonathan-douglas-3014b1b3/
-- **GitHub**: https://github.com/jonnxpr
+### Projects
 
-## 🔒 Privacidade
+- Grid de cards renderizado de `data/projects.json`
 
-Este portfólio não coleta dados de visitantes. É um site estático hospedado no GitHub Pages.
+### Opportunities e Footer
 
-## 📄 Licença
+- Blocos finais e contatos reaproveitando dados de `data/chrome.json` e `data/sections.json`
 
-Este projeto é open source. Sinta-se livre para usá-lo como referência ou base para seu próprio portfólio.
+## Stack tecnológica
+
+- HTML5 semântico
+- CSS3 com variáveis, Grid, Flexbox e media queries
+- JavaScript vanilla modular
+- Bootstrap 5 via CDN
+- Font Awesome via CDN
+- JSON como fonte de conteúdo dinâmico
+- `clean-css-cli` para minificação de CSS
+- `terser` para minificação de JavaScript
+- `chokidar-cli` para observar mudanças no CSS durante o desenvolvimento
+
+## Acessibilidade e responsividade
+
+- Estrutura semântica com `nav`, `main`, `section` e `footer`
+- Navegação por teclado
+- Contraste visual planejado para leitura e foco
+- Comportamento responsivo para mobile, tablet e desktop
+
+## Privacidade
+
+Este projeto é um site estático e não coleta dados de visitantes.
+
+## Licença
+
+Projeto disponibilizado sob licença MIT.
 
 ---
 
-**Última atualização**: Janeiro 5, 2026
+Última atualização: Janeiro de 2026
 
-**Autor**: Jonathan Douglas Diego Tavares
+Autor: Jonathan Douglas Diego Tavares
 
-**Versão**: 1.0.0
+Versão: 1.0.0
 
-**Licença**: MIT
+Licença: MIT

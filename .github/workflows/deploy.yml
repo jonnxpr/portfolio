@@ -29,13 +29,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Verify metadata sync
+        run: npm run verify:metadata
+
       - name: Build assets
         run: npm run build
+
+      - name: Prepare Pages artifact
+        run: npm run prepare:pages
+
+      - name: Verify Pages artifact metadata sync
+        run: npm run verify:metadata:artifact
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -43,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: '.pages-artifact'
 
       - name: Deploy to GitHub Pages
         id: deployment
