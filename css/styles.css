@@ -83,6 +83,11 @@ main {
   width: 100%;
 }
 
+/* Visual panels should be nested inside .container, not merged with it. */
+.section-panel {
+  width: 100%;
+}
+
 /* Remove default link styling */
 a {
   color: inherit;

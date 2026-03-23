@@ -196,6 +196,11 @@ Edite `data/chrome.json`. Esse arquivo centraliza:
 
 Edite `data/i18n.json` e mantenha as chaves coerentes com o código existente.
 
+## Convenção de layout
+
+- Wrappers visuais com borda, fundo ou raio devem ficar dentro de um `.container`, nunca combinar a classe visual com o próprio `container`
+- Para esses casos, prefira um painel interno com a classe utilitária `.section-panel`
+
 ## Arquitetura da interface
 
 ### Navbar

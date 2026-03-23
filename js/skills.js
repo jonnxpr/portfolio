@@ -53,7 +53,7 @@ const Skills = (() => {
 
   const createSkillCard = (skill, index) => {
     const card = document.createElement('li');
-    card.className = 'skill-category fade-in-scroll';
+    card.className = 'section-panel skill-category fade-in-scroll';
     card.style.animationDelay = `${index * 0.1}s`;
 
     const icon = document.createElement('div');

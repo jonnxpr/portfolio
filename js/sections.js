@@ -128,7 +128,7 @@ const ContentSections = (() => {
     }
 
     const wrapper = document.createElement('div');
-    wrapper.className = 'education__item fade-in-scroll';
+    wrapper.className = 'section-panel education__item fade-in-scroll';
     wrapper.style.animationDelay = `${index * 0.1}s`;
 
     const header = document.createElement('div');

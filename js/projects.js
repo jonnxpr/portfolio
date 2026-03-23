@@ -71,7 +71,7 @@ const Projects = (() => {
 
   const createProjectCard = (project, index) => {
     const card = document.createElement('li');
-    card.className = 'project-card fade-in-scroll';
+    card.className = 'section-panel project-card fade-in-scroll';
     card.style.animationDelay = `${index * 0.1}s`;
 
     // Badge de projeto atual
