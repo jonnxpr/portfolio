@@ -27,7 +27,8 @@ and provide one objective next step.
 5. `.github/skills/development-standards/SKILL.md`
 6. `.agent/skills/development-standards/SKILL.md`
 7. `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` for design-centric work
-8. `.agent/rules/development-standards.md`
+8. `.github/skills/glab-operations/SKILL.md` or `.agent/skills/glab-operations/SKILL.md` for GitLab/`glab` tasks
+9. `.agent/rules/development-standards.md`
 
 ## Mandatory rules
 
@@ -35,6 +36,7 @@ and provide one objective next step.
 - Keep build artifacts aligned with source changes.
 - For commit creation or commit message generation, read `.github/copilot-commit-message-instructions.md`.
 - If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md`; if `tasks/` is missing, create both first.
+- For GitLab repository, pipeline, merge request, issue, release, or project-status tasks via `glab`, also load `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
 - This is a non-Java workspace.
 
 ## Context7 documentation policy (mandatory)

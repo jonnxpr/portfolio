@@ -44,6 +44,10 @@ description: Canonical technical memory for implementation, refactor, and review
 
 - Use Context7 before implementation, refactor, and review decisions.
 
+## Related task routing
+
+- For GitLab repository, pipeline, merge request, issue, release, or project-status tasks via `glab`, use `.agent/skills/glab-operations/SKILL.md`, `.github/skills/glab-operations/SKILL.md`, or `.opencode/skills/glab-operations/SKILL.md` as the primary task skill.
+
 ## Mandatory final code review, cross-validation, and factual integrity
 
 - Final approval requires code review plus evidence-backed validation.

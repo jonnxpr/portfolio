@@ -34,6 +34,11 @@ Universal behavior and quality standards for the `Portfolio` workspace.
 - If `tasks/` exists, read `tasks/todo.md` and `tasks/lessons.md`; if `tasks/` is missing, create both first.
 - This is a non-Java workspace.
 
+## Task-type skill routing
+
+- Frontend design-centric work uses `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` when present.
+- GitLab repository, pipeline, merge request, issue, release, or project-status work via `glab` uses `.github/skills/glab-operations/SKILL.md`, `.opencode/skills/glab-operations/SKILL.md`, or `.agent/skills/glab-operations/SKILL.md`.
+
 ## Context7 documentation policy (mandatory)
 
 - Use Context7 before implementation, refactor, and review work.
