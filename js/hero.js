@@ -90,10 +90,15 @@ const Hero = (() => {
       return null;
     }
 
+    const localizedLabel = I18n.resolveLocalizedValue(item.label);
+    if (typeof localizedLabel !== 'string' || localizedLabel.trim().length === 0) {
+      return null;
+    }
+
     const wrapper = document.createElement('div');
     wrapper.className = 'tech-icon';
-    wrapper.title = item.label;
-    wrapper.setAttribute('aria-label', item.label);
+    wrapper.title = localizedLabel;
+    wrapper.setAttribute('aria-label', localizedLabel);
     wrapper.setAttribute('role', 'img');
 
     if (item.type === 'image') {
@@ -104,10 +109,16 @@ const Hero = (() => {
       const image = document.createElement('img');
       image.src = item.src;
       image.className = 'tech-icon__image';
-      image.alt = typeof item.alt === 'string' && item.alt.length > 0 ? item.alt : item.label;
+      image.alt = typeof item.alt === 'string' && item.alt.length > 0 ? item.alt : localizedLabel;
       image.loading = 'lazy';
       image.decoding = 'async';
       wrapper.appendChild(image);
+
+      const label = document.createElement('span');
+      label.className = 'tech-icon__label';
+      label.textContent = localizedLabel;
+      wrapper.appendChild(label);
+
       return wrapper;
     }
 
@@ -119,6 +130,11 @@ const Hero = (() => {
     icon.className = item.iconClass;
     icon.setAttribute('aria-hidden', 'true');
     wrapper.appendChild(icon);
+
+    const label = document.createElement('span');
+    label.className = 'tech-icon__label';
+    label.textContent = localizedLabel;
+    wrapper.appendChild(label);
 
     return wrapper;
   };
@@ -199,7 +215,7 @@ const Hero = (() => {
     if (languageListenerBound) return;
 
     globalThis.addEventListener('languageChanged', () => {
-      updateCtaLabels();
+      renderHeroSections();
     });
 
     languageListenerBound = true;

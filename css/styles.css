@@ -498,6 +498,7 @@ select:focus-visible {
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--spacing-lg);
   font-family: var(--font-mono);
+  text-wrap: balance;
 }
 
 .hero__description {
@@ -611,27 +612,29 @@ select:focus-visible {
 }
 
 .hero__tech-icons {
-  display: flex;
-  gap: clamp(var(--spacing-sm), 2vw, var(--spacing-lg));
-  row-gap: var(--spacing-base);
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 0.85rem;
+  align-items: stretch;
 }
 
 .tech-icon {
-  width: 60px;
-  height: 60px;
-  display: flex;
+  width: 100%;
+  min-height: 92px;
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   background: rgba(0, 217, 255, 0.05);
   border: 2px solid rgba(0, 217, 255, 0.3);
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1.8rem;
   color: var(--color-neon-cian);
   transition: all var(--transition-base);
   overflow: hidden;
-  padding: 8px;
+  padding: 0.95rem 0.9rem 0.85rem;
+  text-align: center;
 }
 
 .tech-icon img {
@@ -655,12 +658,23 @@ select:focus-visible {
   justify-content: center;
 }
 
+.tech-icon__label {
+  display: block;
+  max-width: 100%;
+  color: var(--color-text-secondary);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
 .tech-icon:hover,
 .tech-icon:focus {
   background: rgba(0, 217, 255, 0.15);
   border-color: var(--color-neon-cian);
   box-shadow: var(--glow-cian);
-  transform: translateY(-4px) scale(1.1);
+  transform: translateY(-4px);
 }
 
 /* CTA Buttons */
@@ -1094,6 +1108,7 @@ select:focus-visible {
   font-family: var(--font-display);
   max-inline-size: 12ch;
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .opportunities__text {
@@ -1398,14 +1413,20 @@ select:focus-visible {
     margin-bottom: var(--spacing-base);
   }
 
+  .hero__subtitle {
+    max-width: 24ch;
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
   .hero__tech-icons {
-    gap: 0.75rem;
-    row-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    gap: 0.85rem;
   }
 
   .tech-icon {
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    min-height: 92px;
     font-size: 1.5rem;
   }
 
@@ -1439,6 +1460,15 @@ select:focus-visible {
 
   .opportunities__actions {
     justify-content: center;
+  }
+
+  .section__title,
+  .opportunities__title {
+    line-height: 1.04;
+  }
+
+  .opportunities__title {
+    font-size: clamp(2.15rem, 9vw, 3rem);
   }
 
   .footer {
@@ -1477,14 +1507,21 @@ select:focus-visible {
     font-size: var(--font-size-base);
   }
 
+  .hero__tech-icons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .tech-icon {
-    width: 40px;
-    height: 40px;
+    min-height: 88px;
     font-size: 1.2rem;
   }
 
   .hero__description {
     font-size: var(--font-size-base);
+  }
+
+  .tech-icon__label {
+    font-size: 0.68rem;
   }
 
   .hero__btn {
@@ -1498,6 +1535,10 @@ select:focus-visible {
 
   .section__subtitle {
     font-size: var(--font-size-base);
+  }
+
+  .opportunities__title {
+    font-size: clamp(1.85rem, 11vw, 2.4rem);
   }
 
   .skill-category {
@@ -1525,6 +1566,27 @@ select:focus-visible {
   .project-card__image {
     height: 150px;
     font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero__tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(var(--spacing-sm), 2vw, var(--spacing-lg));
+    row-gap: var(--spacing-base);
+    align-items: center;
+  }
+
+  .tech-icon {
+    min-width: 74px;
+    width: auto;
+    min-height: 74px;
+    padding: 1rem;
+  }
+
+  .tech-icon__label {
+    display: none;
   }
 }
 
