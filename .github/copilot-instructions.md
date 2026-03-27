@@ -53,6 +53,10 @@ and include one single objective action to unblock.
 
 - For design-centric work, also apply `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 
+## Testing skill (mandatory by context)
+
+- For build validation, smoke testing, regression, or automated test work, also apply `.github/skills/testing-standards/SKILL.md`, `.opencode/skills/testing-standards/SKILL.md`, or `.agent/skills/testing-standards/SKILL.md`.
+
 ## GitLab skill (mandatory by context)
 
 - For GitLab repository, pipeline, merge request, issue, release, or project-status work via `glab`, also apply `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
