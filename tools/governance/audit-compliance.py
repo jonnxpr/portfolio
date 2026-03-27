@@ -31,6 +31,7 @@ GRADLE_WRAPPER = "gradlew-jdk.ps1"
 MAVEN_WRAPPER = "mvn-jdk.ps1"
 FRONTEND_SKILL = "frontend-design"
 GLAB_SKILL = "glab-operations"
+GH_SKILL = "gh-operations"
 
 MANDATORY_PATTERNS = [
     "**/PRE-FLIGHT.md",
@@ -330,7 +331,7 @@ def check_skill_routing(findings):
     ]
     routed_skills = {
         FRONTEND_SKILL: "Reference frontend-design in at least one core routing file.",
-        GLAB_SKILL: "Reference glab-operations in at least one core routing file.",
+        GH_SKILL: "Reference gh-operations in at least one core routing file.",
     }
     for skill_name, fix in routed_skills.items():
         skill_sources = [
@@ -414,7 +415,7 @@ def check_global_copilot_cli_skills(findings):
         "development-standards",
         "code-review",
         "orchestrate-multi-agents",
-        GLAB_SKILL,
+        GH_SKILL,
     }
     if (opencode_root / "frontend-design" / "SKILL.md").exists():
         required.add("frontend-design")
