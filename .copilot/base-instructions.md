@@ -39,10 +39,17 @@ Universal behavior and quality standards for the `Portfolio` workspace.
 - Frontend design-centric work uses `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` when present.
 - Build validation, smoke testing, regression, or automated test work uses `.github/skills/testing-standards/SKILL.md`, `.opencode/skills/testing-standards/SKILL.md`, or `.agent/skills/testing-standards/SKILL.md`.
 - GitLab repository, pipeline, merge request, issue, release, or project-status work via `glab` uses `.github/skills/glab-operations/SKILL.md`, `.opencode/skills/glab-operations/SKILL.md`, or `.agent/skills/glab-operations/SKILL.md`.
+- Specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts) use `.github/skills/speckit-workflow/SKILL.md`, `.opencode/skills/speckit-workflow/SKILL.md`, or `.agent/skills/speckit-workflow/SKILL.md`.
 
 ## Context7 documentation policy (mandatory)
 
 - Use Context7 before implementation, refactor, and review work.
+
+## Speckit safe parity (mandatory)
+
+- Repo-local Speckit assets live under `.specify/` and `specs/` inside this repository.
+- OpenCode custom Speckit commands live under `.opencode/command/`.
+- Speckit automation must not rewrite home-dir configs or unrelated governance files.
 
 ## MCP credential discovery and connection consent (mandatory)
 

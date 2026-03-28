@@ -22,6 +22,7 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 - Static single-page portfolio with HTML, CSS, and vanilla JS modules.
 - `data/projects.json` is the dynamic data source.
 - `npm run build` is the canonical verification for asset changes.
+- Specification-driven workflow artifacts live repo-locally under `.specify/` and `specs/`.
 
 ## Git repository context (mandatory)
 
@@ -31,6 +32,12 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 ## Context7 documentation policy (mandatory)
 
 - Use Context7 before implementation, refactor, and review decisions.
+
+## Speckit safe parity (mandatory)
+
+- Keep Speckit writes inside this repository only.
+- Use repo-local `.specify/`, `specs/`, and `.opencode/command/` surfaces.
+- Do not let Speckit automation rewrite home-dir configs or unrelated governance files.
 
 ## MCP credential discovery and connection consent (mandatory)
 

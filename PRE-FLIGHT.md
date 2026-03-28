@@ -18,7 +18,8 @@ Hard gate before any technical answer across OpenCode, GitHub Copilot VS Code, G
 12. For frontend design-centric tasks, also load `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 13. For GitHub repository, workflow run, pull request, issue, release, or project-status tasks via `gh`, also load `.github/skills/gh-operations/SKILL.md` or `.opencode/skills/gh-operations/SKILL.md`.
 14. For build validation, smoke testing, regression, or automated test work, also load `.github/skills/testing-standards/SKILL.md` or `.opencode/skills/testing-standards/SKILL.md`.
-15. Git Repository Discovery (MANDATORY):
+15. For specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts), also load `.github/skills/speckit-workflow/SKILL.md` or `.opencode/skills/speckit-workflow/SKILL.md`.
+16. Git Repository Discovery (MANDATORY):
     - If workspace root is not a git repo, run `scripts/discover-git-repo.ps1`.
     - Use the discovered repo for git operations.
 
@@ -45,6 +46,12 @@ Then include one single objective next action to unblock.
 ## Context7 documentation policy (mandatory)
 
 - Use Context7 for implementation, refactor, and review decisions.
+
+## Speckit safe parity (mandatory)
+
+- Repo-local Speckit assets live under `.specify/` and `specs/` inside this repository.
+- OpenCode custom Speckit commands live under `.opencode/command/`.
+- Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
 ## MCP credential discovery and connection consent (mandatory)
 

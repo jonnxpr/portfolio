@@ -44,6 +44,7 @@ and include one single objective action to unblock.
 - Source CSS/JS changes must keep minified artifacts aligned.
 - Keep payload small, semantic HTML strong, and responsiveness intact.
 - This is a non-Java workspace.
+- Repo-local Speckit workflow state lives under `.specify/` and `specs/`.
 
 ## Context7 documentation policy (mandatory)
 
@@ -57,6 +58,10 @@ and include one single objective action to unblock.
 
 - For build validation, smoke testing, regression, or automated test work, also apply `.github/skills/testing-standards/SKILL.md`, `.opencode/skills/testing-standards/SKILL.md`, or `.agent/skills/testing-standards/SKILL.md`.
 
+## Speckit skill (mandatory by context)
+
+- For specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts), also apply `.github/skills/speckit-workflow/SKILL.md` or `.opencode/skills/speckit-workflow/SKILL.md`.
+
 ## GitLab skill (mandatory by context)
 
 - For GitLab repository, pipeline, merge request, issue, release, or project-status work via `glab`, also apply `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
@@ -66,6 +71,11 @@ and include one single objective action to unblock.
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
 - Discovery must cover workspace/project files, OpenCode config, `.copilot/mcp-config.json`, VS Code `profiles/*/mcp.json`, `~/.gemini/antigravity/mcp_config.json`, and referenced environment variables such as `CONTEXT7_API_KEY`.
 - If credentials are not found, report exactly: `credentials not found for requested MCP`.
+
+## Speckit safe parity (mandatory)
+
+- Keep `.specify/`, `specs/`, and `.opencode/command/` scoped to this repository.
+- Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
 ## Mandatory multi-agent orchestration skill
 
