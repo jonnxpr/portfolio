@@ -14,7 +14,9 @@ description: Local Antigravity-compatible skill for safe-parity Speckit workflow
 
 - `.specify/` stores templates, scripts, and constitution.
 - `specs/<feature-branch>/` stores feature artifacts.
-- `.opencode/command/` stores OpenCode command entrypoints.
+- OpenCode command entrypoints live in `.opencode/commands/`.
+- GitHub Copilot discovery surfaces live in `.github/prompts/` and `.github/agents/`.
+- Antigravity discovery surfaces live in `.gemini/commands/`.
 
 ## Safe parity rules
 

@@ -54,7 +54,7 @@ and provide one objective next step.
 ## Speckit safe parity
 
 - Repo-local Speckit assets live under `.specify/` and `specs/` inside this repository.
-- OpenCode custom Speckit commands live under `.opencode/command/`.
+- OpenCode custom Speckit commands live under `.opencode/commands/`.
 - Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
 ## Task knowledge policy

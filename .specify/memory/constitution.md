@@ -8,7 +8,7 @@ Templates requiring updates:
 - .specify/templates/plan-template.md ✅ aligned via safe-parity pilot
 - .specify/templates/spec-template.md ✅ aligned via safe-parity pilot
 - .specify/templates/tasks-template.md ✅ aligned via safe-parity pilot
-- .opencode/command/speckit*.md ✅ aligned via safe-parity pilot
+- .opencode/commands/speckit*.md ✅ aligned via safe-parity pilot
 Follow-up TODOs: none
 -->
 # Portfolio Constitution
@@ -49,7 +49,7 @@ ownership MUST stay clear from specification through implementation.
 - Features MUST remain compatible with desktop and mobile layouts.
 - Spec-driven workflow artifacts live only inside this repository under
   `.specify/` and `specs/`.
-- OpenCode command surfaces live only inside `.opencode/command/`.
+- OpenCode command surfaces live only inside `.opencode/commands/`.
 
 ## Workflow And Quality Gates
 

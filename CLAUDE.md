@@ -36,7 +36,7 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 ## Speckit safe parity (mandatory)
 
 - Keep Speckit writes inside this repository only.
-- Use repo-local `.specify/`, `specs/`, and `.opencode/command/` surfaces.
+- Use repo-local `.specify/`, `specs/`, and `.opencode/commands/` surfaces.
 - Do not let Speckit automation rewrite home-dir configs or unrelated governance files.
 
 ## MCP credential discovery and connection consent (mandatory)

@@ -50,7 +50,7 @@ Then include one single objective next action to unblock.
 ## Speckit safe parity (mandatory)
 
 - Repo-local Speckit assets live under `.specify/` and `specs/` inside this repository.
-- OpenCode custom Speckit commands live under `.opencode/command/`.
+- OpenCode custom Speckit commands live under `.opencode/commands/`.
 - Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
 ## MCP credential discovery and connection consent (mandatory)

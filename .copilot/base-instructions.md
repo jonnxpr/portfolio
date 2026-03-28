@@ -48,7 +48,7 @@ Universal behavior and quality standards for the `Portfolio` workspace.
 ## Speckit safe parity (mandatory)
 
 - Repo-local Speckit assets live under `.specify/` and `specs/` inside this repository.
-- OpenCode custom Speckit commands live under `.opencode/command/`.
+- OpenCode custom Speckit commands live under `.opencode/commands/`.
 - Speckit automation must not rewrite home-dir configs or unrelated governance files.
 
 ## MCP credential discovery and connection consent (mandatory)

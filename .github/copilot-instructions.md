@@ -74,7 +74,7 @@ and include one single objective action to unblock.
 
 ## Speckit safe parity (mandatory)
 
-- Keep `.specify/`, `specs/`, and `.opencode/command/` scoped to this repository.
+- Keep `.specify/`, `specs/`, and `.opencode/commands/` scoped to this repository.
 - Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
 ## Mandatory multi-agent orchestration skill
