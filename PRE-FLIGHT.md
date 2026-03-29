@@ -53,6 +53,11 @@ Then include one single objective next action to unblock.
 - OpenCode custom Speckit commands live under `.opencode/commands/`.
 - Never let Speckit automation rewrite home-dir configs or unrelated governance files outside this repository.
 
+## Shared governance repository (mandatory context)
+
+- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `C:\Users\jonathan.tavares\Documents\portfolio-governance`.
+- This primary repository remains authoritative for product code, content, repo-local instructions, and repo-local Speckit assets.
+
 ## MCP credential discovery and connection consent (mandatory)
 
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).

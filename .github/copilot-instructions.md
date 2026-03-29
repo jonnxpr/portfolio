@@ -46,6 +46,11 @@ and include one single objective action to unblock.
 - This is a non-Java workspace.
 - Repo-local Speckit workflow state lives under `.specify/` and `specs/`.
 
+## Shared governance repository (mandatory context)
+
+- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `C:\Users\jonathan.tavares\Documents\portfolio-governance`.
+- This primary repository remains authoritative for product code, content, repo-local instructions, and repo-local Speckit assets.
+
 ## Context7 documentation policy (mandatory)
 
 - Use Context7 before implementation, refactor, and review work.

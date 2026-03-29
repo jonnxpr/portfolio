@@ -2,6 +2,11 @@
 
 Site single page responsivo para apresentar projetos, habilidades e informações profissionais de Jonathan Douglas Diego Tavares. O conteúdo principal é carregado dinamicamente de arquivos JSON e a experiência visual é construída com HTML, CSS e JavaScript vanilla.
 
+## Governanca compartilhada
+
+- A memoria compartilhada de governanca, templates reutilizaveis e notas de rollout que precisam evoluir fora do historico do site agora possuem repositorio irmao dedicado: `C:\Users\jonathan.tavares\Documents\portfolio-governance` (`https://github.com/jonnxpr/portfolio-governance`).
+- Este repositorio `Portfolio/` continua sendo a fonte de verdade para codigo, conteudo, assets, specs repo-locais e instrucoes que precisam permanecer junto do produto.
+
 ## Características
 
 - Single page responsiva com navegação suave
