@@ -3,6 +3,7 @@ node_modules/
 dist/
 build/
 .pages-artifact/
+.history/
 .DS_Store
 *.log
 .env
@@ -36,6 +37,8 @@ tasks/precedence-report.md
 tasks/secret-scan.sarif
 tasks/secret-triage-report.md
 tasks/workspace-baseline-report.md
+__pycache__/
+*.pyc
 !scripts/jdk-env.ps1
 !scripts/gradlew-jdk.ps1
 !scripts/mvn-jdk.ps1
