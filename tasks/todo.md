@@ -1,4 +1,11 @@
-# TODO
+# Task Plan
+
+Registre aqui as tarefas nao triviais em execucao neste repositorio ou workspace.
+
+- Objetivo:
+- Plano de execucao:
+- Evidencias esperadas:
+- Status/Resultado:
 
 ## Speckit safe parity pilot (2026-03-27)
 
