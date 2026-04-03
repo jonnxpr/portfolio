@@ -71,10 +71,10 @@ Canonical precedence: `.copilot/base-instructions.md` -> `CLAUDE.md` -> `.github
 ## Orchestration Reference
 
 - Operational matrix, modes, and parallelization rules:
-  see preflight-prompt/docs/orchestration-matrix.md
+  see ~/Documents/preflight-prompt/docs/orchestration-matrix.md
 - Orchestration templates (S0-S4):
-  see preflight-prompt/docs/orchestration-templates.md
+  see ~/Documents/preflight-prompt/docs/orchestration-templates.md
 - validate-fast/full commands for this ecosystem:
-  see preflight-prompt/docs/validate-catalog.md
+  see ~/Documents/preflight-prompt/docs/validate-catalog.md
 - Ownership registry for this ecosystem:
-  see portfolio-governance/docs/ownership-registry.md
+  see ~/Documents/portfolio-governance/docs/ownership-registry.md
