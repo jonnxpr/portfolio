@@ -1,5 +1,7 @@
 ---
 description: Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature using gh.
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 ## User Input
@@ -35,3 +37,4 @@ git config --get remote.origin.url
 
 > [!CAUTION]
 > UNDER NO CIRCUMSTANCES EVER CREATE ISSUES IN REPOSITORIES THAT DO NOT MATCH THE REMOTE URL
+

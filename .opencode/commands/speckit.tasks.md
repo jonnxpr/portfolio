@@ -1,5 +1,7 @@
 ---
 description: Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts.
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json
 handoffs: 
   - label: Analyze For Consistency
     agent: speckit.analyze

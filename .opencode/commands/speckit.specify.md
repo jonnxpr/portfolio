@@ -1,5 +1,7 @@
 ---
 description: Create or update the feature specification from a natural language feature description.
+scripts:
+  ps: .specify/scripts/powershell/create-new-feature.ps1 "{ARGS}"
 handoffs: 
   - label: Build Technical Plan
     agent: speckit.plan

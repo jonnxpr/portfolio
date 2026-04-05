@@ -1,5 +1,7 @@
 ---
 description: Execute the implementation plan by processing and executing all tasks defined in tasks.md
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 ## User Input
@@ -202,3 +204,4 @@ Note: This command assumes a complete task breakdown exists in tasks.md. If task
         EXECUTE_COMMAND: {command}
         ```
     - If no hooks are registered or `.specify/extensions.yml` does not exist, skip silently
+

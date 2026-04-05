@@ -1,5 +1,7 @@
 ---
 description: Execute the implementation plan by processing and executing all tasks defined in tasks.md
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 ## User Input

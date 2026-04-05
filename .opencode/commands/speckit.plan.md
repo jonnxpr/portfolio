@@ -1,5 +1,9 @@
 ---
 description: Execute the implementation planning workflow using the plan template to generate design artifacts.
+scripts:
+  ps: .specify/scripts/powershell/setup-plan.ps1 -Json
+agent_scripts:
+  ps: .specify/scripts/powershell/update-agent-context.ps1 -AgentType __AGENT__
 handoffs: 
   - label: Create Tasks
     agent: speckit.tasks

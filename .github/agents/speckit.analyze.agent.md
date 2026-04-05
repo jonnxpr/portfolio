@@ -1,5 +1,7 @@
 ---
 description: Perform a non-destructive cross-artifact consistency and quality analysis across spec.md, plan.md, and tasks.md after task generation.
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 ## User Input
@@ -187,3 +189,4 @@ Ask the user: "Would you like me to suggest concrete remediation edits for the t
 ## Context
 
 $ARGUMENTS
+

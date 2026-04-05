@@ -1,5 +1,7 @@
 ---
 description: Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature using gh.
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 ## User Input

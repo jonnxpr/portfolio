@@ -1,5 +1,7 @@
 ---
 description: Identify underspecified areas in the current feature spec by asking up to 5 highly targeted clarification questions and encoding answers back into the spec.
+scripts:
+  ps: .specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly
 handoffs: 
   - label: Build Technical Plan
     agent: speckit.plan
@@ -184,3 +186,4 @@ Behavior rules:
 - If quota reached with unresolved high-impact categories remaining, explicitly flag them under Deferred with rationale.
 
 Context for prioritization: $ARGUMENTS
+
