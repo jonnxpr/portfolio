@@ -15,6 +15,16 @@ Universal behavior and quality standards for the `Portfolio` workspace.
 7. `.agent/skills/development-standards/SKILL.md`
 8. `.agent/rules/development-standards.md`
 
+## Integral instruction read (mandatory)
+
+- Read all mandatory files from first line through last line.
+- If the runtime returns only partial content, continue chunked reads until EOF.
+
+## Preflight result (mandatory)
+
+- Start every technical response with `Preflight OK: <file1>, <file2>, ...` listing every mandatory file read.
+- If any mandatory file is missing or unreadable, reply only with `BLOCKED: preflight incompleto` and one objective next action.
+
 ## Cross-tool contract
 
 - Keep the same semantics across GitHub Copilot VS Code, GitHub Copilot CLI, OpenCode, and Antigravity.

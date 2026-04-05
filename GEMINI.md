@@ -18,6 +18,11 @@ If preflight is incomplete, reply only:
 
 and provide one objective next step.
 
+## Integral instruction read (mandatory)
+
+- Read all mandatory files from first line through last line.
+- If the runtime returns only partial content, continue chunked reads until EOF.
+
 ## Mandatory loading order
 
 1. `.copilot/base-instructions.md`
