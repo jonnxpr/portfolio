@@ -30,12 +30,13 @@ and provide one objective next step.
 3. `.github/copilot-instructions.md`
 4. `.github/instructions/*.instructions.md`
 5. `.github/skills/development-standards/SKILL.md`
-6. `.agent/skills/development-standards/SKILL.md`
-7. `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` for design-centric work
-8. `.github/skills/glab-operations/SKILL.md` or `.agent/skills/glab-operations/SKILL.md` for GitLab/`glab` tasks
-9. `.github/skills/gh-operations/SKILL.md` or `.agent/skills/gh-operations/SKILL.md` for GitHub/`gh` tasks
-10. `.github/skills/speckit-workflow/SKILL.md` or `.agent/skills/speckit-workflow/SKILL.md` for Speckit workflow tasks
-11. `.agent/rules/development-standards.md`
+6. `.opencode/skills/development-standards/SKILL.md`
+7. `.agent/skills/development-standards/SKILL.md`
+8. `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md` for design-centric work
+9. `.github/skills/glab-operations/SKILL.md` or `.agent/skills/glab-operations/SKILL.md` for GitLab/`glab` tasks
+10. `.github/skills/gh-operations/SKILL.md` or `.agent/skills/gh-operations/SKILL.md` for GitHub/`gh` tasks
+11. `.github/skills/speckit-workflow/SKILL.md` or `.agent/skills/speckit-workflow/SKILL.md` for Speckit workflow tasks
+12. `.agent/rules/development-standards.md`
 
 ## Mandatory rules
 
