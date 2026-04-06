@@ -45,6 +45,7 @@ Technical memory for implementation and refactor in this workspace.
 
 ## Related task routing
 
+- For GitHub repository, workflow run, pull request, issue, release, or project-status tasks via `gh`, use `.github/skills/gh-operations/SKILL.md`, `.opencode/skills/gh-operations/SKILL.md`, or `.agent/skills/gh-operations/SKILL.md` as the primary task skill.
 - For GitLab repository, pipeline, merge request, issue, release, or project-status tasks via `glab`, use `.github/skills/glab-operations/SKILL.md`, `.opencode/skills/glab-operations/SKILL.md`, or `.agent/skills/glab-operations/SKILL.md` as the primary task skill.
 
 ## Mandatory final code review, cross-validation, and factual integrity
