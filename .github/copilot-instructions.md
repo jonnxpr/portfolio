@@ -92,6 +92,10 @@ and include one single objective action to unblock.
 
 - For GitLab repository, pipeline, merge request, issue, release, or project-status work via `glab`, also apply `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
 
+## GitHub skill (mandatory by context)
+
+- For GitHub repository, workflow run, pull request, issue, release, or project-status work via `gh`, also apply `.github/skills/gh-operations/SKILL.md` or `.opencode/skills/gh-operations/SKILL.md`.
+
 ## MCP credential discovery and connection consent (mandatory)
 
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
@@ -117,3 +121,4 @@ and include one single objective action to unblock.
 - Secret scan: `./tools/governance/scan-secrets.ps1`
 - Instruction sync: `python ./tools/governance/sync-instructions.py`
 - Compliance audit: `python ./tools/governance/audit-compliance.py`
+- Precedence audit: `python ./tools/governance/verify-precedence.py`

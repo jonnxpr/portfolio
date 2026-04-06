@@ -94,3 +94,4 @@ Then include one single objective next action to unblock.
 - Secret scan: `./tools/governance/scan-secrets.ps1`
 - Instruction sync: `python ./tools/governance/sync-instructions.py`
 - Compliance audit: `python ./tools/governance/audit-compliance.py`
+- Precedence audit: `python ./tools/governance/verify-precedence.py`
