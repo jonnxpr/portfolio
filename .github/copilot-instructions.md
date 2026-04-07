@@ -100,6 +100,10 @@ and include one single objective action to unblock.
 
 - For GitHub repository, workflow run, pull request, issue, release, or project-status work via `gh`, also apply `.github/skills/gh-operations/SKILL.md` or `.opencode/skills/gh-operations/SKILL.md`.
 
+## Governance audit skill (mandatory by context)
+
+- For governance architecture, instructions, skills, preflight gates, routing, CLI-native parity, mirror scope, or governance-toolkit audit/fix loop tasks, also apply `.github/skills/governance-audit-loop/SKILL.md` or `.opencode/skills/governance-audit-loop/SKILL.md`.
+
 ## MCP credential discovery and connection consent (mandatory)
 
 - Before connecting to any MCP server, request user confirmation and list the credential source(s) to be used (redacted; never print secret values).
@@ -113,8 +117,7 @@ and include one single objective action to unblock.
 
 ## Mandatory multi-agent orchestration skill
 
-- For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`.
-- For non-trivial tasks, instantiate the `Template DAG 100% compliance` from `orchestrate-multi-agents`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
+- For non-trivial tasks, apply `orchestrate-multi-agents` before implementation and keep the `Template DAG 100% compliance`; owners/tasks may be reduced only when not applicable, but mandatory gates cannot be removed.
 
 ## Mandatory final code review, cross-validation, and factual integrity
 

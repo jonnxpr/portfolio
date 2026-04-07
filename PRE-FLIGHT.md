@@ -19,9 +19,10 @@ Hard gate before any technical answer across OpenCode, GitHub Copilot VS Code, G
 13. Before implementation/refactor/review, consult Context7.
 14. For frontend design-centric tasks, also load `.github/skills/frontend-design/SKILL.md` or `.opencode/skills/frontend-design/SKILL.md`.
 15. For GitHub repository, workflow run, pull request, issue, release, or project-status tasks via `gh`, also load `.github/skills/gh-operations/SKILL.md` or `.opencode/skills/gh-operations/SKILL.md`.
-16. For build validation, smoke testing, regression, or automated test work, also load `.github/skills/testing-standards/SKILL.md` or `.opencode/skills/testing-standards/SKILL.md`.
-17. For specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts), also load `.github/skills/speckit-workflow/SKILL.md` or `.opencode/skills/speckit-workflow/SKILL.md`.
-18. Git Repository Discovery (MANDATORY):
+16. For GitLab repository, pipeline, merge request, issue, release, or project-status tasks via `glab`, also load `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
+17. For build validation, smoke testing, regression, or automated test work, also load `.github/skills/testing-standards/SKILL.md` or `.opencode/skills/testing-standards/SKILL.md`.
+18. For specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts), also load `.github/skills/speckit-workflow/SKILL.md` or `.opencode/skills/speckit-workflow/SKILL.md`.
+19. Git Repository Discovery (MANDATORY):
     - If workspace root is not a git repo, run `scripts/discover-git-repo.ps1`.
     - Use the discovered repo for git operations.
 
@@ -96,4 +97,5 @@ Then include one single objective next action to unblock.
 - Secret scan: `./tools/governance/scan-secrets.ps1`
 - Instruction sync: `python ./tools/governance/sync-instructions.py`
 - Compliance audit: `python ./tools/governance/audit-compliance.py`
+- Workspace baseline audit: `python ./tools/governance/audit-workspace-baseline.py`
 - Precedence audit: `python ./tools/governance/verify-precedence.py`
