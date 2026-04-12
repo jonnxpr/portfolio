@@ -4,7 +4,7 @@ Site single page responsivo para apresentar projetos, habilidades e informaçõe
 
 ## Governanca compartilhada
 
-- A memoria compartilhada de governanca, templates reutilizaveis e notas de rollout que precisam evoluir fora do historico do site agora possuem repositorio irmao dedicado: `C:\Users\jonathan.tavares\Documents\portfolio-governance` (`https://github.com/jonnxpr/portfolio-governance`).
+- A memoria compartilhada de governanca, templates reutilizaveis e notas de rollout que precisam evoluir fora do historico do site agora possuem repositorio irmao dedicado: `~/Documentos/portfolio-governance` (`https://github.com/jonnxpr/portfolio-governance`).
 - Este repositorio `Portfolio/` continua sendo a fonte de verdade para codigo, conteudo, assets, specs repo-locais e instrucoes que precisam permanecer junto do produto.
 
 ## Características
@@ -55,7 +55,11 @@ portfolio/
 │   ├── sections.js
 │   └── skills.js
 ├── scripts/
+│   ├── discover-git-repo.sh
 │   ├── prepare-pages-artifact.mjs
+│   ├── start-static.mjs
+│   ├── validate.ps1
+│   ├── validate.sh
 │   └── verify-metadata-sync.mjs
 ├── tasks/
 └── tools/
@@ -64,9 +68,9 @@ portfolio/
 ## Scripts disponíveis
 
 ```bash
-npm start              # servidor local em http://localhost:8000
+npm start              # servidor Node local em http://localhost:8000
 npm run start:localhost
-npm run start:127      # servidor local em http://127.0.0.1:8000
+npm run start:127      # servidor Node local em http://127.0.0.1:8000
 npm run start:all      # servidor em todas as interfaces da máquina
 npm run verify:metadata
 npm run build:css
@@ -91,6 +95,15 @@ Uso padrão:
 
 ```bash
 npm start
+```
+
+Os scripts de start usam o servidor estatico em `scripts/start-static.mjs`, sem depender de Python local.
+
+Validacoes rapidas multiplataforma:
+
+```bash
+bash scripts/validate.sh fast
+pwsh -NoProfile -File scripts/validate.ps1 -Mode fast
 ```
 
 Outras opções úteis:

@@ -22,8 +22,9 @@ Hard gate before any technical answer across OpenCode, GitHub Copilot VS Code, G
 16. For GitLab repository, pipeline, merge request, issue, release, or project-status tasks via `glab`, also load `.github/skills/glab-operations/SKILL.md` or `.opencode/skills/glab-operations/SKILL.md`.
 17. For build validation, smoke testing, regression, or automated test work, also load `.github/skills/testing-standards/SKILL.md` or `.opencode/skills/testing-standards/SKILL.md`.
 18. For specification-driven workflow tasks (`/speckit.*`, specification authoring, clarification, constitution, planning, tasks, analysis, or implementation from `specs/` artifacts), also load `.github/skills/speckit-workflow/SKILL.md` or `.opencode/skills/speckit-workflow/SKILL.md`.
-19. Git Repository Discovery (MANDATORY):
-    - If workspace root is not a git repo, run `scripts/discover-git-repo.ps1`.
+19. For local SonarQube tasks (scans, quality gates, issue review, hotspots, coverage, or `sonar-project.properties`) against `http://localhost:9001`, also load `sonarqube-local`.
+20. Git Repository Discovery (MANDATORY):
+    - If workspace root is not a git repo, run `scripts/discover-git-repo.sh`.
     - Use the discovered repo for git operations.
 
 ## Integral instruction read (mandatory)
@@ -74,7 +75,7 @@ Then include one single objective next action to unblock.
 
 ## Shared governance repository (mandatory context)
 
-- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `C:\Users\jonathan.tavares\Documents\portfolio-governance`.
+- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `~/Documentos/portfolio-governance`.
 - This primary repository remains authoritative for product code, content, repo-local instructions, and repo-local Speckit assets.
 
 ## MCP credential discovery and connection consent (mandatory)
@@ -94,8 +95,8 @@ Then include one single objective next action to unblock.
 
 ## Governance automation (mandatory)
 
-- Secret scan: `./tools/governance/scan-secrets.ps1`
-- Instruction sync: `python ./tools/governance/sync-instructions.py`
-- Compliance audit: `python ./tools/governance/audit-compliance.py`
-- Workspace baseline audit: `python ./tools/governance/audit-workspace-baseline.py`
-- Precedence audit: `python ./tools/governance/verify-precedence.py`
+- Secret scan: `./tools/governance/scan-secrets.sh`
+- Instruction sync: `python3 ./tools/governance/sync-instructions.py`
+- Compliance audit: `python3 ./tools/governance/audit-compliance.py`
+- Workspace baseline audit: `python3 ./tools/governance/audit-workspace-baseline.py`
+- Precedence audit: `python3 ./tools/governance/verify-precedence.py`
