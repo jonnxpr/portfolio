@@ -75,7 +75,7 @@ Then include one single objective next action to unblock.
 
 ## Shared governance repository (mandatory context)
 
-- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `~/Documentos/portfolio-governance`.
+- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `/media/jonathan/Dados/Documentos/portfolio-governance`.
 - This primary repository remains authoritative for product code, content, repo-local instructions, and repo-local Speckit assets.
 
 ## MCP credential discovery and connection consent (mandatory)

@@ -4,7 +4,7 @@ Site single page responsivo para apresentar projetos, habilidades e informaçõe
 
 ## Governanca compartilhada
 
-- A memoria compartilhada de governanca, templates reutilizaveis e notas de rollout que precisam evoluir fora do historico do site agora possuem repositorio irmao dedicado: `~/Documentos/portfolio-governance` (`https://github.com/jonnxpr/portfolio-governance`).
+- A memoria compartilhada de governanca, templates reutilizaveis e notas de rollout que precisam evoluir fora do historico do site agora possuem repositorio irmao dedicado: `/media/jonathan/Dados/Documentos/portfolio-governance` (`https://github.com/jonnxpr/portfolio-governance`).
 - Este repositorio `Portfolio/` continua sendo a fonte de verdade para codigo, conteudo, assets, specs repo-locais e instrucoes que precisam permanecer junto do produto.
 
 ## Características
