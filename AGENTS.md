@@ -19,7 +19,7 @@ Code/commits/PRs: normal. Off: "stop caveman" / "normal mode".
 - Use active files as the source of truth.
 - Ignore generated artifacts unless the task targets them.
 - This workspace is non-Java.
-- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `/media/jonathan/Dados1/Documentos/portfolio-governance`.
+- Long-lived shared governance memory, reusable templates, and rollout notes now have a sibling repository: `/media/jonathan/Dados2/Documentos/portfolio-governance`.
 
 ## Instruction loading strategy
 

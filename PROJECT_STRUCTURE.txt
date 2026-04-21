@@ -3,7 +3,7 @@
 
 📦 portfolio/
 │
-├─ 📄 index.html                 ← ARQUIVO PRINCIPAL (abra no navegador)
+├─ 📄 index.html                 ← ARQUIVO PRINCIPAL (servido por `npm start`)
 ├─ 📄 QUICKSTART.md              ← Guia rápido (LEIA PRIMEIRO!)
 ├─ 📄 README.md                  ← Documentação completa
 ├─ 📄 DEPLOYMENT.md              ← Instruções de deploy
@@ -41,15 +41,15 @@
    └─ Máximo: 1 hora (4 projetos)
 
 2️⃣  TESTAR LOCALMENTE
-   └─ Abrir Terminal na pasta
-   └─ Executar: python -m http.server 8000
-   └─ Acessar: http://localhost:8000
-   └─ Verificar: Navbar, Hero, Skills, Projects, Footer
+    └─ Abrir Terminal na pasta
+    └─ Executar: npm start
+    └─ Acessar: http://localhost:8000
+    └─ Verificar: Navbar, Hero, Skills, Projects, Footer
 
 3️⃣  CUSTOMIZAR VISUAL (OPCIONAL)
-   └─ Editar: css/styles.css
-   └─ Mudar variáveis CSS (:root)
-   └─ Recriar: styles.min.css (minificar)
+    └─ Editar: css/styles.css
+    └─ Mudar variáveis CSS (:root)
+    └─ Recriar: npm run build:css
 
 4️⃣  FAZER DEPLOY
    └─ Criar ou renomear repo: portfolio no GitHub
@@ -157,17 +157,16 @@ README.md            Documentação              Raramente
 ═══════════════════════════════════════════════════════════════
 
 # Executar localmente
-python -m http.server 8000
+npm start
 
 # Depois de editar CSS
-# 1. Abra: https://cssminifier.com
-# 2. Cole styles.css
-# 3. Copie resultado para styles.min.css
+npm run build:css
 
 # Depois de editar JS
-# 1. Abra: https://javascript-minifier.com
-# 2. Cole navigation.js + projects.js + main.js
-# 3. Copie resultado para main.min.js
+npm run build:js
+
+# Build completo
+npm run build
 
 ═══════════════════════════════════════════════════════════════
 
@@ -214,7 +213,7 @@ GitHub:   https://github.com/jonnxpr
 
 1. Abra QUICKSTART.md para instruções rápidas
 2. Configure data/projects.json com seus projetos
-3. Teste localmente com: python -m http.server 8000
+3. Teste localmente com: npm start
 4. Leia DEPLOYMENT.md e faça deploy no GitHub Pages
 5. Compartilhe seu portfólio! 🎉
 
