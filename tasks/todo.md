@@ -50,3 +50,22 @@ Registre aqui as tarefas nao triviais em execucao neste repositorio ou workspace
   - [x] `pwsh -NoProfile -File scripts/validate.ps1 -Mode fast` -> PASS
   - [x] `npm run build` -> PASS
   - [x] `node scripts/start-static.mjs --host 127.0.0.1 --port 8123` -> `200 /`, `404 /does-not-exist.js`
+
+## 2026-11-24 — Projeto Nava (Banco Inter), padronização de competências e alinhamento com LinkedIn
+
+- Objetivo: Adicionar projeto Nava | Tech for Business (Banco Inter) como atual, adicionar Preflight Prompt (open source), atualizar PartnerBank para encerrado com AWS ECR, padronizar competências em todos projetos/seções e aplicar melhorias derivadas do LinkedIn.
+- Plano de execucao:
+  1. Persistir plano em `plans/plan-navaProjectAndLinkedInImprovements.prompt.md` e validar referências com Context7.
+  2. Atualizar `data/projects.json`, `data/skills.json`, `data/hero.json`, `data/sections.json`, `data/i18n.json`, `data/chrome.json` e `index.html`.
+  3. Atualizar `js/projects.js` e `css/styles.css` para exibir cargo e período nos cards com responsividade e acessibilidade.
+  4. Executar `npm run build`, `pwsh -NoProfile -File scripts/validate.ps1 -Mode fast` e smoke test em `http://localhost:8000/` (desktop, mobile, PT/EN/ES).
+  5. Executar code review final, cross-validation e atualizar `plans/` e `tasks/todo.md` como concluído.
+- Evidencias esperadas: `npm run build` verde (`verify:metadata`, `cleancss`, `terser`), `validate.ps1 -Mode fast` verde, smoke test no browser confirmando renderização sem erros de console.
+- Status/Resultado:
+  - [x] Plano salvo em `plans/plan-navaProjectAndLinkedInImprovements.prompt.md` e Context7 consultado
+  - [x] Dados e metadados atualizados (`data/*.json`, `index.html`)
+  - [x] Renderização de cargo/período e estilos atualizados (`js/projects.js`, `css/styles.css`)
+  - [x] Build e validações rápidas verdes (`npm.cmd run build`, `verify-precedence.py=0`, `audit-compliance.py=100`)
+  - [x] Smoke test desktop (1280×800) + mobile (375×812) + PT/EN/ES aprovado em `http://localhost:8000/` (0 erros console/rede)
+  - [x] Code review final + cross-validation concluídos e plano marcado `completed`
+  - [x] SVG hero-tech-visual.svg verificado via Playwright DOM (naturalWidth=680, complete=true, sem overflow); toggler mobile corrigido com `filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(155deg)` + `npm run build:css` verde

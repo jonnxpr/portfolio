@@ -6,19 +6,19 @@
       "iconClass": "fab fa-java"
     },
     {
-      "label": "Spring Framework",
+      "label": "Spring Boot",
       "type": "icon",
       "iconClass": "fas fa-leaf"
     },
     {
-      "label": "Quarkus",
+      "label": "Micronaut",
       "type": "icon",
       "iconClass": "fas fa-bolt"
     },
     {
-      "label": "Node.js",
+      "label": "AWS",
       "type": "icon",
-      "iconClass": "fab fa-node-js"
+      "iconClass": "fab fa-aws"
     },
     {
       "label": "React",

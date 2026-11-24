@@ -12,10 +12,28 @@
     "image": "https://jonnxpr.github.io/portfolio/assets/profile-image.jpg",
     "ogImage": "https://jonnxpr.github.io/portfolio/assets/og-image.jpg",
     "sameAsKeys": ["linkedin", "github"],
-    "knowsAbout": ["Java", "Spring Boot", "React", "Angular", "AWS", "Microservices", "SQL", "NoSQL", "Docker", "CI/CD"],
+    "knowsAbout": [
+      "Java",
+      "Spring Boot",
+      "Spring Framework",
+      "Micronaut",
+      "Quarkus",
+      "React",
+      "Angular",
+      "AWS",
+      "Microservices",
+      "Apache Kafka",
+      "Kubernetes",
+      "Docker",
+      "New Relic",
+      "Grafana",
+      "SQL",
+      "NoSQL",
+      "CI/CD"
+    ],
     "worksFor": {
       "@type": "Organization",
-      "name": "PartnerBank"
+      "name": "Nava | Tech for Business"
     }
   },
   "languageOptions": [

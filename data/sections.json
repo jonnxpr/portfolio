@@ -2,9 +2,9 @@
   "heroHighlights": [
     {
       "text": {
-        "pt-BR": "Backend com Java, Spring Boot e Quarkus",
-        "en": "Backend with Java, Spring Boot, and Quarkus",
-        "es": "Backend con Java, Spring Boot y Quarkus"
+        "pt-BR": "Backend com Java, Spring Boot, Micronaut e Quarkus",
+        "en": "Backend with Java, Spring Boot, Micronaut, and Quarkus",
+        "es": "Backend con Java, Spring Boot, Micronaut y Quarkus"
       }
     },
     {
@@ -16,32 +16,20 @@
     },
     {
       "text": {
-        "pt-BR": "AWS, construção de sistemas, integração e evolução de legados",
-        "en": "AWS, systems engineering, integration, and legacy modernization",
-        "es": "AWS, construcción de sistemas, integración y evolución de legados"
+        "pt-BR": "AWS, Apache Kafka, Kubernetes e observabilidade (New Relic e Grafana)",
+        "en": "AWS, Apache Kafka, Kubernetes, and observability (New Relic and Grafana)",
+        "es": "AWS, Apache Kafka, Kubernetes y observabilidad (New Relic y Grafana)"
+      }
+    },
+    {
+      "text": {
+        "pt-BR": "Idiomas: Português (Nativo), Inglês (Avançado) e Espanhol (Básico–Intermediário)",
+        "en": "Languages: Portuguese (Native), English (Advanced), and Spanish (Basic–Intermediate)",
+        "es": "Idiomas: Portugués (Nativo), Inglés (Avanzado) y Español (Básico–Intermedio)"
       }
     }
   ],
   "educationItems": [
-    {
-      "iconClass": "fas fa-graduation-cap",
-      "title": {
-        "pt-BR": "Técnico em Informática",
-        "en": "IT Technician",
-        "es": "Técnico en Informática"
-      },
-      "institution": "CEFET-MG",
-      "period": {
-        "pt-BR": "Formação Técnica",
-        "en": "Technical Education",
-        "es": "Formación Técnica"
-      },
-      "description": {
-        "pt-BR": "Fundamentação sólida em tecnologia da informação com disciplinas práticas em programação, redes e sistemas operacionais.",
-        "en": "Solid foundation in information technology with hands-on coursework in programming, networking, and operating systems.",
-        "es": "Base sólida en tecnología de la información con formación práctica en programación, redes y sistemas operativos."
-      }
-    },
     {
       "iconClass": "fas fa-laptop-code",
       "title": {
@@ -49,16 +37,16 @@
         "en": "Computer Science",
         "es": "Ciencias de la Computación"
       },
-      "institution": "PUC-MG",
+      "institution": "PUC Minas",
       "period": {
-        "pt-BR": "Graduação",
-        "en": "Undergraduate Degree",
-        "es": "Grado"
+        "pt-BR": "Graduação (Interrompido) · Jan 2020 – Dez 2026",
+        "en": "Bachelor's Program (Discontinued) · Jan 2020 – Dec 2026",
+        "es": "Grado (Interrumpido) · Ene 2020 – Dic 2026"
       },
       "description": {
-        "pt-BR": "Formação abrangente em conceitos de programação, algoritmos, estruturas de dados, engenharia de software e ciência computacional teórica.",
-        "en": "Comprehensive education in programming concepts, algorithms, data structures, software engineering, and theoretical computer science.",
-        "es": "Formación integral en conceptos de programación, algoritmos, estructuras de datos, ingeniería de software y computación teórica."
+        "pt-BR": "Formação abrangente em programação orientada a objetos (POO), algoritmos, estruturas de dados, engenharia de software e computação teórica.",
+        "en": "Comprehensive education in object-oriented programming (OOP), algorithms, data structures, software engineering, and theoretical computer science.",
+        "es": "Formación integral en programación orientada a objetos (POO), algoritmos, estructuras de datos, ingeniería de software y computación teórica."
       }
     },
     {
@@ -70,14 +58,33 @@
       },
       "institution": "CEFET-MG",
       "period": {
-        "pt-BR": "Graduação",
-        "en": "Undergraduate Degree",
-        "es": "Grado"
+        "pt-BR": "Graduação (Não concluído) · 2016 – 2019",
+        "en": "Bachelor's Program (Incomplete) · 2016 – 2019",
+        "es": "Grado (Incompleto) · 2016 – 2019"
       },
       "description": {
-        "pt-BR": "Aprofundamento em arquitetura de sistemas, hardware/software, desenvolvimento de aplicações escaláveis e engenharia de software avançada.",
+        "pt-BR": "Aprofundamento em arquitetura de sistemas, integração hardware/software, desenvolvimento de aplicações escaláveis e engenharia de software avançada.",
         "en": "Advanced study in systems architecture, hardware and software integration, scalable application development, and advanced software engineering.",
         "es": "Profundización en arquitectura de sistemas, integración hardware/software, desarrollo de aplicaciones escalables e ingeniería de software avanzada."
+      }
+    },
+    {
+      "iconClass": "fas fa-graduation-cap",
+      "title": {
+        "pt-BR": "Técnico em Informática",
+        "en": "IT Technician",
+        "es": "Técnico en Informática"
+      },
+      "institution": "CEFET-MG",
+      "period": {
+        "pt-BR": "Ensino Médio e Técnico · 2012 – 2014",
+        "en": "High School & Technical Education · 2012 – 2014",
+        "es": "Educación Secundaria y Técnica · 2012 – 2014"
+      },
+      "description": {
+        "pt-BR": "Fundamentação sólida em tecnologia da informação com disciplinas práticas em análise e desenvolvimento de sistemas, programação, redes e manutenção de computadores.",
+        "en": "Solid foundation in information technology with hands-on coursework in systems analysis and development, programming, networking, and computer maintenance.",
+        "es": "Base sólida en tecnología de la información con formación práctica en análisis y desarrollo de sistemas, programación, redes y mantenimiento de computadoras."
       }
     }
   ],

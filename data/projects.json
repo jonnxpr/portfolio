@@ -1,26 +1,36 @@
 [
   {
-    "id": 1,
+    "id": 3,
     "title": {
-      "pt-BR": "Sistemas de Gerenciamento Industrial (Pátio, Ativos, Manutenção e Financeiro)",
-      "en": "Industrial Management Systems (Yard, Assets, Maintenance, and Finance)",
-      "es": "Sistemas de Gestión Industrial (Patio, Activos, Mantenimiento y Finanzas)"
+      "pt-BR": "Nava | Tech for Business — Banco Inter",
+      "en": "Nava | Tech for Business — Banco Inter",
+      "es": "Nava | Tech for Business — Banco Inter"
+    },
+    "role": {
+      "pt-BR": "Desenvolvedor Fullstack Pleno",
+      "en": "Mid-level Full Stack Developer",
+      "es": "Desarrollador Full Stack Semi-Senior"
+    },
+    "period": {
+      "pt-BR": "Mai 2026 – Atual",
+      "en": "May 2026 – Present",
+      "es": "May 2026 – Actualidad"
     },
     "description": {
-      "pt-BR": "Na Vetta, atuei por três anos no cliente Usiminas, evoluindo de estagiário (2021) a profissional. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. Trabalhei em ambiente ágil utilizando Scrum e Kanban, colaborando eficazmente com equipes multifuncionais. A experiência consolidou minhas habilidades técnicas e de colaboração, entregando soluções de qualidade para uma grande corporação.",
-      "en": "At Vetta, I worked for three years on the Usiminas account, progressing from intern (2021) to professional developer. I participated in the development and maintenance of integrated industrial management systems, including yard, assets, maintenance, and financial management. These systems significantly improved operations, delivering higher efficiency and control in daily activities. I worked in agile environments using Scrum and Kanban, collaborating effectively with cross-functional teams. This experience strengthened my technical and collaboration skills while delivering high-quality solutions for a large corporation.",
-      "es": "En Vetta, trabajé durante tres años para el cliente Usiminas, evolucionando de pasante (2021) a desarrollador profesional. Participé en el desarrollo y mantenimiento de sistemas integrados de gestión industrial, incluyendo patio, activos, mantenimiento y gestión financiera. Estos sistemas optimizaron significativamente las operaciones, brindando mayor eficiencia y control en las actividades diarias. Trabajé en entornos ágiles utilizando Scrum y Kanban, colaborando eficazmente con equipos multidisciplinarios. Esta experiencia fortaleció mis habilidades técnicas y de colaboración, entregando soluciones de alta calidad para una gran corporación."
+      "pt-BR": "Atuação terceirizada para o Banco Inter no desenvolvimento e manutenção de serviços financeiros críticos em Java com Spring Boot e Micronaut, construindo APIs REST e microsserviços com foco em escalabilidade, performance e confiabilidade. Implementação de mensageria e integrações em nuvem com Apache Kafka e AWS (S3, RDS, SQS, ECS, EKS, EC2 e Parameter Store) em ambientes conteinerizados com Docker e Kubernetes. Monitoramento de performance e observabilidade com New Relic e Grafana para identificar gargalos e propor melhorias técnicas. Aplicação de POO, Clean Code, princípios SOLID, versionamento com Git/GitLab, documentação técnica e participação ativa em ambiente ágil (Scrum e Kanban) na evolução arquitetural da plataforma.",
+      "en": "Outsourced engagement at Banco Inter developing and maintaining mission-critical financial services in Java with Spring Boot and Micronaut, building REST APIs and microservices focused on scalability, performance, and reliability. Implementation of messaging and cloud integrations with Apache Kafka and AWS (S3, RDS, SQS, ECS, EKS, EC2, and Parameter Store) across containerized Docker and Kubernetes environments. Performance monitoring and observability with New Relic and Grafana to identify bottlenecks and drive technical improvements. Application of OOP, Clean Code, SOLID principles, Git/GitLab versioning, technical documentation, and active participation in agile teams (Scrum and Kanban) to advance platform architecture.",
+      "es": "Servicio tercerizado para Banco Inter en el desarrollo y mantenimiento de servicios financieros críticos en Java con Spring Boot y Micronaut, construyendo APIs REST y microservicios enfocados en escalabilidad, rendimiento y confiabilidad. Implementación de mensajería e integraciones en la nube con Apache Kafka y AWS (S3, RDS, SQS, ECS, EKS, EC2 y Parameter Store) en entornos con Docker y Kubernetes. Monitoreo de rendimiento y observabilidad con New Relic y Grafana para detectar cuellos de botella y proponer mejoras técnicas. Aplicación de POO, Clean Code, principios SOLID, versionado con Git/GitLab, documentación técnica y participación activa en equipos ágiles (Scrum y Kanban) en la evolución arquitectónica de la plataforma."
     },
     "technologies": {
-      "pt-BR": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD com Jenkins e Gogs"],
-      "en": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD with Jenkins and Gogs"],
-      "es": ["Java", "Quarkus", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "CI/CD con Jenkins y Gogs"]
+      "pt-BR": ["Java", "Spring Boot", "Spring Framework", "Micronaut", "APIs REST", "Microsserviços", "Apache Kafka", "AWS", "AWS EC2", "AWS ECS", "AWS EKS", "AWS RDS", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Kubernetes", "Git", "GitLab", "New Relic", "Grafana"],
+      "en": ["Java", "Spring Boot", "Spring Framework", "Micronaut", "REST APIs", "Microservices", "Apache Kafka", "AWS", "AWS EC2", "AWS ECS", "AWS EKS", "AWS RDS", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Kubernetes", "Git", "GitLab", "New Relic", "Grafana"],
+      "es": ["Java", "Spring Boot", "Spring Framework", "Micronaut", "APIs REST", "Microservicios", "Apache Kafka", "AWS", "AWS EC2", "AWS ECS", "AWS EKS", "AWS RDS", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Kubernetes", "Git", "GitLab", "New Relic", "Grafana"]
     },
-    "icon": "<i class='fas fa-industry'></i>",
-    "current": false,
+    "icon": "<i class='fas fa-landmark'></i>",
+    "current": true,
     "links": {
-      "Usiminas": "https://www.usiminas.com/",
-      "Vetta": "https://www.vetta.digital/pt-br"
+      "Nava": "https://nava.com.br/",
+      "Banco Inter": "https://inter.co/"
     }
   },
   {
@@ -30,20 +40,97 @@
       "en": "PartnerBank - Payment Institution",
       "es": "PartnerBank - Institución de Pago"
     },
+    "role": {
+      "pt-BR": "Desenvolvedor Fullstack Pleno",
+      "en": "Mid-level Full Stack Developer",
+      "es": "Desarrollador Full Stack Semi-Senior"
+    },
+    "period": {
+      "pt-BR": "Jul 2025 – Abr 2026",
+      "en": "Jul 2025 – Apr 2026",
+      "es": "Jul 2025 – Abr 2026"
+    },
     "description": {
-      "pt-BR": "Atuo no desenvolvimento e manutenção de aplicações REST em Java e Spring Boot com frontend em React. Realizo integrações com AWS (S3, SQS, ECS) e implemento pipelines de CI/CD utilizando GitLab, Docker, Nexus e Sonar, garantindo qualidade e observabilidade através do New Relic para monitorar performance e identificar gargalos. Minhas responsabilidades incluem definição de padrões de código, revisão técnica, documentação e suporte a sistemas existentes. Trabalho com bancos de dados MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban). Atualmente, desenvolvo novos módulos para a plataforma de serviços financeiros, otimizando aplicações legadas e assegurando conformidade regulatória do setor.",
-      "en": "I develop and maintain REST applications in Java and Spring Boot with a React frontend. I implement AWS integrations (S3, SQS, ECS) and build CI/CD pipelines using GitLab, Docker, Nexus, and Sonar, ensuring quality and observability through New Relic for performance monitoring and bottleneck detection. My responsibilities include coding standards definition, technical review, documentation, and support for existing systems. I work with MySQL, PostgreSQL, and MongoDB in agile environments (Scrum and Kanban). Currently, I build new modules for the financial services platform, optimize legacy applications, and ensure regulatory compliance.",
-      "es": "Desarrollo y mantengo aplicaciones REST en Java y Spring Boot con frontend en React. Implemento integraciones con AWS (S3, SQS, ECS) y pipelines de CI/CD utilizando GitLab, Docker, Nexus y Sonar, garantizando calidad y observabilidad con New Relic para monitorear rendimiento e identificar cuellos de botella. Mis responsabilidades incluyen definición de estándares de código, revisión técnica, documentación y soporte a sistemas existentes. Trabajo con MySQL, PostgreSQL y MongoDB en entornos ágiles (Scrum y Kanban). Actualmente, desarrollo nuevos módulos para la plataforma de servicios financieros, optimizo aplicaciones legadas y aseguro el cumplimiento regulatorio del sector."
+      "pt-BR": "Atuei no desenvolvimento e manutenção de APIs REST em Java com Spring Boot e frontend em React para serviços financeiros críticos. Implementei integrações com AWS (S3, SQS, ECS, ECR, EC2 e Parameter Store) e pipelines de CI/CD utilizando Git, GitLab, Docker, Nexus e Sonar, garantindo qualidade e observabilidade através do New Relic para monitorar performance e identificar gargalos. Minhas responsabilidades incluíram definição de padrões de código, revisão técnica, documentação, evolução de módulos da plataforma, otimização de aplicações legadas e conformidade regulatória do setor com MySQL, PostgreSQL e MongoDB em ambiente ágil (Scrum e Kanban).",
+      "en": "Developed and maintained REST APIs in Java with Spring Boot and a React frontend for mission-critical financial services. Implemented AWS integrations (S3, SQS, ECS, ECR, EC2, and Parameter Store) and CI/CD pipelines using Git, GitLab, Docker, Nexus, and Sonar, ensuring quality and observability through New Relic for performance monitoring and bottleneck detection. Responsibilities included coding standards definition, technical reviews, documentation, platform module development, legacy optimization, and regulatory compliance across MySQL, PostgreSQL, and MongoDB in agile environments (Scrum and Kanban).",
+      "es": "Participé en el desarrollo y mantenimiento de APIs REST en Java con Spring Boot y frontend en React para servicios financieros críticos. Implementé integraciones con AWS (S3, SQS, ECS, ECR, EC2 y Parameter Store) y pipelines de CI/CD con Git, GitLab, Docker, Nexus y Sonar, garantizando calidad y observabilidad mediante New Relic para monitorear rendimiento e identificar cuellos de botella. Mis responsabilidades incluyeron definición de estándares de código, revisión técnica, documentación, desarrollo de nuevos módulos, optimización de sistemas legados y cumplimiento regulatorio con MySQL, PostgreSQL y MongoDB en entornos ágiles (Scrum y Kanban)."
     },
     "technologies": {
-      "pt-BR": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD com GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
-      "en": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD with GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
-      "es": ["Java", "Spring Boot", "React", "JavaScript", "AWS S3", "AWS SQS", "AWS ECS", "AWS EC2", "AWS Parameter Store", "Docker", "CI/CD con GitLab", "MySQL", "PostgreSQL", "MongoDB", "New Relic"]
+      "pt-BR": ["Java", "Spring Boot", "Spring Framework", "APIs REST", "React", "JavaScript", "AWS", "AWS EC2", "AWS ECS", "AWS ECR", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Git", "GitLab", "CI/CD", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
+      "en": ["Java", "Spring Boot", "Spring Framework", "REST APIs", "React", "JavaScript", "AWS", "AWS EC2", "AWS ECS", "AWS ECR", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Git", "GitLab", "CI/CD", "MySQL", "PostgreSQL", "MongoDB", "New Relic"],
+      "es": ["Java", "Spring Boot", "Spring Framework", "APIs REST", "React", "JavaScript", "AWS", "AWS EC2", "AWS ECS", "AWS ECR", "AWS S3", "AWS SQS", "AWS Parameter Store", "Docker", "Git", "GitLab", "CI/CD", "MySQL", "PostgreSQL", "MongoDB", "New Relic"]
     },
     "icon": "<i class='fas fa-credit-card'></i>",
-    "current": true,
+    "current": false,
     "links": {
       "PartnerBank": "https://www.partnerbank.com.br/"
+    }
+  },
+  {
+    "id": 1,
+    "title": {
+      "pt-BR": "Sistemas de Gerenciamento Industrial (Pátio, Ativos, Manutenção e Financeiro)",
+      "en": "Industrial Management Systems (Yard, Assets, Maintenance, and Finance)",
+      "es": "Sistemas de Gestión Industrial (Patio, Activos, Mantenimiento y Finanzas)"
+    },
+    "role": {
+      "pt-BR": "Estagiário → Desenvolvedor Fullstack Júnior",
+      "en": "Intern → Junior Full Stack Developer",
+      "es": "Pasante → Desarrollador Full Stack Junior"
+    },
+    "period": {
+      "pt-BR": "Out 2021 – Jul 2025",
+      "en": "Oct 2021 – Jul 2025",
+      "es": "Oct 2021 – Jul 2025"
+    },
+    "description": {
+      "pt-BR": "Na Vetta, atuei por quase quatro anos no cliente Usiminas, evoluindo de estagiário (2021) a desenvolvedor efetivo. Participei do desenvolvimento e manutenção de sistemas integrados de gerenciamento industrial, incluindo pátio, ativos, manutenção e gestão financeira. Esses sistemas otimizaram significativamente as operações, proporcionando maior eficiência e controle nas atividades diárias. Trabalhei em ambiente ágil utilizando Scrum e Kanban, colaborando eficazmente com equipes multifuncionais e apoiando tecnicamente o time na entrega de soluções robustas para uma grande corporação.",
+      "en": "At Vetta, I worked for nearly four years on the Usiminas account, progressing from intern (2021) to full-time developer. I participated in the development and maintenance of integrated industrial management systems, including yard, assets, maintenance, and financial management. These systems significantly improved operations, delivering higher efficiency and control in daily activities. I worked in agile environments using Scrum and Kanban, collaborating effectively with cross-functional teams and supporting teammates to deliver robust solutions for a major enterprise.",
+      "es": "En Vetta, trabajé durante casi cuatro años para el cliente Usiminas, evolucionando de pasante (2021) a desarrollador efectivo. Participé en el desarrollo y mantenimiento de sistemas integrados de gestión industrial, incluyendo patio, activos, mantenimiento y gestión financiera. Estos sistemas optimizaron significativamente las operaciones, brindando mayor eficiencia y control en las actividades diarias. Trabajé en entornos ágiles utilizando Scrum y Kanban, colaborando con equipos multidisciplinarios y brindando apoyo técnico para entregar soluciones robustas a una gran corporación."
+    },
+    "technologies": {
+      "pt-BR": ["Java", "Quarkus", "APIs REST", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "Git", "Gogs", "Jenkins", "CI/CD"],
+      "en": ["Java", "Quarkus", "REST APIs", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "Git", "Gogs", "Jenkins", "CI/CD"],
+      "es": ["Java", "Quarkus", "APIs REST", "Oracle Database", "Oracle PL/SQL", "Angular", "Ionic", "TypeScript", "Docker", "Git", "Gogs", "Jenkins", "CI/CD"]
+    },
+    "icon": "<i class='fas fa-industry'></i>",
+    "current": false,
+    "links": {
+      "Usiminas": "https://www.usiminas.com/",
+      "Vetta": "https://www.vetta.digital/pt-br"
+    }
+  },
+  {
+    "id": 4,
+    "title": {
+      "pt-BR": "Preflight Prompt — Governança para Agentes de IA",
+      "en": "Preflight Prompt — AI Agent Governance",
+      "es": "Preflight Prompt — Gobernanza para Agentes de IA"
+    },
+    "role": {
+      "pt-BR": "Autor",
+      "en": "Author",
+      "es": "Autor"
+    },
+    "period": {
+      "pt-BR": "2026 · Open Source",
+      "en": "2026 · Open Source",
+      "es": "2026 · Open Source"
+    },
+    "description": {
+      "pt-BR": "Template open-source para inicializar e padronizar governança de instruções de IA em repositórios novos e existentes com compatibilidade entre OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI e Antigravity/Gemini. Estrutura camadas de instruções e skills, gate obrigatório de preflight, descoberta segura de contexto Git e servidores MCP, validação de precedência semântica e auditoria de compliance com execução idempotente.",
+      "en": "Open-source template to initialize and standardize AI instruction governance across new and existing repositories, compatible with OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI, and Antigravity/Gemini. Structures layered instructions and skills, mandatory preflight gates, safe Git and MCP discovery, semantic precedence validation, and idempotent compliance audits.",
+      "es": "Plantilla open-source para inicializar y estandarizar la gobernanza de instrucciones de IA en repositorios nuevos y existentes, compatible con OpenCode, GitHub Copilot VS Code, GitHub Copilot CLI y Antigravity/Gemini. Estructura capas de instrucciones y skills, gate obligatorio de preflight, descubrimiento seguro de Git y MCP, validación de precedencia semántica y auditoría de cumplimiento idempotente."
+    },
+    "technologies": {
+      "pt-BR": ["Engenharia de IA", "Prompt Engineering", "Governança", "Git", "GitHub", "Python", "Markdown"],
+      "en": ["AI Engineering", "Prompt Engineering", "Governance", "Git", "GitHub", "Python", "Markdown"],
+      "es": ["Ingeniería de IA", "Prompt Engineering", "Gobernanza", "Git", "GitHub", "Python", "Markdown"]
+    },
+    "icon": "<i class='fas fa-terminal'></i>",
+    "current": false,
+    "links": {
+      "GitHub": "https://github.com/jonnxpr/preflight-prompt"
     }
   }
 ]

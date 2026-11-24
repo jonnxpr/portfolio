@@ -96,6 +96,8 @@ const Projects = (() => {
     title.textContent = I18n.resolveLocalizedValue(project.title);
     title.setAttribute('lang', I18n.t('htmlLang'));
 
+    const meta = createProjectMeta(project);
+
     const description = document.createElement('p');
     description.className = 'project-card__description';
     description.textContent = I18n.resolveLocalizedValue(project.description);
@@ -154,6 +156,9 @@ const Projects = (() => {
     }
 
     content.appendChild(title);
+    if (meta) {
+      content.appendChild(meta);
+    }
     content.appendChild(description);
     content.appendChild(techContainer);
     content.appendChild(linksContainer);
@@ -162,6 +167,38 @@ const Projects = (() => {
     card.appendChild(content);
 
     return card;
+  };
+
+  const createProjectMeta = (project) => {
+    const roleText = I18n.resolveLocalizedValue(project?.role);
+    const periodText = I18n.resolveLocalizedValue(project?.period);
+    const hasRole = typeof roleText === 'string' && roleText.trim().length > 0;
+    const hasPeriod = typeof periodText === 'string' && periodText.trim().length > 0;
+
+    if (!hasRole && !hasPeriod) {
+      return null;
+    }
+
+    const meta = document.createElement('div');
+    meta.className = 'project-card__meta';
+    meta.setAttribute('aria-label', I18n.t('projectMetaAria'));
+    meta.setAttribute('lang', I18n.t('htmlLang'));
+
+    if (hasRole) {
+      const role = document.createElement('span');
+      role.className = 'project-card__role';
+      role.textContent = roleText.trim();
+      meta.appendChild(role);
+    }
+
+    if (hasPeriod) {
+      const period = document.createElement('span');
+      period.className = 'project-card__period';
+      period.textContent = periodText.trim();
+      meta.appendChild(period);
+    }
+
+    return meta;
   };
 
   const createProjectIcon = (iconMarkup) => {

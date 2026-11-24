@@ -7,9 +7,9 @@
       "es": "Backend"
     },
     "description": {
-      "pt-BR": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, APIs REST, Microsserviços, Monolitos",
-      "en": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, REST APIs, Microservices, Monoliths",
-      "es": "Java, Spring, Quarkus, Node.js, JavaScript, TypeScript, APIs REST, Microservicios, Monolitos"
+      "pt-BR": "Java, Spring Boot, Spring Framework, Micronaut, Quarkus, APIs REST, Microsserviços, Apache Kafka, Monolitos",
+      "en": "Java, Spring Boot, Spring Framework, Micronaut, Quarkus, REST APIs, Microservices, Apache Kafka, Monoliths",
+      "es": "Java, Spring Boot, Spring Framework, Micronaut, Quarkus, APIs REST, Microservicios, Apache Kafka, Monolitos"
     },
     "icon": "<i class='fas fa-server'></i>"
   },
@@ -35,9 +35,9 @@
       "es": "Bases de Datos"
     },
     "description": {
-      "pt-BR": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
-      "en": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL",
-      "es": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, PL/SQL"
+      "pt-BR": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, Oracle PL/SQL",
+      "en": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, Oracle PL/SQL",
+      "es": "MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Oracle Database, Oracle PL/SQL"
     },
     "icon": "<i class='fas fa-database'></i>"
   },
@@ -49,9 +49,9 @@
       "es": "Cloud y DevOps"
     },
     "description": {
-      "pt-BR": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
-      "en": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab",
-      "es": "AWS EC2, AWS S3, AWS Lambda, AWS RDS, AWS ECS, AWS Parameter Store, CI/CD, Docker, Jenkins, GitLab"
+      "pt-BR": "AWS (EC2, ECS, EKS, ECR, RDS, S3, SQS, Parameter Store), Docker, Kubernetes, CI/CD, Git, GitLab, GitHub, Jenkins, Gogs, New Relic, Grafana",
+      "en": "AWS (EC2, ECS, EKS, ECR, RDS, S3, SQS, Parameter Store), Docker, Kubernetes, CI/CD, Git, GitLab, GitHub, Jenkins, Gogs, New Relic, Grafana",
+      "es": "AWS (EC2, ECS, EKS, ECR, RDS, S3, SQS, Parameter Store), Docker, Kubernetes, CI/CD, Git, GitLab, GitHub, Jenkins, Gogs, New Relic, Grafana"
     },
     "icon": "<i class='fas fa-cloud'></i>"
   }

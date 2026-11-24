@@ -427,6 +427,10 @@ select:focus-visible {
   outline: 1px solid var(--color-neon-cian);
 }
 
+.navbar__toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(155deg);
+}
+
 /* ========================================
    Hero Section
    ======================================== */
@@ -1014,6 +1018,30 @@ select:focus-visible {
   margin-bottom: 0;
   min-block-size: calc(1.25em * 2);
   line-height: 1.25;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+}
+
+.project-card__role {
+  color: var(--color-neon-magenta);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.35;
+}
+
+.project-card__period {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.35;
 }
 
 .project-card__description {
